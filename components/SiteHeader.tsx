@@ -4,7 +4,7 @@ const navigation = [
   { href: "/", label: "Home" },
   { href: "/our-work", label: "Our Work" },
   { href: "/families", label: "For Families" },
-  { href: "/about", label: "Our Family" },
+  { href: "/about", label: "Our Story" },
 ];
 
 export function SiteHeader() {
