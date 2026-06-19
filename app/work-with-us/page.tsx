@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 const collaborationTypes = [
-  "Children&apos;s publishing and story projects",
+  "Children's publishing and story projects",
   "Family resources and care-centered education",
   "Creative direction, storytelling, and visual identity",
   "Digital experiences, brand launches, and content",
@@ -34,7 +34,7 @@ export default function WorkWithUsPage() {
             <h2 className="h2">We are especially excited by work that helps people.</h2>
             <ul className="contactList">
               {collaborationTypes.map((type) => (
-                <li key={type} dangerouslySetInnerHTML={{ __html: type }} />
+                <li key={type}>{type}</li>
               ))}
             </ul>
           </div>
