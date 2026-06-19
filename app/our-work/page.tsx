@@ -8,13 +8,13 @@ export const metadata: Metadata = {
 
 const workAreas = [
   {
-    title: "Benny & Penny&apos;s Adventures",
-    label: "Children&apos;s storytelling",
-    description: "A care-centered children&apos;s story world that helps young readers feel more prepared, understood, and brave during unfamiliar experiences.",
+    title: "Benny & Penny's Adventures",
+    label: "Children's storytelling",
+    description: "A care-centered children's story world that helps young readers feel more prepared, understood, and brave during unfamiliar experiences.",
     tags: ["Books", "Characters", "Illustration", "Family guides"],
   },
   {
-    title: "Visual worlds &amp; creative direction",
+    title: "Visual worlds & creative direction",
     label: "Creative identity",
     description: "Brand systems, visual language, story-led creative direction, and digital experiences with feeling, clarity, and a point of view.",
     tags: ["Branding", "Visual direction", "Web", "Content"],
@@ -52,8 +52,8 @@ export default function OurWorkPage() {
           <div className="workGrid">
             {workAreas.map((area) => (
               <article className="card workCard" key={area.title}>
-                <span className="kicker" dangerouslySetInnerHTML={{ __html: area.label }} />
-                <h3 dangerouslySetInnerHTML={{ __html: area.title }} />
+                <span className="kicker">{area.label}</span>
+                <h3>{area.title}</h3>
                 <p>{area.description}</p>
                 <div className="tagList">
                   {area.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}
