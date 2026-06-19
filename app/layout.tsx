@@ -7,6 +7,12 @@ import { SiteHeader } from "@/components/SiteHeader";
 const siteUrl = "https://bennyandpenny.com";
 const description =
   "Benny & Penny's is the technology and creative studio of Hamilton Pinto Jr. — software architect, creative technologist, and publisher. Two decades building the systems behind brands, platforms, and ventures including XBeton, Advantage First Financial, Benny & Penny's Adventures, and Mercury Call Desk.";
+const socialImage = {
+  url: "/images/og-social-background.webp",
+  width: 960,
+  height: 640,
+  alt: "Benny & Penny's — A Tech Company",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -36,11 +42,13 @@ export const metadata: Metadata = {
     siteName: "Benny & Penny's — A Tech Company",
     title: "Benny & Penny's — A Tech Company | Hamilton Pinto Jr.",
     description,
+    images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
     title: "Benny & Penny's — A Tech Company | Hamilton Pinto Jr.",
     description,
+    images: [socialImage.url],
   },
 };
 
