@@ -32,13 +32,24 @@ Do not place store checkout, customer portal, product-order, gifting, cart-recov
 
 Launch a credible, warm, visually polished parent-brand site before the first book is finished. The site must establish the family brand, show the work in progress professionally, introduce Benny & Penny’s Adventures as the featured story world, and create a clear path for aligned business inquiries.
 
+## Approved Navigation
+
+```txt
+Home | Our Work | For Families | Our Story | Work With Us
+```
+
+- `Our Story` uses the existing `/about` route.
+- `Work With Us` is the persistent highlighted header button and the primary business CTA.
+- The same structure appears in the mobile menu.
+- Keep Privacy, Terms, social links, and future Adventures/store links in the footer until they are ready for public use.
+
 ## Public Pages
 
 ```txt
 /                 Home — brand story and primary calls to action
 /our-work         Portfolio categories and featured initiatives
 /families         Family-resource vision and future guide library
-/about            Family story and values
+/about            Our Story: family story and values
 /work-with-us     Collaboration inquiry path
 ```
 
@@ -50,6 +61,7 @@ React 19
 App Router
 Starter responsive homepage and shared styling
 SEO metadata, sitemap, robots, Organization schema, social sharing image
+Branded generated favicon and not-found page
 ```
 
 ## Build Order
@@ -59,7 +71,7 @@ SEO metadata, sitemap, robots, Organization schema, social sharing image
 3. Tighten home-page copy and work categories around real work that is ready to show.
 4. Add a reliable inquiry form and route submissions into the selected inbox or CRM.
 5. Add Privacy and Terms before collecting any form or newsletter data.
-6. Deploy to Vercel, attach domains, validate SEO and social sharing, then submit to search tools.
+6. Create the Vercel project linked to this GitHub repository, deploy `main`, attach domains, validate SEO and social sharing, then submit to search tools.
 
 ## Asset Needs
 
