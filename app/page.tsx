@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const capabilities = [
@@ -23,30 +24,40 @@ const ventures = [
     title: "XBeton",
     eyebrow: "Construction Technology",
     text: "Commerce and agent-onboarding platform for an AAC and nano-graphene building-systems company. Architecture, API integration, and go-to-market systems.",
+    image: "/images/work-xbeton-architecture.webp",
+    imageAlt: "XBeton AAC building blocks on a modern construction site",
     url: "https://www.xbeton.com/",
   },
   {
     title: "Advantage First Financial",
     eyebrow: "Financial Services",
     text: "Lead-capture, compliance, and sales-performance infrastructure for a debt-resolution firm, built and supported end to end.",
+    image: "/images/work-aff-dashboard.webp",
+    imageAlt: "Financial services dashboard with performance and compliance analytics",
     url: "https://www.advantagefirst.com/",
   },
   {
     title: "Benny & Penny's Adventures",
     eyebrow: "Publishing Imprint",
     text: "An original children's medical book series and a self-owned publishing imprint. Brand, web, and production pipeline.",
+    image: "/images/work-adventures-mockup.webp",
+    imageAlt: "Benny and Penny's Adventures children's book collection",
     url: "https://www.bennyandpennyadventures.com/",
   },
   {
     title: "Mercury Call Desk",
     eyebrow: "Communications",
     text: "AI-powered communications platform. Pricing, quoting, telephony, and billing systems for high-volume outbound teams.",
+    image: "/images/work-mercury-telephony.webp",
+    imageAlt: "Mercury Call Desk AI-powered telephony network visual",
     url: "https://mercurycalldesk.com/",
   },
   {
     title: "60+ Establishments",
     eyebrow: "Brand & Launch",
     text: "Restaurants, law firms, medical practices, and professional-service organizations opened and supported across Southern California.",
+    image: "/images/work-establishments-collage.webp",
+    imageAlt: "Restaurant, law office, and medical-practice environments",
     url: null,
   },
 ];
@@ -69,12 +80,16 @@ export default function HomePage() {
               <Link className="button button--light" href="/work-with-us">Work with me</Link>
             </div>
           </div>
-          <div className="heroVisual" aria-label="Benny and Penny brand mark">
-            <div className="storyWindow">
-              <div className="characterPair" aria-hidden="true">
-                <div className="character character--penny">P</div>
-                <div className="character character--benny">B</div>
-              </div>
+          <div className="heroVisual">
+            <div className="heroImageFrame">
+              <Image
+                src="/images/home-hero-brandmark.webp"
+                alt="Benny and Penny's sculptural B and P brand mark"
+                fill
+                priority
+                sizes="(max-width: 800px) 100vw, 46vw"
+                className="heroImage"
+              />
             </div>
             <div className="visualTag">A technology &amp; creative studio with heart at the center.</div>
           </div>
@@ -116,14 +131,25 @@ export default function HomePage() {
           <div className="workGrid">
             {ventures.map((v) => (
               <article className="card workCard ventureCard" key={v.title}>
-                <span className="kicker">{v.eyebrow}</span>
-                <h3>{v.title}</h3>
-                <p>{v.text}</p>
-                {v.url && (
-                  <a className="cardLink" href={v.url} target="_blank" rel="noopener">
-                    Visit site →
-                  </a>
-                )}
+                <div className="workCardMedia">
+                  <Image
+                    src={v.image}
+                    alt={v.imageAlt}
+                    fill
+                    sizes="(max-width: 800px) 100vw, 33vw"
+                    className="workCardImage"
+                  />
+                </div>
+                <div className="workCardBody">
+                  <span className="kicker">{v.eyebrow}</span>
+                  <h3>{v.title}</h3>
+                  <p>{v.text}</p>
+                  {v.url && (
+                    <a className="cardLink" href={v.url} target="_blank" rel="noopener">
+                      Visit site →
+                    </a>
+                  )}
+                </div>
               </article>
             ))}
           </div>
