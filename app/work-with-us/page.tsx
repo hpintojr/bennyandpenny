@@ -1,28 +1,29 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Work With Us",
-  description: "Start a conversation with Benny & Penny about creative collaborations, publishing, family resources, or mission-driven projects.",
+  title: "Contact",
+  description:
+    "Work with Hamilton Pinto Jr. — software architecture, API integration, creative technology, brand and web, and publishing engagements.",
 };
 
-const collaborationTypes = [
-  "Children's publishing and story projects",
-  "Family resources and care-centered education",
-  "Creative direction, storytelling, and visual identity",
-  "Digital experiences, brand launches, and content",
-  "Aligned partnerships, advocacy, and community initiatives",
+const engagements = [
+  "Software architecture and custom platform builds",
+  "API integration and systems / business intelligence",
+  "Brand, visual identity, and web",
+  "Go-to-market and launch systems",
+  "Publishing, imprint, and production-pipeline projects",
 ];
 
-export default function WorkWithUsPage() {
+export default function ContactPage() {
   return (
     <>
       <section className="pageHero">
         <div className="shell">
-          <p className="eyebrow">Work With Us</p>
-          <h1 className="display">Let&apos;s make something that people can feel.</h1>
+          <p className="eyebrow">Contact</p>
+          <h1 className="display">Let&apos;s build the next one.</h1>
           <p className="lede">
-            We welcome conversations with people, organizations, and brands who care about
-            meaningful storytelling, family connection, and creative work with a purpose.
+            I take on a small number of aligned engagements across software, brand, and publishing.
+            Tell me what you&apos;re building.
           </p>
         </div>
       </section>
@@ -30,26 +31,26 @@ export default function WorkWithUsPage() {
       <section className="section">
         <div className="shell contactGrid">
           <div className="contactPanel contactPanel--dark">
-            <p className="eyebrow">Best fit</p>
-            <h2 className="h2">We are especially excited by work that helps people.</h2>
+            <p className="eyebrow">What I take on</p>
+            <h2 className="h2">Where I can help most.</h2>
             <ul className="contactList">
-              {collaborationTypes.map((type) => (
-                <li key={type}>{type}</li>
+              {engagements.map((e) => (
+                <li key={e}>{e}</li>
               ))}
             </ul>
           </div>
           <div className="contactPanel">
             <p className="eyebrow">Start here</p>
-            <h2 className="h2">Tell us what you are building.</h2>
+            <h2 className="h2">Tell me about the project.</h2>
             <p className="lede">
-              Send a brief note with your name, organization, project idea, timeline, and the best way to reach you.
+              Send a brief note with your name, company, the problem you&apos;re solving, timeline, and the
+              best way to reach you.
             </p>
-            <a className="button" href="mailto:hello@bennyandpenny.com?subject=Benny%20%26%20Penny%20Collaboration%20Inquiry">
-              Email Benny &amp; Penny
+            <a className="button" href="mailto:hello@bennyandpenny.com?subject=Project%20Inquiry%20—%20Benny%20%26%20Penny%27s">
+              Email me
             </a>
             <p className="note">
-              Contact-form delivery will be added when the domain email and preferred lead-routing workflow are finalized.
-              Until then, this direct email route keeps every inquiry personal and reliable.
+              A contact form can route to a CRM later; for now, direct email keeps every inquiry personal and reliable.
             </p>
           </div>
         </div>
@@ -59,10 +60,11 @@ export default function WorkWithUsPage() {
         <div className="shell pageIntro">
           <div>
             <p className="eyebrow">What to expect</p>
-            <h2 className="h2">Thoughtful communication from the first conversation.</h2>
+            <h2 className="h2">Straight answers, then a clear plan.</h2>
           </div>
           <p className="lede">
-            We will listen for the heart of the project first, then determine whether there is a clear and aligned way to build it together.
+            I&apos;ll listen for the heart of the project first, then tell you honestly whether there&apos;s a
+            strong, aligned way to build it together.
           </p>
         </div>
       </section>

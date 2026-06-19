@@ -1,20 +1,53 @@
 import Link from "next/link";
 
-const pillars = [
+const capabilities = [
   {
     icon: "✦",
-    title: "Meaningful stories",
-    text: "Children’s storytelling that makes big feelings, care experiences, and brave moments easier to understand.",
+    title: "Software architecture",
+    text: "Custom platforms, API integration, and systems that improve operational efficiency, data flow, and business intelligence.",
+  },
+  {
+    icon: "◆",
+    title: "Creative technology",
+    text: "The eye of a designer with the discipline of an architect—brand systems, web, and digital experiences built to perform.",
   },
   {
     icon: "♥",
-    title: "Care-centered creativity",
-    text: "Visual experiences and family resources created with empathy, clarity, and comfort at the center.",
+    title: "Brand & publishing",
+    text: "From go-to-market systems to an original children's book imprint, ideas taken from concept to launch.",
+  },
+];
+
+const ventures = [
+  {
+    title: "XBeton",
+    eyebrow: "Construction Technology",
+    text: "Commerce and agent-onboarding platform for an AAC and nano-graphene building-systems company. Architecture, API integration, and go-to-market systems.",
+    url: "https://www.xbeton.com/",
   },
   {
-    icon: "↗",
-    title: "Mission-driven work",
-    text: "Thoughtful collaborations, digital projects, and brand ideas made to move people and create real connection.",
+    title: "Advantage First Financial",
+    eyebrow: "Financial Services",
+    text: "Lead-capture, compliance, and sales-performance infrastructure for a debt-resolution firm, built and supported end to end.",
+    url: "https://www.advantagefirst.com/",
+  },
+  {
+    title: "Benny & Penny's Adventures",
+    eyebrow: "Publishing Imprint",
+    text: "An original children's medical book series and a self-owned publishing imprint. Brand, web, and production pipeline.",
+    url: "https://www.bennyandpennyadventures.com/",
+  },
+  {
+    title: "Mercury Call Desk",
+    eyebrow: "Communications",
+    text: "AI-powered communications platform. Pricing, quoting, telephony, and billing systems for high-volume outbound teams.",
+    url: "https://mercurycalldesk.com/",
+  },
+  {
+    title: "60+ Establishments",
+    eyebrow: "Brand & Launch",
+    text: "Restaurants, law firms, medical practices, and professional-service organizations opened and supported across Southern California.",
+    url: null,
   },
 ];
 
@@ -24,26 +57,26 @@ export default function HomePage() {
       <section className="hero">
         <div className="shell heroGrid">
           <div className="heroCopy">
-            <p className="eyebrow">Stories · Care · Creativity · Family</p>
-            <h1 className="display">Building little worlds that make a meaningful difference.</h1>
+            <p className="eyebrow">Software Architect · Creative Technologist · Publisher</p>
+            <h1 className="display">Vision, translated into real-world solutions.</h1>
             <p className="lede">
-              Benny &amp; Penny is a family-built creative and care-centered brand creating
-              meaningful children&apos;s stories, visual experiences, family resources, and
-              mission-driven projects.
+              For two decades I&apos;ve built the systems behind brands, platforms, and ventures—pairing
+              the eye of a designer with the discipline of a software architect. Benny &amp; Penny&apos;s is
+              the studio where that work, and my own, comes together. Now I&apos;m building my own.
             </p>
             <div className="buttonRow">
-              <Link className="button" href="/our-work">Explore our work</Link>
-              <Link className="button button--light" href="/work-with-us">Work with us</Link>
+              <Link className="button" href="/our-work">View my work</Link>
+              <Link className="button button--light" href="/work-with-us">Work with me</Link>
             </div>
           </div>
-          <div className="heroVisual" aria-label="A playful abstract Benny and Penny world">
+          <div className="heroVisual" aria-label="Benny and Penny brand mark">
             <div className="storyWindow">
               <div className="characterPair" aria-hidden="true">
                 <div className="character character--penny">P</div>
                 <div className="character character--benny">B</div>
               </div>
             </div>
-            <div className="visualTag">A creative family brand with heart at the center.</div>
+            <div className="visualTag">A technology &amp; creative studio with heart at the center.</div>
           </div>
         </div>
       </section>
@@ -52,19 +85,19 @@ export default function HomePage() {
         <div className="shell">
           <div className="sectionHead">
             <div>
-              <p className="eyebrow">What we are building</p>
-              <h2 className="h2">A brand where imagination meets real life.</h2>
+              <p className="eyebrow">What I do</p>
+              <h2 className="h2">One discipline, many registers.</h2>
             </div>
             <p className="lede">
-              We believe the most memorable creative work feels beautiful, useful, and deeply human.
+              From construction-tech platforms to a children&apos;s book imprint, the common thread is execution.
             </p>
           </div>
           <div className="pillarGrid">
-            {pillars.map((pillar) => (
-              <article className="card pillarCard" key={pillar.title}>
-                <div className="iconBadge" aria-hidden="true">{pillar.icon}</div>
-                <h3>{pillar.title}</h3>
-                <p>{pillar.text}</p>
+            {capabilities.map((c) => (
+              <article className="card pillarCard" key={c.title}>
+                <div className="iconBadge" aria-hidden="true">{c.icon}</div>
+                <h3>{c.title}</h3>
+                <p>{c.text}</p>
               </article>
             ))}
           </div>
@@ -72,58 +105,27 @@ export default function HomePage() {
       </section>
 
       <section className="section section--soft">
-        <div className="shell featureSplit">
-          <div className="featureArtwork" aria-hidden="true">
-            <div className="bookShape"><span>Benny &amp; Penny&apos;s Adventures</span></div>
-          </div>
-          <div>
-            <p className="eyebrow">Featured creative world</p>
-            <h2 className="h2">Benny &amp; Penny&apos;s Adventures</h2>
-            <p className="lede">
-              Our children&apos;s story world is inspired by the moments families navigate together—especially
-              the ones that call for comfort, courage, and a little more understanding.
-            </p>
-            <ul className="checkList">
-              <li>Care-centered children&apos;s books and companion resources</li>
-              <li>Storybook illustration, character worlds, and family-friendly tools</li>
-              <li>A growing library created to help children feel seen and prepared</li>
-            </ul>
-            <div className="buttonRow">
-              <Link className="button" href="/our-work">See the project</Link>
-              <Link className="textLink" href="/families">Explore family resources</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
         <div className="shell">
           <div className="sectionHead">
             <div>
-              <p className="eyebrow">Designed to grow with purpose</p>
-              <h2 className="h2">Work made to connect, comfort, and inspire.</h2>
+              <p className="eyebrow">Selected ventures</p>
+              <h2 className="h2">The work speaks.</h2>
             </div>
-            <Link className="textLink" href="/our-work">View everything we do</Link>
+            <Link className="textLink" href="/our-work">See all work</Link>
           </div>
           <div className="workGrid">
-            <article className="card workCard">
-              <span className="kicker">Storytelling</span>
-              <h3>Children&apos;s stories &amp; publishing</h3>
-              <p>Original story worlds, educational concepts, character systems, and thoughtful publishing projects.</p>
-              <Link className="cardLink" href="/our-work">Discover the work →</Link>
-            </article>
-            <article className="card workCard">
-              <span className="kicker">Creative Direction</span>
-              <h3>Visual worlds &amp; digital experiences</h3>
-              <p>Brand storytelling, illustration direction, websites, and visuals that carry a message with warmth and clarity.</p>
-              <Link className="cardLink" href="/our-work">Discover the work →</Link>
-            </article>
-            <article className="card workCard">
-              <span className="kicker">Family Support</span>
-              <h3>Resources that meet families where they are</h3>
-              <p>Guides and future tools that make difficult conversations and care experiences feel more approachable.</p>
-              <Link className="cardLink" href="/families">Explore resources →</Link>
-            </article>
+            {ventures.map((v) => (
+              <article className="card workCard ventureCard" key={v.title}>
+                <span className="kicker">{v.eyebrow}</span>
+                <h3>{v.title}</h3>
+                <p>{v.text}</p>
+                {v.url && (
+                  <a className="cardLink" href={v.url} target="_blank" rel="noopener">
+                    Visit site →
+                  </a>
+                )}
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -131,9 +133,11 @@ export default function HomePage() {
       <section className="section section--blush">
         <div className="shell callout">
           <div className="calloutInner">
-            <p className="eyebrow">Let&apos;s make something meaningful</p>
-            <h2 className="h2">Have a project that deserves more heart, clarity, or imagination?</h2>
-            <p className="lede">We are open to aligned creative, publishing, family-resource, and mission-driven collaborations.</p>
+            <p className="eyebrow">Let&apos;s build the next one</p>
+            <h2 className="h2">Have a platform, brand, or product that needs to get built right?</h2>
+            <p className="lede">
+              I take on a small number of aligned software, brand, and publishing engagements.
+            </p>
             <div className="buttonRow">
               <Link className="button" href="/work-with-us">Start a conversation</Link>
             </div>

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Benny & Penny — Stories, Care, Creativity & Family-Led Work";
+export const alt = "Benny & Penny's — A Tech Company | Hamilton Pinto Jr.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -21,15 +21,15 @@ export default function OpenGraphImage() {
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", flexDirection: "column", width: "720px", zIndex: 1 }}>
-          <div style={{ display: "flex", color: "#175b59", fontSize: 25, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase" }}>
-            Stories · Care · Creativity · Family
+        <div style={{ display: "flex", flexDirection: "column", width: "760px", zIndex: 1 }}>
+          <div style={{ display: "flex", color: "#175b59", fontSize: 24, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase" }}>
+            Software Architect · Creative Technologist · Publisher
           </div>
-          <div style={{ display: "flex", marginTop: 26, fontSize: 76, lineHeight: 1.02, fontWeight: 700, letterSpacing: -3 }}>
-            Benny &amp; Penny
+          <div style={{ display: "flex", marginTop: 26, fontSize: 72, lineHeight: 1.02, fontWeight: 700, letterSpacing: -3 }}>
+            Hamilton Pinto Jr.
           </div>
-          <div style={{ display: "flex", marginTop: 25, fontSize: 34, lineHeight: 1.25, color: "#496363" }}>
-            A family-built creative and care-centered brand creating meaningful work.
+          <div style={{ display: "flex", marginTop: 22, fontSize: 31, lineHeight: 1.25, color: "#496363" }}>
+            Benny &amp; Penny&apos;s — a technology &amp; creative studio. Vision, translated into real-world solutions.
           </div>
         </div>
         <div style={{ position: "absolute", right: 108, bottom: 105, display: "flex", alignItems: "flex-end", gap: 25 }}>

@@ -2,77 +2,75 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "For Families",
-  description: "Explore the care-centered family-resource vision behind Benny & Penny, including future guides, stories, and practical support.",
+  title: "Adventures",
+  description:
+    "Benny & Penny's Adventures — an original children's medical book series and the self-owned publishing imprint behind Benny & Penny's, A Tech Company.",
 };
 
-const resources = [
+const highlights = [
   {
-    title: "Talk-to-your-child guides",
-    text: "Gentle language and story-based prompts for caregivers preparing children for new, confusing, or emotional experiences.",
+    title: "A children's medical book series",
+    text: "Care-centered stories that help young readers feel prepared and brave for medical experiences—written by the author, produced end to end in-house.",
   },
   {
-    title: "Care experience companions",
-    text: "Future story-led materials designed around medical visits, treatments, hospital stays, and the feelings that come with them.",
+    title: "A self-owned imprint",
+    text: "Brand, web storefront, digital delivery, and a full print/e-book/audio production pipeline, built and operated as our own publishing venture.",
   },
   {
-    title: "A trusted resource path",
-    text: "A growing place for practical family support, advocacy pathways, and tools that make it easier to take the next step.",
-  },
-  {
-    title: "Bravery through familiarity",
-    text: "Creative resources that help children recognize what is happening, ask questions, and feel less alone in the process.",
+    title: "Part of the studio",
+    text: "The imprint is the namesake and creative heart of Benny & Penny's—proof of the same build-it-right discipline applied to my own work.",
   },
 ];
 
-export default function FamiliesPage() {
+export default function AdventuresPage() {
   return (
     <>
       <section className="pageHero">
         <div className="shell">
-          <p className="eyebrow">For Families</p>
-          <h1 className="display">More than stories. A softer way to prepare for hard moments.</h1>
+          <p className="eyebrow">Featured imprint</p>
+          <h1 className="display">Benny &amp; Penny&apos;s Adventures.</h1>
           <p className="lede">
-            Benny &amp; Penny is being built to support the people who explain the big things,
-            hold the little hands, and make children feel safe along the way.
+            The publishing imprint at the heart of the studio: an original children&apos;s medical book
+            series, with its own brand, storefront, and production pipeline.
           </p>
+          <div className="buttonRow">
+            <a className="button" href="https://www.bennyandpennyadventures.com/" target="_blank" rel="noopener">
+              Visit the storefront →
+            </a>
+            <Link className="button button--light" href="/our-work">Back to all work</Link>
+          </div>
         </div>
       </section>
 
       <section className="section">
-        <div className="shell pageIntro">
-          <div>
-            <p className="eyebrow">Our family-resource vision</p>
-            <h2 className="h2">Help families find words, comfort, and a next step.</h2>
+        <div className="shell">
+          <div className="resourceGrid">
+            {highlights.map((h) => (
+              <article className="card resourceCard" key={h.title}>
+                <div className="iconBadge" aria-hidden="true">♥</div>
+                <h3>{h.title}</h3>
+                <p>{h.text}</p>
+              </article>
+            ))}
           </div>
-          <p className="lede">
-            The resource library is growing alongside the Benny &amp; Penny story world. It will
-            bring together age-appropriate preparation tools, caregiver guidance, and trusted
-            support pathways in one welcoming place.
-          </p>
-        </div>
-        <div className="shell resourceGrid">
-          {resources.map((resource) => (
-            <article className="card resourceCard" key={resource.title}>
-              <div className="iconBadge" aria-hidden="true">♥</div>
-              <h3>{resource.title}</h3>
-              <p>{resource.text}</p>
-            </article>
-          ))}
         </div>
       </section>
 
-      <section className="section section--blush">
-        <div className="shell callout">
-          <div className="calloutInner">
-            <p className="eyebrow">Coming as we grow</p>
-            <h2 className="h2">A trusted place for stories, preparation, and family support.</h2>
+      <section className="section section--soft">
+        <div className="shell pageIntro">
+          <div>
+            <p className="eyebrow">Where to find it</p>
+            <h2 className="h2">The books live at bennyandpennyadventures.com.</h2>
+          </div>
+          <div>
             <p className="lede">
-              We are building this with care. New resources will be announced as each story and
-              companion guide is ready to share.
+              The full catalog, digital library, and ordering experience are handled by the dedicated
+              storefront. This page is the imprint&apos;s home within the studio portfolio.
             </p>
             <div className="buttonRow">
-              <Link className="button" href="mailto:hello@bennyandpenny.com?subject=Benny%20%26%20Penny%20Family%20Resources">Ask about the resource vision</Link>
+              <a className="button" href="https://www.bennyandpennyadventures.com/" target="_blank" rel="noopener">
+                Go to the storefront →
+              </a>
             </div>
           </div>
         </div>

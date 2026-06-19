@@ -154,3 +154,18 @@ button, input, textarea, select { font: inherit; }
   .visualTag { right: .5rem; bottom: .5rem; }
   .footerBottom { display: grid; }
 }
+
+/* Portfolio additions */
+.brandMark__name { display: inline-flex; flex-direction: column; line-height: 1.05; }
+.brandMark__tag { font-size: .6rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.footerVenturesLabel { margin: 1.4rem 0 .5rem; color: #a6e1d5; font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.footerVentures { display: grid; gap: .5rem; }
+.footerVentures a { color: rgba(255,255,255,.86); font-weight: 600; width: fit-content; }
+.footerVentures a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.ventureCard { display: flex; flex-direction: column; }
+.ventureCard .cardLink { margin-top: auto; padding-top: 1.2rem; color: var(--teal-deep); font-weight: 700; }
+.statRow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.15rem; margin-top: 2.5rem; }
+.statCard { padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--paper); }
+.statCard .statNum { font-family: "Playfair Display", Georgia, serif; font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--teal-deep); line-height: 1; }
+.statCard .statLabel { margin-top: .5rem; color: var(--muted); font-size: .9rem; }
+@media (max-width: 800px) { .statRow { grid-template-columns: 1fr; } }
