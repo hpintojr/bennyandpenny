@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 import "./accessibility.css";
+import "./accessibility-fixes.css";
 import "./portfolio-images.css";
 import "./logo-monogram.css";
 import "./aff-logo.css";
