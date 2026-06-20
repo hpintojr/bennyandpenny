@@ -29,6 +29,14 @@ Hamilton Pinto Jr. is a software architect, creative technologist, business cons
 - Benny & Penny's Adventures: https://www.bennyandpennyadventures.com/
 - Mercury Call Desk: https://mercurycalldesk.com/
 
+## Accessibility
+
+Benny & Penny's is working toward WCAG 2.2 Level AA as a design and engineering target. Accessibility improvements are ongoing; the site does not claim zero defects or guaranteed legal compliance.
+
+Accessibility statement: https://bennyandpenny.com/accessibility
+Accessibility Markdown mirror: https://bennyandpenny.com/accessibility.md
+Accessibility support: hello@bennyandpenny.com
+
 ## Site pages and Markdown mirrors
 
 - Home: https://bennyandpenny.com/ | https://bennyandpenny.com/index.md
@@ -36,6 +44,7 @@ Hamilton Pinto Jr. is a software architect, creative technologist, business cons
 - Adventures: https://bennyandpenny.com/families | https://bennyandpenny.com/families.md
 - About: https://bennyandpenny.com/about | https://bennyandpenny.com/about.md
 - Contact: https://bennyandpenny.com/work-with-us | https://bennyandpenny.com/work-with-us.md
+- Accessibility: https://bennyandpenny.com/accessibility | https://bennyandpenny.com/accessibility.md
 - Privacy: https://bennyandpenny.com/privacy | https://bennyandpenny.com/privacy.md
 - Terms: https://bennyandpenny.com/terms | https://bennyandpenny.com/terms.md
 
