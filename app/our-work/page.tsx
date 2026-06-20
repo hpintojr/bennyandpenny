@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Work",
   description:
     "Selected ventures and platforms by Hamilton Pinto Jr. — XBeton, Advantage First Financial, American Colonial Capital, Benny & Penny's Adventures, Mercury Call Desk, and 60+ launched establishments.",
+  alternates: { canonical: "/our-work" },
+  openGraph: {
+    url: "/our-work",
+    title: "Work by Benny & Penny's — A Tech Company",
+    description:
+      "Selected platforms, ventures, brand systems, and publishing work by Hamilton Pinto Jr.",
+  },
 };
 
 const ventures = [
