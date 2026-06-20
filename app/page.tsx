@@ -172,6 +172,7 @@ export default function HomePage() {
           <div className="workGrid">
             {ventures.map((v) => {
               const isAcc = v.title === "American Colonial Capital";
+              const isAff = v.title === "Advantage First Financial";
 
               return (
                 <article className="card workCard ventureCard" key={v.title}>
@@ -192,6 +193,25 @@ export default function HomePage() {
                             fill
                             sizes="(max-width: 800px) 35vw, 11vw"
                             className="accPortfolioLogo__image"
+                          />
+                        </div>
+                      </div>
+                    ) : isAff ? (
+                      <div className="affPortfolioVisual">
+                        <Image
+                          src={v.image}
+                          alt={v.imageAlt}
+                          fill
+                          sizes="(max-width: 800px) 100vw, 33vw"
+                          className="affPortfolioVisual__background"
+                        />
+                        <div className="affPortfolioLogo" aria-hidden="true">
+                          <Image
+                            src="/images/AFF_Logo.png"
+                            alt=""
+                            fill
+                            sizes="(max-width: 800px) 52vw, 17vw"
+                            className="affPortfolioLogo__image"
                           />
                         </div>
                       </div>
