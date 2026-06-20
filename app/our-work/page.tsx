@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected ventures and platforms by Hamilton Pinto Jr. — XBeton, Advantage First Financial, Benny & Penny's Adventures, Mercury Call Desk, and 60+ launched establishments.",
+    "Selected ventures and platforms by Hamilton Pinto Jr. — XBeton, Advantage First Financial, American Colonial Capital, Benny & Penny's Adventures, Mercury Call Desk, and 60+ launched establishments.",
 };
 
 const ventures = [
@@ -41,6 +41,18 @@ const ventures = [
     image: "/images/work-adventures-mockup.webp",
     imageAlt: "Benny and Penny's Adventures children's book collection",
     url: "https://www.bennyandpennyadventures.com/",
+  },
+  {
+    title: "American Colonial Capital",
+    label: "Capital & Finance",
+    description:
+      "Web, API, systems, brand, and launch infrastructure for an American Colonial Capital venture.",
+    role: "Web · APIs · Systems · Brand · Launch",
+    tags: ["Web", "APIs", "Systems", "Brand", "Launch"],
+    image: null,
+    imageAlt: "American Colonial Capital portfolio visual",
+    url: null,
+    visual: "acc",
   },
   {
     title: "Mercury Call Desk",
@@ -85,14 +97,22 @@ export default function WorkPage() {
           <div className="workGrid workGrid--feature">
             {ventures.map((v) => (
               <article className="card workCard ventureCard" key={v.title}>
-                <div className="workCardMedia">
-                  <Image
-                    src={v.image}
-                    alt={v.imageAlt}
-                    fill
-                    sizes="(max-width: 800px) 100vw, 33vw"
-                    className="workCardImage"
-                  />
+                <div className={`workCardMedia${v.visual ? ` workCardMedia--${v.visual}` : ""}`}>
+                  {v.image ? (
+                    <Image
+                      src={v.image}
+                      alt={v.imageAlt}
+                      fill
+                      sizes="(max-width: 800px) 100vw, 33vw"
+                      className="workCardImage"
+                    />
+                  ) : (
+                    <div className="accVisual" aria-hidden="true">
+                      <span className="accVisual__monogram">ACC</span>
+                      <span className="accVisual__name">American Colonial Capital</span>
+                      <span className="accVisual__line" />
+                    </div>
+                  )}
                 </div>
                 <div className="workCardBody">
                   <span className="kicker">{v.label}</span>
