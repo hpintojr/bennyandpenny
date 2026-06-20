@@ -1,0 +1,69 @@
+.brandMark {
+  gap: .7rem;
+}
+
+.brandMonogram {
+  position: relative;
+  display: flex;
+  width: 3.05rem;
+  height: 3.05rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(24, 52, 55, .12);
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 20%, rgba(255,255,255,.98), rgba(255,250,242,.82) 64%, rgba(214,236,225,.72));
+  box-shadow: 0 8px 18px rgba(24, 52, 55, .14), inset 0 1px 0 rgba(255,255,255,.9);
+  isolation: isolate;
+}
+
+.brandMonogram::after {
+  position: absolute;
+  inset: .2rem;
+  border: 1px solid rgba(255,255,255,.75);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.brandMonogram__b,
+.brandMonogram__p {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.05rem;
+  font-weight: 700;
+  line-height: .8;
+  letter-spacing: -.17em;
+}
+
+.brandMonogram__b {
+  margin-right: -.05rem;
+  background: linear-gradient(130deg, #7a3d24 0%, #b96f47 31%, #f0b28b 56%, #8e4a2d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(92, 44, 25, .2));
+}
+
+.brandMonogram__p {
+  margin-left: -.03rem;
+  background: linear-gradient(135deg, rgba(62,133,125,.94) 0%, rgba(170,244,220,.98) 46%, rgba(87,174,160,.86) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(30, 119, 109, .25));
+}
+
+@media (max-width: 520px) {
+  .brandMonogram {
+    width: 2.55rem;
+    height: 2.55rem;
+  }
+
+  .brandMonogram__b,
+  .brandMonogram__p {
+    font-size: 1.75rem;
+  }
+}
