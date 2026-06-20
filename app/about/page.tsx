@@ -47,7 +47,21 @@ export default function AboutPage() {
             />
           </div>
           <div>
-            <p className="eyebrow">Hamilton Pinto Jr.</p>
+            <Image
+              src="/images/Sig.png"
+              alt="Hamilton Pinto Jr. signature"
+              width={230}
+              height={153}
+              sizes="230px"
+              style={{
+                display: "block",
+                width: "min(100%, 11.75rem)",
+                height: "auto",
+                margin: "0 0 .7rem",
+                objectFit: "contain",
+                objectPosition: "left center",
+              }}
+            />
             <h2 className="h2">A disciplined problem solver with a designer&apos;s eye.</h2>
             <p className="lede">
               My traditional training began at Westwood College of Technology, where I studied Graphic
