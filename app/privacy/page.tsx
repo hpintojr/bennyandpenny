@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   description:
     "Privacy Policy for Benny & Penny's — A Tech Company: what we collect, how we use it, the providers we rely on, and your rights.",
   alternates: { canonical: "/privacy" },
+  openGraph: {
+    url: "/privacy",
+    title: "Privacy Policy | Benny & Penny's",
+    description: "How Benny & Penny's collects, uses, and protects contact-form information.",
+  },
 };
 
 export default function PrivacyPage() {
@@ -58,7 +63,7 @@ export default function PrivacyPage() {
           </p>
           <ul className="legalList">
             <li><strong>Vercel</strong> — website hosting and delivery.</li>
-            <li><strong>Mailjet</strong> — transactional email used to deliver your inquiry to us.</li>
+            <li><strong>Sequenzy</strong> — transactional email used to deliver your inquiry to us.</li>
             <li><strong>Neon</strong> — database storage for contact submissions.</li>
           </ul>
           <p>
