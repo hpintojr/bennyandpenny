@@ -1,0 +1,48 @@
+name: Browser Accessibility Audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      site_url:
+        description: Production or Vercel preview URL to audit
+        required: true
+        default: https://www.bennyandpenny.com
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  axe-audit:
+    name: Axe WCAG browser audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      BASE_URL: ${{ inputs.site_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install test dependencies
+        run: npm install
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run browser accessibility audit
+        run: npm run a11y:axe
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: accessibility-audit-report
+          path: |
+            playwright-report/accessibility
+            test-results
+          if-no-files-found: ignore
