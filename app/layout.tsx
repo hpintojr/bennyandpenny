@@ -6,7 +6,8 @@ import "./accessibility-fixes.css";
 import "./portfolio-images.css";
 import "./logo-monogram.css";
 import "./aff-logo.css";
-import { SiteFooter } from "@/components/SiteFooter";
+import { AccessibilityPreferencesDock, AccessibilityPreferencesProvider } from "@/components/AccessibilityPreferences";
+import { SiteFooterAccessible } from "@/components/SiteFooterAccessible";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SkipLink } from "@/components/SkipLink";
 
@@ -121,10 +122,13 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en">
       <body>
-        <SkipLink />
-        <SiteHeader />
-        <main id="main-content" tabIndex={-1}>{children}</main>
-        <SiteFooter />
+        <AccessibilityPreferencesProvider>
+          <SkipLink />
+          <SiteHeader />
+          <main id="main-content" tabIndex={-1}>{children}</main>
+          <SiteFooterAccessible />
+          <AccessibilityPreferencesDock />
+        </AccessibilityPreferencesProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
