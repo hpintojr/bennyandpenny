@@ -17,6 +17,21 @@ html {
   outline-offset: var(--a11y-focus-offset);
 }
 
+.cform input:focus-visible,
+.cform select:focus-visible,
+.cform textarea:focus-visible {
+  outline: 3px solid var(--a11y-focus);
+  outline-offset: 2px;
+}
+
+.desktopNav a[aria-current="page"]:not(.button),
+.mobilePanelNav a[aria-current="page"]:not(.button) {
+  color: var(--teal-deep);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .28em;
+}
+
 .skipLink {
   position: fixed;
   top: .75rem;
