@@ -5,7 +5,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Hamilton Pinto Jr. — software architect, creative technologist, and publisher. BA in Visual Communications, owner of Pinto Design Group and Pinto Consulting, 60+ establishments launched across Southern California.",
+    "Hamilton Pinto Jr. — software architect, creative technologist, and publisher. BA in Visual Communications, owner of Pinto Design Group and Pinto Consulting, with 60+ establishments launched across Southern California.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    url: "/about",
+    title: "About Hamilton Pinto Jr.",
+    description:
+      "Software architecture, creative technology, business consulting, and publishing from Hamilton Pinto Jr.",
+  },
 };
 
 const stats = [
