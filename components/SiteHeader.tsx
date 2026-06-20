@@ -14,28 +14,62 @@ const navigation = [
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const initialPathname = useRef(pathname);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
+  const lastMobileLinkRef = useRef<HTMLAnchorElement>(null);
   const close = () => setOpen(false);
 
   useEffect(() => {
     if (!open) return;
 
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     const frame = window.requestAnimationFrame(() => firstMobileLinkRef.current?.focus());
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         event.preventDefault();
         setOpen(false);
         window.requestAnimationFrame(() => toggleRef.current?.focus());
       }
+
+      if (event.key === "Tab") {
+        const first = firstMobileLinkRef.current;
+        const last = lastMobileLinkRef.current;
+        if (!first || !last) return;
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
     };
 
     document.addEventListener("keydown", onKeyDown);
     return () => {
+      document.body.style.overflow = previousOverflow;
       window.cancelAnimationFrame(frame);
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [open]);
+
+  useEffect(() => {
+    if (pathname === initialPathname.current) return;
+    setOpen(false);
+
+    const frame = window.requestAnimationFrame(() => {
+      const heading = document.querySelector<HTMLElement>("#main-content h1");
+      const target = heading ?? document.getElementById("main-content");
+      if (!target) return;
+      if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+      target.focus({ preventScroll: true });
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [pathname]);
 
   return (
     <header className="siteHeader">
@@ -106,24 +140,14 @@ export function SiteHeader() {
       <div className="shell headerInner">
         <Link className="brandMark" href="/" aria-label="Benny and Penny's — A Tech Company, home" onClick={close}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className="brandLogo"
-            src="/images/logo-horizontal-transparent.png"
-            alt="Benny &amp; Penny's — A Tech Company"
-            width={269}
-            height={54}
-          />
+          <img className="brandLogo" src="/images/logo-horizontal-transparent.png" alt="Benny & Penny's — A Tech Company" width={269} height={54} />
         </Link>
 
         <nav className="desktopNav" aria-label="Primary navigation">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href} aria-current={pathname === item.href ? "page" : undefined}>
-              {item.label}
-            </Link>
+            <Link key={item.href} href={item.href} aria-current={pathname === item.href ? "page" : undefined}>{item.label}</Link>
           ))}
-          <Link className="button button--small" href="/work-with-us" aria-current={pathname === "/work-with-us" ? "page" : undefined}>
-            Contact
-          </Link>
+          <Link className="button button--small" href="/work-with-us" aria-current={pathname === "/work-with-us" ? "page" : undefined}>Contact</Link>
         </nav>
 
         <button
@@ -136,11 +160,7 @@ export function SiteHeader() {
           aria-controls="mobile-menu"
           onClick={() => setOpen((value) => !value)}
         >
-          <span className="menuIcon" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </span>
+          <span className="menuIcon" aria-hidden="true"><span /><span /><span /></span>
         </button>
       </div>
 
@@ -158,6 +178,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link
+            ref={lastMobileLinkRef}
             className="button button--small mobileContact"
             href="/work-with-us"
             aria-current={pathname === "/work-with-us" ? "page" : undefined}
