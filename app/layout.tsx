@@ -8,18 +8,18 @@ import { SiteHeader } from "@/components/SiteHeader";
 
 const siteUrl = "https://bennyandpenny.com";
 const description =
-  "Benny & Penny's is the development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, brand and web development, and publishing solutions.";
+  "The development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, and publishing solutions. Proudly motivated by my children, Benny and Penny.";
 const socialImage = {
   url: "/images/og-social-background.webp?rev=20260620",
   width: 1200,
   height: 630,
-  alt: "Benny & Penny's — A Tech Company | Hamilton Pinto Jr.",
+  alt: "Benny & Penny's | A Tech Company",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Benny & Penny's — A Tech Company | Hamilton Pinto Jr., Software Architect & Creative Technologist",
+    default: "Benny & Penny's | A Tech Company",
     template: "%s | Benny & Penny's",
   },
   description,
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    siteName: "Benny & Penny's — A Tech Company",
-    title: "Benny & Penny's — A Tech Company | Hamilton Pinto Jr.",
-    description,
+    siteName: "Benny & Penny's | A Tech Company",
+    title: "Benny & Penny's | A Tech Company",
+    description: "Building the next generation of digital tools, web applications, and technology platforms.",
     images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Benny & Penny's — A Tech Company | Hamilton Pinto Jr.",
+    title: "Benny & Penny's | A Tech Company",
     description,
     images: [socialImage.url],
   },
@@ -79,7 +79,7 @@ const personSchema = {
   description,
   worksFor: {
     "@type": "Organization",
-    name: "Benny & Penny's — A Tech Company",
+    name: "Benny & Penny's | A Tech Company",
     url: siteUrl,
   },
   knowsAbout: [
