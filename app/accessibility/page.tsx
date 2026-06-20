@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Accessibility",
   description:
-    "Accessibility statement for Benny & Penny's — A Tech Company, including our WCAG 2.2 AA target, accessibility preferences, and how to report an access barrier.",
+    "Accessibility statement for Benny & Penny's — A Tech Company, including our WCAG 2.2 AA target, floating accessibility preferences, and how to report an access barrier.",
   alternates: { canonical: "/accessibility" },
   openGraph: {
     url: "/accessibility",
@@ -36,14 +36,19 @@ export default function AccessibilityPage() {
 
           <h2>Accessibility preferences</h2>
           <p>
-            Use the <strong>Accessibility preferences</strong> button in the site footer to adjust text size,
-            high contrast, motion, and font readability for this device. These optional controls work alongside
-            browser and operating-system accessibility settings.
+            Use the floating accessibility icon at the lower-left of the page to adjust text size, high contrast,
+            motion, and font readability for this device. You can minimize the icon when you do not need it; a compact
+            Accessibility tab remains available to restore it. The text-based <strong>Accessibility preferences</strong>
+            button in the site footer opens the same controls.
+          </p>
+          <p>
+            These optional preferences work alongside browser and operating-system accessibility settings and are saved
+            only on this device.
           </p>
 
           <h2>What we are working on</h2>
           <ul className="legalList">
-            <li>Keyboard-accessible navigation, forms, links, and interactive controls.</li>
+            <li>Keyboard-accessible navigation, forms, links, interactive controls, and floating preferences launcher.</li>
             <li>Visible focus indicators, readable contrast, responsive reflow, and reduced-motion support.</li>
             <li>Meaningful headings, landmarks, labels, alternative text, and status messages.</li>
             <li>Automated accessibility checks plus manual keyboard, screen-reader, contrast, and zoom testing.</li>
