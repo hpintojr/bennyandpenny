@@ -5,11 +5,11 @@ import { useState } from "react";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const projectTypes = [
-  "Software architecture / platform build",
-  "API integration & systems / BI",
-  "Brand, visual identity & web",
-  "Go-to-market & launch systems",
-  "Publishing / imprint / production",
+  "Systems Architecture & Platform Build",
+  "API, CRM & Telephony Integrations",
+  "Business Consulting & Development",
+  "Marketing, Brand Design & Web",
+  "Publishing & Production",
   "Something else",
 ];
 
@@ -95,7 +95,7 @@ export function ContactForm() {
         <div className="cform__field">
           <label htmlFor="cf-type">Project type</label>
           <select id="cf-type" name="project_type" defaultValue="">
-            <option value="" disabled>Choose one…</option>
+            <option value="" disabled>Choose one...</option>
             {projectTypes.map((t) => <option key={t} value={t}>{t}</option>)}
           </select>
         </div>
