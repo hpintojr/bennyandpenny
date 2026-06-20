@@ -66,7 +66,7 @@ function HighlightIcon({ name }: { name: string }) {
   return (
     <svg {...common} aria-hidden="true">
       <path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z" />
-      <path d="M18.5 15.5l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z" />
+      <path d="M18.5 15.5l.6 1.6 1.6.6-1.6.6 1.6-.6.6-1.6-.6-1.6-1.6-.6 1.6-.6z" />
     </svg>
   );
 }
@@ -91,8 +91,10 @@ export default function AdventuresPage() {
         <div className="shell pageHeroSplit">
           <div>
             <p className="eyebrow">Featured imprint · Ten-part series</p>
-            <div className="adventuresBrand" aria-label="Benny and Penny's Adventures — Medical Books for Brave Little Hearts">
-              <h1 className="adventuresBrand__name">Benny &amp; Penny&apos;s</h1>
+            <div className="adventuresBrand">
+              <h1 className="adventuresBrand__name">
+                Benny &amp; Penny&apos;s<span className="visuallyHidden"> Adventures</span>
+              </h1>
               <div className="adventuresBrand__adventures" aria-hidden="true">
                 <span>♥</span>
                 <span>Adventures</span>
