@@ -101,18 +101,18 @@ export default function WorkPage() {
       <section className="section">
         <div className="shell">
           <div className="workGrid workGrid--feature">
-            {ventures.map((v) => {
-              const isAcc = v.title === "American Colonial Capital";
-              const isAff = v.title === "Advantage First Financial";
+            {ventures.map((venture) => {
+              const isAcc = venture.title === "American Colonial Capital";
+              const isAff = venture.title === "Advantage First Financial";
 
               return (
-                <article className="card workCard ventureCard" key={v.title}>
+                <article className="card workCard ventureCard" key={venture.title}>
                   <div className="workCardMedia">
                     {isAcc ? (
                       <div className="accPortfolioVisual">
                         <Image
-                          src={v.image}
-                          alt={v.imageAlt}
+                          src={venture.image}
+                          alt={venture.imageAlt}
                           fill
                           sizes="(max-width: 800px) 100vw, 33vw"
                           className="accPortfolioVisual__background"
@@ -130,8 +130,8 @@ export default function WorkPage() {
                     ) : isAff ? (
                       <div className="affPortfolioVisual">
                         <Image
-                          src={v.image}
-                          alt={v.imageAlt}
+                          src={venture.image}
+                          alt={venture.imageAlt}
                           fill
                           sizes="(max-width: 800px) 100vw, 33vw"
                           className="affPortfolioVisual__background"
@@ -148,8 +148,8 @@ export default function WorkPage() {
                       </div>
                     ) : (
                       <Image
-                        src={v.image}
-                        alt={v.imageAlt}
+                        src={venture.image}
+                        alt={venture.imageAlt}
                         fill
                         sizes="(max-width: 800px) 100vw, 33vw"
                         className="workCardImage"
@@ -157,16 +157,16 @@ export default function WorkPage() {
                     )}
                   </div>
                   <div className="workCardBody">
-                    <span className="kicker">{v.label}</span>
-                    <h3>{v.title}</h3>
-                    <p>{v.description}</p>
-                    <p className="roleLine">{v.role}</p>
+                    <span className="kicker">{venture.label}</span>
+                    <h3>{venture.title}</h3>
+                    <p>{venture.description}</p>
+                    <p className="roleLine">{venture.role}</p>
                     <div className="tagList">
-                      {v.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
+                      {venture.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}
                     </div>
-                    {v.url && (
-                      <a className="cardLink" href={v.url} target="_blank" rel="noopener">
-                        Visit site →
+                    {venture.url && (
+                      <a className="cardLink" href={venture.url} target="_blank" rel="noopener noreferrer">
+                        Visit {venture.title}<span aria-hidden="true"> →</span><span className="visuallyHidden"> (opens in a new tab)</span>
                       </a>
                     )}
                   </div>
