@@ -1,0 +1,8 @@
+# Benny & Penny's — A Tech Company
+
+This is an alias for the primary LLM site guide.
+
+Read the complete curated guide at https://bennyandpenny.com/llms.txt.
+Read the complete consolidated site context at https://bennyandpenny.com/llms-full.txt.
+
+Primary contact: hello@bennyandpenny.com.
