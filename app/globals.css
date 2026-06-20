@@ -45,8 +45,8 @@ button, input, textarea, select { font: inherit; }
 .siteHeader { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid rgba(24, 52, 55, .08); background: rgba(255, 250, 242, .9); backdrop-filter: blur(16px); }
 .headerInner { display: flex; align-items: center; justify-content: space-between; min-height: 5.1rem; gap: 1rem; }
 .brandMark { display: inline-flex; align-items: center; gap: .65rem; font-weight: 700; }
-.brandLogo { height: 40px; width: auto; display: block; }
-@media (max-width: 520px) { .brandLogo { height: 34px; } }
+.brandLogo { height: 54px; width: auto; display: block; }
+@media (max-width: 520px) { .brandLogo { height: 42px; } }
 .brandMark__icon { display: grid; width: 2.4rem; height: 2.4rem; place-items: center; border-radius: 50% 50% 45% 45%; background: var(--teal); color: white; font-size: .67rem; letter-spacing: .04em; box-shadow: 0 7px 16px rgba(47, 125, 121, .22); }
 .brandMark__name { letter-spacing: -.03em; }
 .desktopNav { display: flex; align-items: center; gap: 1.15rem; font-size: .92rem; font-weight: 600; }

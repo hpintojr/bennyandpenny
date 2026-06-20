@@ -17,8 +17,8 @@ export function SiteHeader() {
             className="brandLogo"
             src="/images/logo-horizontal-transparent.png"
             alt="Benny &amp; Penny's — A Tech Company"
-            width={183}
-            height={40}
+            width={269}
+            height={54}
           />
         </Link>
 
