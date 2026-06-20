@@ -1,0 +1,47 @@
+# Benny & Penny's — A Tech Company: Full Context
+
+## Organization
+
+Benny & Penny's is the development and design studio of Hamilton Pinto Jr. The studio delivers custom software architecture, API and CRM integrations, business consulting, brand and web development, go-to-market systems, and publishing solutions. The studio is named for and proudly motivated by Hamilton's children, Benny and Penny.
+
+Website: https://bennyandpenny.com
+Contact: hello@bennyandpenny.com
+Location: Southern California
+
+## Services
+
+- Software architecture and custom platform builds
+- API, CRM, telephony, systems, and business-intelligence integrations
+- Business consulting and operational systems
+- Marketing, brand design, visual identity, and web development
+- Go-to-market and launch systems
+- Publishing and production workflows
+
+## Founder
+
+Hamilton Pinto Jr. is a software architect, creative technologist, business consultant, and publisher. He holds a BA in Visual Communications and has more than two decades of architecture and design experience. He has opened and supported more than 60 establishments across financial services, restaurants, law, medicine, and professional services throughout Southern California.
+
+## Ventures
+
+- XBeton: https://www.xbeton.com/
+- Advantage First Financial: https://www.advantagefirst.com/
+- American Colonial Capital: https://acc.capital/
+- Benny & Penny's Adventures: https://www.bennyandpennyadventures.com/
+- Mercury Call Desk: https://mercurycalldesk.com/
+
+## Site pages and Markdown mirrors
+
+- Home: https://bennyandpenny.com/ | https://bennyandpenny.com/index.md
+- Work: https://bennyandpenny.com/our-work | https://bennyandpenny.com/our-work.md
+- Adventures: https://bennyandpenny.com/families | https://bennyandpenny.com/families.md
+- About: https://bennyandpenny.com/about | https://bennyandpenny.com/about.md
+- Contact: https://bennyandpenny.com/work-with-us | https://bennyandpenny.com/work-with-us.md
+- Privacy: https://bennyandpenny.com/privacy | https://bennyandpenny.com/privacy.md
+- Terms: https://bennyandpenny.com/terms | https://bennyandpenny.com/terms.md
+
+## Discovery
+
+LLM guide: https://bennyandpenny.com/llms.txt
+LLM guide alias: https://bennyandpenny.com/llm.txt
+XML sitemap: https://bennyandpenny.com/sitemap.xml
+Robots file: https://bennyandpenny.com/robots.txt
