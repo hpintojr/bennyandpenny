@@ -45,6 +45,14 @@ const ventures = [
     url: "https://www.bennyandpennyadventures.com/",
   },
   {
+    title: "American Colonial Capital",
+    eyebrow: "Capital & Finance",
+    text: "Web, API, systems, brand, and launch infrastructure for an American Colonial Capital venture.",
+    image: "/images/work-acc-capital.svg",
+    imageAlt: "American Colonial Capital navy, red, and white private-equity brand visual",
+    url: "https://acc.capital/",
+  },
+  {
     title: "Mercury Call Desk",
     eyebrow: "Communications",
     text: "AI-powered communications platform. Pricing, quoting, telephony, and billing systems for high-volume outbound teams.",
@@ -129,29 +137,54 @@ export default function HomePage() {
             <Link className="textLink" href="/our-work">See all work</Link>
           </div>
           <div className="workGrid">
-            {ventures.map((v) => (
-              <article className="card workCard ventureCard" key={v.title}>
-                <div className="workCardMedia">
-                  <Image
-                    src={v.image}
-                    alt={v.imageAlt}
-                    fill
-                    sizes="(max-width: 800px) 100vw, 33vw"
-                    className="workCardImage"
-                  />
-                </div>
-                <div className="workCardBody">
-                  <span className="kicker">{v.eyebrow}</span>
-                  <h3>{v.title}</h3>
-                  <p>{v.text}</p>
-                  {v.url && (
-                    <a className="cardLink" href={v.url} target="_blank" rel="noopener">
-                      Visit site →
-                    </a>
-                  )}
-                </div>
-              </article>
-            ))}
+            {ventures.map((v) => {
+              const isAcc = v.title === "American Colonial Capital";
+
+              return (
+                <article className="card workCard ventureCard" key={v.title}>
+                  <div className="workCardMedia">
+                    {isAcc ? (
+                      <div className="accPortfolioVisual">
+                        <Image
+                          src={v.image}
+                          alt={v.imageAlt}
+                          fill
+                          sizes="(max-width: 800px) 100vw, 33vw"
+                          className="accPortfolioVisual__background"
+                        />
+                        <div className="accPortfolioLogo" aria-hidden="true">
+                          <Image
+                            src="/images/acc-logo.svg"
+                            alt=""
+                            fill
+                            sizes="(max-width: 800px) 35vw, 11vw"
+                            className="accPortfolioLogo__image"
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      <Image
+                        src={v.image}
+                        alt={v.imageAlt}
+                        fill
+                        sizes="(max-width: 800px) 100vw, 33vw"
+                        className="workCardImage"
+                      />
+                    )}
+                  </div>
+                  <div className="workCardBody">
+                    <span className="kicker">{v.eyebrow}</span>
+                    <h3>{v.title}</h3>
+                    <p>{v.text}</p>
+                    {v.url && (
+                      <a className="cardLink" href={v.url} target="_blank" rel="noopener">
+                        Visit site →
+                      </a>
+                    )}
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
