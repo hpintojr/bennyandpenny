@@ -1,0 +1,25 @@
+/* Targeted WCAG contrast and keyboard-navigation corrections. */
+
+#main-content:target,
+#main-content:focus-visible {
+  outline: 3px solid var(--a11y-focus);
+  outline-offset: 6px;
+}
+
+.cform input::placeholder,
+.cform textarea::placeholder {
+  color: #5b7071;
+  opacity: 1;
+}
+
+.cform__field label .cform__requiredMark {
+  color: #bb4934;
+}
+
+.bookTag--soon {
+  color: #75551f;
+}
+
+.footerBottom {
+  color: rgba(255, 255, 255, .62);
+}
