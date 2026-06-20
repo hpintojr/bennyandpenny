@@ -12,14 +12,14 @@ export function SiteHeader() {
     <header className="siteHeader">
       <div className="shell headerInner">
         <Link className="brandMark" href="/" aria-label="Benny and Penny's — A Tech Company, home">
-          <span className="brandMonogram" aria-hidden="true">
-            <span className="brandMonogram__b">B</span>
-            <span className="brandMonogram__p">P</span>
-          </span>
-          <span className="brandMark__name">
-            Benny &amp; Penny&apos;s
-            <span className="brandMark__tag">A Tech Company</span>
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="brandLogo"
+            src="/images/logo-horizontal-transparent.png"
+            alt="Benny &amp; Penny's — A Tech Company"
+            width={183}
+            height={40}
+          />
         </Link>
 
         <nav className="desktopNav" aria-label="Primary navigation">
