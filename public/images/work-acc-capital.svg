@@ -1,6 +1,6 @@
 <svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">American Colonial Capital</title>
-  <desc id="desc">A navy, red, and white private-equity brand visual with a colonial-column seal and architectural backdrop.</desc>
+  <desc id="desc">Navy and red architectural private-equity backdrop for the American Colonial Capital logo.</desc>
   <defs>
     <linearGradient id="bg" x1="68" y1="50" x2="1122" y2="648" gradientUnits="userSpaceOnUse">
       <stop stop-color="#1B2A56"/>
@@ -15,9 +15,6 @@
       <stop stop-color="#8294C1" stop-opacity="0.20"/>
       <stop offset="1" stop-color="#8294C1" stop-opacity="0"/>
     </radialGradient>
-    <filter id="shadow" x="0" y="0" width="1200" height="675" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#09132A" flood-opacity="0.32"/>
-    </filter>
     <clipPath id="clip"><rect width="1200" height="675"/></clipPath>
   </defs>
   <g clip-path="url(#clip)">
@@ -42,21 +39,6 @@
       <path d="M1057 486l3.7 9.8 10.3.3-8.1 6.3 2.8 10-8.6-6-8.6 6 2.8-10-8.1-6.3 10.3-.3 3.7-9.8Z"/>
       <path d="M1115 538l3 8 8.5.2-6.7 5.2 2.3 8.2-7.1-4.9-7.1 4.9 2.3-8.2-6.6-5.2 8.4-.2 3.1-8Z"/>
     </g>
-    <g filter="url(#shadow)">
-      <circle cx="170" cy="230" r="86" fill="#E52B34"/>
-      <circle cx="170" cy="230" r="75" stroke="#F7F8FA" stroke-width="4"/>
-      <path d="M117 207L170 174L223 207H117Z" fill="#F7F8FA"/>
-      <path d="M124 214H216V223H124V214Z" fill="#F7F8FA"/>
-      <rect x="130" y="224" width="13" height="42" rx="1" fill="#F7F8FA"/>
-      <rect x="152" y="224" width="13" height="42" rx="1" fill="#F7F8FA"/>
-      <rect x="175" y="224" width="13" height="42" rx="1" fill="#F7F8FA"/>
-      <rect x="197" y="224" width="13" height="42" rx="1" fill="#F7F8FA"/>
-      <rect x="121" y="268" width="98" height="10" rx="1" fill="#F7F8FA"/>
-      <g fill="#F7F8FA"><circle cx="137" cy="190" r="3"/><circle cx="154" cy="180" r="3"/><circle cx="186" cy="180" r="3"/><circle cx="203" cy="190" r="3"/></g>
-    </g>
-    <text x="282" y="213" fill="#F7F8FA" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="3.5">AMERICAN COLONIAL</text>
-    <text x="282" y="255" fill="#F7F8FA" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="3.5">CAPITAL</text>
-    <text x="282" y="298" fill="#C7D2EA" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="3.2">BUY-AND-BUILD PRIVATE EQUITY</text>
     <text x="80" y="458" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="50" font-weight="400">The Buy-and-Build</text>
     <text x="80" y="518" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="50" font-weight="400">Platform Company</text>
     <path d="M82 551H731" stroke="#E52B34" stroke-width="3"/>
