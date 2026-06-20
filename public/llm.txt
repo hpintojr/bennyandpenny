@@ -1,20 +1,18 @@
-# Benny & Penny's — A Tech Company
+# Benny and Penny's — A Tech Company
 
-> Benny & Penny's is the development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, brand and web development, and publishing solutions.
-
-Website: https://bennyandpenny.com
+Website: https://www.bennyandpenny.com
 Contact: hello@bennyandpenny.com
 
 ## Primary resources
 
-- Website guide: https://bennyandpenny.com/llms.txt
-- Full context: https://bennyandpenny.com/llms-full.txt
-- Home: https://bennyandpenny.com/index.md
-- Work: https://bennyandpenny.com/our-work.md
-- Adventures: https://bennyandpenny.com/families.md
-- About: https://bennyandpenny.com/about.md
-- Contact: https://bennyandpenny.com/work-with-us.md
-- Accessibility: https://bennyandpenny.com/accessibility.md
-- Privacy: https://bennyandpenny.com/privacy.md
-- Terms: https://bennyandpenny.com/terms.md
-- XML sitemap: https://bennyandpenny.com/sitemap.xml
+- Website guide: https://www.bennyandpenny.com/llms.txt
+- Full context: https://www.bennyandpenny.com/llms-full.txt
+- Home: https://www.bennyandpenny.com/index.md
+- Work: https://www.bennyandpenny.com/our-work.md
+- Adventures: https://www.bennyandpenny.com/families.md
+- About: https://www.bennyandpenny.com/about.md
+- Contact: https://www.bennyandpenny.com/work-with-us.md
+- Accessibility: https://www.bennyandpenny.com/accessibility.md
+- Privacy: https://www.bennyandpenny.com/privacy.md
+- Terms: https://www.bennyandpenny.com/terms.md
+- XML sitemap: https://www.bennyandpenny.com/sitemap.xml
