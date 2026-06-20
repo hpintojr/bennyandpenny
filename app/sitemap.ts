@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://bennyandpenny.com";
+const siteUrl = "https://www.bennyandpenny.com";
 const lastModified = new Date("2026-06-20T00:00:00.000Z");
 
 const pages: Array<{
