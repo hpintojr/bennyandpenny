@@ -12,7 +12,10 @@ export function SiteHeader() {
     <header className="siteHeader">
       <div className="shell headerInner">
         <Link className="brandMark" href="/" aria-label="Benny and Penny's — A Tech Company, home">
-          <span className="brandMark__icon" aria-hidden="true">B + P</span>
+          <span className="brandMonogram" aria-hidden="true">
+            <span className="brandMonogram__b">B</span>
+            <span className="brandMonogram__p">P</span>
+          </span>
           <span className="brandMark__name">
             Benny &amp; Penny&apos;s
             <span className="brandMark__tag">A Tech Company</span>
