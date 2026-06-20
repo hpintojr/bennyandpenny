@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   description:
     "Terms of Service for Benny & Penny's — A Tech Company: contract execution and scope, payment terms and refunds, and binding arbitration.",
   alternates: { canonical: "/terms" },
+  openGraph: {
+    url: "/terms",
+    title: "Terms of Service | Benny & Penny's",
+    description: "Terms governing custom technical development, consulting, and publishing services.",
+  },
 };
 
 export default function TermsPage() {
