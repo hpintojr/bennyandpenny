@@ -2,7 +2,7 @@
 
 > The development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, brand and web development, and publishing solutions. Proudly motivated by Benny and Penny.
 
-Canonical page: https://bennyandpenny.com/
+Canonical page: https://www.bennyandpenny.com/
 
 ## Vision, translated into real-world solutions
 
@@ -53,5 +53,5 @@ Brand and launch work for restaurants, law firms, medical practices, and profess
 
 Hamilton takes on a small number of aligned software, brand, and publishing engagements.
 
-https://bennyandpenny.com/work-with-us
+https://www.bennyandpenny.com/work-with-us
 hello@bennyandpenny.com
