@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 import "./accessibility.css";
 import "./accessibility-fixes.css";
+import "./accessibility-dock.css";
 import "./portfolio-images.css";
 import "./logo-monogram.css";
 import "./aff-logo.css";
