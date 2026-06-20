@@ -9,7 +9,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SkipLink } from "@/components/SkipLink";
 
-const siteUrl = "https://bennyandpenny.com";
+const siteUrl = "https://www.bennyandpenny.com";
 const socialTitle = "Benny & Penny's | A Tech Company";
 const description =
   "The development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, and publishing solutions. Proudly motivated by my children, Benny and Penny.";
