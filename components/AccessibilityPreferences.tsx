@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, type ReactNode, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import { AccessibilityPreferencesStyles } from "@/components/AccessibilityPreferencesStyles";
 
 type TextScale = 0 | 1 | 2;
 type Preferences = { textScale: TextScale; highContrast: boolean; pauseMotion: boolean; readableFont: boolean };
@@ -74,6 +75,7 @@ export function AccessibilityPreferencesProvider({ children }: { children: React
 
   return (
     <Context.Provider value={context}>
+      <AccessibilityPreferencesStyles />
       {children}
       <dialog ref={dialogRef} className="a11yPreferences" aria-labelledby="a11y-preferences-title" aria-describedby="a11y-preferences-description" onCancel={(event) => { event.preventDefault(); closePreferences(); }}>
         <div className="a11yPreferences__header">
