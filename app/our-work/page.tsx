@@ -109,9 +109,9 @@ export default function WorkPage() {
                       aria-hidden="true"
                       style={{
                         position: "absolute",
-                        top: "8%",
+                        top: "10%",
                         left: "8%",
-                        width: "45%",
+                        width: "36%",
                         aspectRatio: "175.38 / 104.41",
                         zIndex: 2,
                       }}
@@ -120,7 +120,7 @@ export default function WorkPage() {
                         src="/images/acc-logo.svg"
                         alt=""
                         fill
-                        sizes="(max-width: 800px) 46vw, 15vw"
+                        sizes="(max-width: 800px) 38vw, 12vw"
                         style={{ objectFit: "contain" }}
                       />
                     </div>
