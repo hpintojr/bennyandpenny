@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -42,15 +43,10 @@ export default function ContactPage() {
           <div className="contactPanel">
             <p className="eyebrow">Start here</p>
             <h2 className="h2">Tell me about the project.</h2>
-            <p className="lede">
-              Send a brief note with your name, company, the problem you&apos;re solving, timeline, and the
-              best way to reach you.
-            </p>
-            <a className="button" href="mailto:hello@bennyandpenny.com?subject=Project%20Inquiry%20—%20Benny%20%26%20Penny%27s">
-              Email me
-            </a>
-            <p className="note">
-              A contact form can route to a CRM later; for now, direct email keeps every inquiry personal and reliable.
+            <ContactForm />
+            <p className="note" style={{ marginTop: "1rem" }}>
+              Prefer email? Reach me directly at{" "}
+              <a className="textLink" href="mailto:hello@bennyandpenny.com">hello@bennyandpenny.com</a>.
             </p>
           </div>
         </div>
