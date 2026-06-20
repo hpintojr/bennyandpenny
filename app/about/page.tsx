@@ -51,8 +51,8 @@ export default function AboutPage() {
               style={{
                 position: "relative",
                 width: "min(100%, 18.5rem)",
-                height: "4.5rem",
-                margin: "0 0 1rem",
+                height: "5.2rem",
+                margin: "0 0 .85rem",
                 overflow: "hidden",
               }}
             >
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 alt="Hamilton Pinto Jr. signature"
                 fill
                 sizes="(max-width: 800px) 18.5rem, 18.5rem"
-                style={{ objectFit: "cover", objectPosition: "center" }}
+                style={{ objectFit: "cover", objectPosition: "center 56%" }}
               />
             </div>
             <h2 className="h2">A disciplined problem solver with a designer&apos;s eye.</h2>
