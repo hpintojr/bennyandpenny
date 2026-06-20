@@ -80,6 +80,17 @@ const ventures = [
 export default function WorkPage() {
   return (
     <>
+      <style>{`
+        .accPortfolioLogo {
+          transition: transform .35s ease;
+          transform-origin: top left;
+        }
+
+        .workCard:hover .accPortfolioLogo {
+          transform: scale(1.025);
+        }
+      `}</style>
+
       <section className="pageHero">
         <div className="shell">
           <p className="eyebrow">Work</p>
@@ -106,12 +117,13 @@ export default function WorkPage() {
                   />
                   {v.title === "American Colonial Capital" && (
                     <div
+                      className="accPortfolioLogo"
                       aria-hidden="true"
                       style={{
                         position: "absolute",
                         top: "10%",
                         left: "8%",
-                        width: "36%",
+                        width: "33%",
                         aspectRatio: "175.38 / 104.41",
                         zIndex: 2,
                       }}
@@ -120,7 +132,7 @@ export default function WorkPage() {
                         src="/images/acc-logo.svg"
                         alt=""
                         fill
-                        sizes="(max-width: 800px) 38vw, 12vw"
+                        sizes="(max-width: 800px) 35vw, 11vw"
                         style={{ objectFit: "contain" }}
                       />
                     </div>
