@@ -53,7 +53,14 @@ export default function AboutPage() {
               width={230}
               height={153}
               sizes="230px"
-              className="aboutSignature"
+              style={{
+                display: "block",
+                width: "min(100%, 11.75rem)",
+                height: "auto",
+                margin: "0 0 .7rem",
+                objectFit: "contain",
+                objectPosition: "left center",
+              }}
             />
             <h2 className="h2">A disciplined problem solver with a designer&apos;s eye.</h2>
             <p className="lede">
