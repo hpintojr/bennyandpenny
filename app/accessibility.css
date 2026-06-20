@@ -125,6 +125,29 @@ html {
   color: var(--a11y-error);
 }
 
+@media (prefers-contrast: more) {
+  :root {
+    --muted: #405658;
+    --line: rgba(24, 52, 55, .34);
+  }
+
+  .card,
+  .contactPanel,
+  .imprintHeroVisual,
+  .heroImageFrame {
+    border-width: 2px;
+  }
+
+  .button--light {
+    border-width: 2px;
+  }
+
+  .footerLink,
+  .textLink {
+    text-decoration-thickness: 2px;
+  }
+}
+
 @media (forced-colors: active) {
   :focus-visible {
     outline: 3px solid Highlight;
