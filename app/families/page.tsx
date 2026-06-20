@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Adventures",
   description:
     "Benny & Penny's Adventures — Medical Books for Brave Little Hearts. A ten-part children's medical book series and the self-owned publishing imprint behind Benny & Penny's, A Tech Company.",
+  alternates: { canonical: "/families" },
+  openGraph: {
+    url: "/families",
+    title: "Benny & Penny's Adventures — Medical Books for Brave Little Hearts",
+    description:
+      "A ten-part children’s medical book series that helps families approach real medical experiences with comfort and confidence.",
+  },
 };
 
 const highlights = [
