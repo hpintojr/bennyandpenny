@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "a11y:smoke": "node scripts/accessibility-smoke.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
