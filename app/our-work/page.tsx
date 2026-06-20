@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -15,6 +16,8 @@ const ventures = [
       "Commerce and agent-onboarding platform for an AAC and nano-graphene building-systems company. Platform architecture, API integration, and go-to-market systems.",
     role: "Platform architecture · Integrations",
     tags: ["Architecture", "APIs", "Commerce", "Go-to-market"],
+    image: "/images/work-xbeton-architecture.webp",
+    imageAlt: "XBeton AAC building blocks on a modern construction site",
     url: "https://www.xbeton.com/",
   },
   {
@@ -24,6 +27,8 @@ const ventures = [
       "Lead-capture, compliance, and sales-performance infrastructure for a debt-resolution firm, built and supported end to end.",
     role: "Systems · Compliance · BI",
     tags: ["Systems", "Compliance", "Business intelligence"],
+    image: "/images/work-aff-dashboard.webp",
+    imageAlt: "Financial services dashboard with performance and compliance analytics",
     url: "https://www.advantagefirst.com/",
   },
   {
@@ -33,6 +38,8 @@ const ventures = [
       "An original children's medical book series and the launch of a self-owned publishing imprint. Brand, web, and production pipeline.",
     role: "Founder · Publisher · Design",
     tags: ["Brand", "Web", "Publishing"],
+    image: "/images/work-adventures-mockup.webp",
+    imageAlt: "Benny and Penny's Adventures children's book collection",
     url: "https://www.bennyandpennyadventures.com/",
   },
   {
@@ -42,6 +49,8 @@ const ventures = [
       "AI-powered communications platform. Pricing, quoting, telephony, and billing systems for high-volume outbound teams.",
     role: "Product · Architecture",
     tags: ["Product", "Telephony", "Billing"],
+    image: "/images/work-mercury-telephony.webp",
+    imageAlt: "Mercury Call Desk AI-powered telephony network visual",
     url: "https://mercurycalldesk.com/",
   },
   {
@@ -51,6 +60,8 @@ const ventures = [
       "Restaurants, law firms, medical practices, and professional-service organizations opened and supported across Southern California.",
     role: "Visual communications · Web",
     tags: ["Branding", "Web", "Launch"],
+    image: "/images/work-establishments-collage.webp",
+    imageAlt: "Restaurant, law office, and medical-practice environments",
     url: null,
   },
 ];
@@ -71,20 +82,32 @@ export default function WorkPage() {
 
       <section className="section">
         <div className="shell">
-          <div className="workGrid">
+          <div className="workGrid workGrid--feature">
             {ventures.map((v) => (
               <article className="card workCard ventureCard" key={v.title}>
-                <span className="kicker">{v.label}</span>
-                <h3>{v.title}</h3>
-                <p>{v.description}</p>
-                <div className="tagList">
-                  {v.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
+                <div className="workCardMedia">
+                  <Image
+                    src={v.image}
+                    alt={v.imageAlt}
+                    fill
+                    sizes="(max-width: 800px) 100vw, 33vw"
+                    className="workCardImage"
+                  />
                 </div>
-                {v.url && (
-                  <a className="cardLink" href={v.url} target="_blank" rel="noopener">
-                    Visit site →
-                  </a>
-                )}
+                <div className="workCardBody">
+                  <span className="kicker">{v.label}</span>
+                  <h3>{v.title}</h3>
+                  <p>{v.description}</p>
+                  <p className="roleLine">{v.role}</p>
+                  <div className="tagList">
+                    {v.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
+                  </div>
+                  {v.url && (
+                    <a className="cardLink" href={v.url} target="_blank" rel="noopener">
+                      Visit site →
+                    </a>
+                  )}
+                </div>
               </article>
             ))}
           </div>

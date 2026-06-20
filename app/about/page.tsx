@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -29,11 +30,14 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="shell featureSplit">
-          <div className="featureArtwork" aria-hidden="true">
-            <div className="characterPair" style={{ justifyContent: "center", marginTop: "6rem" }}>
-              <div className="character character--penny">P</div>
-              <div className="character character--benny">B</div>
-            </div>
+          <div className="featureArtwork featureArtwork--portrait">
+            <Image
+              src="/images/about-portrait-context.webp"
+              alt="Hamilton Pinto Jr. in a modern office"
+              fill
+              sizes="(max-width: 800px) 100vw, 45vw"
+              className="featureArtworkImage"
+            />
           </div>
           <div>
             <p className="eyebrow">Hamilton Pinto Jr.</p>

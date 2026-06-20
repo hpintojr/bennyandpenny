@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -25,19 +26,30 @@ const highlights = [
 export default function AdventuresPage() {
   return (
     <>
-      <section className="pageHero">
-        <div className="shell">
-          <p className="eyebrow">Featured imprint</p>
-          <h1 className="display">Benny &amp; Penny&apos;s Adventures.</h1>
-          <p className="lede">
-            The publishing imprint at the heart of the studio: an original children&apos;s medical book
-            series, with its own brand, storefront, and production pipeline.
-          </p>
-          <div className="buttonRow">
-            <a className="button" href="https://www.bennyandpennyadventures.com/" target="_blank" rel="noopener">
-              Visit the storefront →
-            </a>
-            <Link className="button button--light" href="/our-work">Back to all work</Link>
+      <section className="pageHero pageHero--split">
+        <div className="shell pageHeroSplit">
+          <div>
+            <p className="eyebrow">Featured imprint</p>
+            <h1 className="display">Benny &amp; Penny&apos;s Adventures.</h1>
+            <p className="lede">
+              The publishing imprint at the heart of the studio: an original children&apos;s medical book
+              series, with its own brand, storefront, and production pipeline.
+            </p>
+            <div className="buttonRow">
+              <a className="button" href="https://www.bennyandpennyadventures.com/" target="_blank" rel="noopener">
+                Visit the storefront →
+              </a>
+              <Link className="button button--light" href="/our-work">Back to all work</Link>
+            </div>
+          </div>
+          <div className="imprintHeroVisual">
+            <Image
+              src="/images/work-adventures-mockup.webp"
+              alt="Benny and Penny's Adventures children's book collection"
+              fill
+              sizes="(max-width: 800px) 100vw, 42vw"
+              className="imprintHeroImage"
+            />
           </div>
         </div>
       </section>
