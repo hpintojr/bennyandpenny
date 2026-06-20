@@ -1,0 +1,29 @@
+/* The AFF mark is a transparent PNG; keep it directly on the dashboard artwork. */
+.affPortfolioLogo {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  width: min(40%, 12rem);
+}
+
+.affPortfolioLogo__image {
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, .46));
+}
+
+@media (max-width: 800px) {
+  .affPortfolioLogo {
+    width: min(43%, 14rem);
+  }
+}
+
+@media (max-width: 520px) {
+  .affPortfolioLogo {
+    top: 8%;
+    left: 5%;
+    width: min(50%, 14rem);
+    padding: 0;
+  }
+}
