@@ -2,16 +2,35 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+const siteDescription =
+  "The development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, and publishing solutions. Proudly motivated by my children, Benny and Penny.";
+const ogDescription =
+  "Building the next generation of digital tools, web applications, and technology platforms.";
+const socialImage = {
+  url: "/images/og-social-background.webp?rev=20260620",
+  width: 1200,
+  height: 630,
+  alt: "Benny & Penny's | A Tech Company",
+};
+
 export const metadata: Metadata = {
-  title: "Benny & Penny's — A Tech Company",
-  description:
-    "Benny & Penny's is the development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, brand and web development, and publishing solutions.",
+  title: { absolute: "Benny & Penny's | A Tech Company" },
+  description: siteDescription,
   alternates: { canonical: "/" },
   openGraph: {
+    type: "website",
+    locale: "en_US",
     url: "/",
-    title: "Benny & Penny's — A Tech Company",
-    description:
-      "Custom API integrations, business consulting, design, web, and publishing solutions by Hamilton Pinto Jr.",
+    siteName: "Benny & Penny's | A Tech Company",
+    title: "Benny & Penny's | A Tech Company",
+    description: ogDescription,
+    images: [socialImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Benny & Penny's | A Tech Company",
+    description: siteDescription,
+    images: [socialImage.url],
   },
 };
 
