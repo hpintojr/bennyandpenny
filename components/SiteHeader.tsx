@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 const navigation = [
   { href: "/", label: "Home" },
@@ -12,7 +13,29 @@ const navigation = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
   const close = () => setOpen(false);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const frame = window.requestAnimationFrame(() => firstMobileLinkRef.current?.focus());
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setOpen(false);
+        window.requestAnimationFrame(() => toggleRef.current?.focus());
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
 
   return (
     <header className="siteHeader">
@@ -37,13 +60,11 @@ export function SiteHeader() {
         .menuIcon span:nth-child(2) { top: 6.3px; transition-delay: 0s; }
         .menuIcon span:nth-child(3) { top: 12.6px; transform-origin: center; transition-delay: .1s; }
 
-        /* hover (closed) = plump "hot dog" */
         .menuToggle:hover .menuIcon span { height: 4.4px; }
         .menuToggle:hover .menuIcon span:nth-child(1) { top: -0.3px; }
         .menuToggle:hover .menuIcon span:nth-child(3) { top: 12.9px; }
         .menuToggle:hover .menuIcon span:nth-child(2) { width: 82%; left: 9%; }
 
-        /* open = staggered cascade that resolves into an X */
         .menuToggle[data-open="true"] .menuIcon span:nth-child(1) { top: 6.3px; transform: rotate(45deg); transition-delay: .05s; }
         .menuToggle[data-open="true"] .menuIcon span:nth-child(2) { transform: translateX(16px); opacity: 0; transition-delay: 0s; }
         .menuToggle[data-open="true"] .menuIcon span:nth-child(3) { top: 6.3px; transform: rotate(-45deg); transition-delay: .13s; }
@@ -58,7 +79,6 @@ export function SiteHeader() {
         .mobilePanelNav { display: flex; flex-direction: column; padding: .3rem clamp(20px,5vw,56px) 1.4rem; }
         .mobilePanelNav a { padding: .85rem 0; font-size: 1.08rem; font-weight: 600; color: var(--ink);
           border-bottom: 1px solid rgba(24,52,55,.08); transition: color .2s ease; }
-        .mobilePanelNav a:last-child { border-bottom: 0; }
         .mobilePanelNav a:hover { color: var(--teal-deep); }
         .mobilePanelNav .mobileContact {
           display: inline-flex;
@@ -97,19 +117,24 @@ export function SiteHeader() {
 
         <nav className="desktopNav" aria-label="Primary navigation">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href}>{item.label}</Link>
+            <Link key={item.href} href={item.href} aria-current={pathname === item.href ? "page" : undefined}>
+              {item.label}
+            </Link>
           ))}
-          <Link className="button button--small" href="/work-with-us">Contact</Link>
+          <Link className="button button--small" href="/work-with-us" aria-current={pathname === "/work-with-us" ? "page" : undefined}>
+            Contact
+          </Link>
         </nav>
 
         <button
+          ref={toggleRef}
           type="button"
           className="menuToggle"
           data-open={open}
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={open}
           aria-controls="mobile-menu"
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => setOpen((value) => !value)}
         >
           <span className="menuIcon" aria-hidden="true">
             <span />
@@ -119,12 +144,25 @@ export function SiteHeader() {
         </button>
       </div>
 
-      <div id="mobile-menu" className={`mobilePanel${open ? " is-open" : ""}`}>
+      <div id="mobile-menu" className={`mobilePanel${open ? " is-open" : ""}`} hidden={!open}>
         <nav className="mobilePanelNav" aria-label="Mobile navigation">
-          {navigation.map((item) => (
-            <Link key={item.href} href={item.href} onClick={close}>{item.label}</Link>
+          {navigation.map((item, index) => (
+            <Link
+              key={item.href}
+              ref={index === 0 ? firstMobileLinkRef : undefined}
+              href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
+              onClick={close}
+            >
+              {item.label}
+            </Link>
           ))}
-          <Link className="button button--small mobileContact" href="/work-with-us" onClick={close}>
+          <Link
+            className="button button--small mobileContact"
+            href="/work-with-us"
+            aria-current={pathname === "/work-with-us" ? "page" : undefined}
+            onClick={close}
+          >
             Contact
           </Link>
         </nav>
