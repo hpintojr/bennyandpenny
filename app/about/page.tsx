@@ -47,21 +47,23 @@ export default function AboutPage() {
             />
           </div>
           <div>
-            <Image
-              src="/images/Sig.png"
-              alt="Hamilton Pinto Jr. signature"
-              width={230}
-              height={153}
-              sizes="230px"
+            <div
               style={{
-                display: "block",
-                width: "min(100%, 11.75rem)",
-                height: "auto",
-                margin: "0 0 .7rem",
-                objectFit: "contain",
-                objectPosition: "left center",
+                position: "relative",
+                width: "min(100%, 18.5rem)",
+                height: "4.5rem",
+                margin: "0 0 1rem",
+                overflow: "hidden",
               }}
-            />
+            >
+              <Image
+                src="/images/Sig.png"
+                alt="Hamilton Pinto Jr. signature"
+                fill
+                sizes="(max-width: 800px) 18.5rem, 18.5rem"
+                style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+            </div>
             <h2 className="h2">A disciplined problem solver with a designer&apos;s eye.</h2>
             <p className="lede">
               My traditional training began at Westwood College of Technology, where I studied Graphic
