@@ -105,13 +105,23 @@ export default function WorkPage() {
                     className="workCardImage"
                   />
                   {v.title === "American Colonial Capital" && (
-                    <div className="accPortfolioLogo" aria-hidden="true">
+                    <div
+                      aria-hidden="true"
+                      style={{
+                        position: "absolute",
+                        top: "8%",
+                        left: "8%",
+                        width: "45%",
+                        aspectRatio: "175.38 / 104.41",
+                        zIndex: 2,
+                      }}
+                    >
                       <Image
                         src="/images/acc-logo.svg"
                         alt=""
                         fill
                         sizes="(max-width: 800px) 46vw, 15vw"
-                        className="accPortfolioLogo__image"
+                        style={{ objectFit: "contain" }}
                       />
                     </div>
                   )}
