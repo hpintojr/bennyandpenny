@@ -22,9 +22,20 @@ export function SiteFooter() {
     <footer className="siteFooter">
       <div className="shell footerGrid">
         <div className="footerBrand">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="footerMark" src="/images/logo-mark-transparent.png" alt="Benny & Penny's monogram" width={48} height={48} />
-          <p className="footerBrandName">Benny &amp; Penny&apos;s <span>— A Tech Company</span></p>
+          <div className="footerBrandLockup">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="footerMark"
+              src="/images/logo-mark-transparent.png"
+              alt="Benny & Penny's monogram"
+              width={64}
+              height={64}
+            />
+            <div className="footerBrandWordmark">
+              <p className="footerBrandName">Benny &amp; Penny&apos;s</p>
+              <p className="footerBrandTag">A Tech Company</p>
+            </div>
+          </div>
           <p className="footerMission">
             The technology and creative studio of Hamilton Pinto Jr. — software architecture,
             creative technology, and publishing for brands, platforms, and ventures.
