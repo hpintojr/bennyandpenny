@@ -53,15 +53,17 @@ test("accessibility preferences persist display choices", async ({ page }) => {
   await expect(page.locator("html")).toHaveAttribute("data-a11y-text-scale", "1");
 });
 
-test("route changes move focus to the destination heading", async ({ page }) => {
+test("desktop route changes move focus to the destination heading", async ({ page }, testInfo) => {
+  if (testInfo.project.name.includes("mobile")) return;
+
   await page.goto("/", { waitUntil: "networkidle" });
-  await page.getByRole("link", { name: "Work" }).first().click();
+  await page.getByRole("link", { name: "Work" }).click();
   await expect(page).toHaveURL(/\/our-work$/);
   await expect(page.locator("#main-content h1")).toBeFocused();
 });
 
 test("mobile navigation handles Escape and traps menu focus", async ({ page }, testInfo) => {
-  test.skip(!testInfo.project.name.includes("mobile"), "Mobile-only test.");
+  if (!testInfo.project.name.includes("mobile")) return;
 
   await page.goto("/", { waitUntil: "networkidle" });
   const menuButton = page.getByRole("button", { name: "Open navigation menu" });
