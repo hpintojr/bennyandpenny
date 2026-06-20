@@ -1,0 +1,32 @@
+name: Accessibility Smoke Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      site_url:
+        description: Production or preview URL to test
+        required: true
+        default: https://www.bennyandpenny.com
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  smoke-test:
+    name: Server-rendered accessibility checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SITE_URL: ${{ inputs.site_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run accessibility smoke test
+        run: node scripts/accessibility-smoke.mjs
