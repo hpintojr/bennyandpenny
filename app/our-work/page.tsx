@@ -104,6 +104,17 @@ export default function WorkPage() {
                     sizes="(max-width: 800px) 100vw, 33vw"
                     className="workCardImage"
                   />
+                  {v.title === "American Colonial Capital" && (
+                    <div className="accPortfolioLogo" aria-hidden="true">
+                      <Image
+                        src="/images/acc-logo.svg"
+                        alt=""
+                        fill
+                        sizes="(max-width: 800px) 46vw, 15vw"
+                        className="accPortfolioLogo__image"
+                      />
+                    </div>
+                  )}
                 </div>
                 <div className="workCardBody">
                   <span className="kicker">{v.label}</span>
