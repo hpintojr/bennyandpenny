@@ -7,22 +7,27 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
 const siteUrl = "https://bennyandpenny.com";
+const socialTitle = "Benny & Penny's | A Tech Company";
 const description =
   "The development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, and publishing solutions. Proudly motivated by my children, Benny and Penny.";
+const socialDescription =
+  "Building the next generation of digital tools, web applications, and technology platforms.";
+const socialImageUrl = `${siteUrl}/images/og-social-background.webp?rev=20260620`;
 const socialImage = {
-  url: "/images/og-social-background.webp?rev=20260620",
+  url: socialImageUrl,
   width: 1200,
   height: 630,
-  alt: "Benny & Penny's | A Tech Company",
+  alt: socialTitle,
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Benny & Penny's | A Tech Company",
+    default: socialTitle,
     template: "%s | Benny & Penny's",
   },
   description,
+  applicationName: socialTitle,
   keywords: [
     "Hamilton Pinto",
     "Hamilton Pinto Jr",
@@ -45,16 +50,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    siteName: "Benny & Penny's | A Tech Company",
-    title: "Benny & Penny's | A Tech Company",
-    description: "Building the next generation of digital tools, web applications, and technology platforms.",
+    siteName: socialTitle,
+    title: socialTitle,
+    description: socialDescription,
     images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Benny & Penny's | A Tech Company",
-    description,
-    images: [socialImage.url],
+    title: socialTitle,
+    description: socialDescription,
+    images: [socialImageUrl],
   },
   robots: {
     index: true,
@@ -79,7 +84,7 @@ const personSchema = {
   description,
   worksFor: {
     "@type": "Organization",
-    name: "Benny & Penny's | A Tech Company",
+    name: socialTitle,
     url: siteUrl,
   },
   knowsAbout: [
@@ -102,6 +107,23 @@ const personSchema = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:site_name" content={socialTitle} />
+        <meta property="og:title" content={socialTitle} />
+        <meta property="og:description" content={socialDescription} />
+        <meta property="og:image" content={socialImageUrl} />
+        <meta property="og:image:url" content={socialImageUrl} />
+        <meta property="og:image:secure_url" content={socialImageUrl} />
+        <meta property="og:image:type" content="image/webp" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={socialTitle} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={socialTitle} />
+        <meta name="twitter:description" content={socialDescription} />
+        <meta name="twitter:image" content={socialImageUrl} />
+        <meta name="twitter:image:alt" content={socialTitle} />
+      </head>
       <body>
         <SiteHeader />
         <main>{children}</main>
