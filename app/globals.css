@@ -124,14 +124,33 @@ button, input, textarea, select { font: inherit; }
 .contactPanel--dark .contactList li { border-top-color: rgba(255,255,255,.16); color: rgba(255,255,255,.85); }
 .contactEmail { display: inline-block; margin-top: 1.2rem; color: inherit; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
 
-.siteFooter { padding: 4rem 0 1.35rem; background: #153b3b; color: white; }
-.footerGrid { display: grid; grid-template-columns: 1.2fr .6fr 1fr; gap: 2rem; }
-.siteFooter .eyebrow { color: #a6e1d5; }
-.footerMission { max-width: 30rem; margin: 0; color: rgba(255,255,255,.78); }
-.footerLinks { display: grid; align-content: start; gap: .6rem; color: rgba(255,255,255,.86); font-weight: 600; }
-.footerContact { color: rgba(255,255,255,.76); font-size: .9rem; }
-.footerContact a { color: white; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
-.footerBottom { display: flex; justify-content: space-between; gap: 1rem; margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,.14); color: rgba(255,255,255,.55); font-size: .78rem; }
+.siteFooter { padding: 4.5rem 0 1.5rem; background: #153b3b; color: white; }
+.footerGrid { display: grid; grid-template-columns: 1.6fr .8fr 1.1fr .9fr; gap: 2.5rem; }
+.footerBrand { max-width: 30rem; }
+.footerMark { height: 48px; width: auto; display: block; margin-bottom: .9rem; }
+.footerBrandName { margin: 0 0 .7rem; font-family: "Playfair Display", Georgia, serif; font-size: 1.25rem; letter-spacing: -.01em; }
+.footerBrandName span { font-family: "DM Sans", Arial, sans-serif; font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #a6e1d5; display: block; margin-top: .15rem; }
+.footerMission { margin: 0; color: rgba(255,255,255,.72); font-size: .95rem; }
+.footerCol { display: grid; align-content: start; gap: .7rem; }
+.footerColLabel { margin: 0 0 .25rem; color: #a6e1d5; font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.footerLocation { margin: .2rem 0 0; color: rgba(255,255,255,.6); font-size: .9rem; }
+
+/* link with animated underline wipe + color shift */
+.footerLink { position: relative; width: fit-content; color: rgba(255,255,255,.82); font-weight: 600; font-size: .96rem; text-decoration: none; transition: color .25s ease; }
+.footerLink::after {
+  content: ""; position: absolute; left: 0; bottom: -3px; height: 1.5px; width: 100%;
+  background: #a6e1d5; transform: scaleX(0); transform-origin: right;
+  transition: transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.footerLink:hover { color: #fff; }
+.footerLink:hover::after { transform: scaleX(1); transform-origin: left; }
+.footerLink--email { font-weight: 700; }
+@media (prefers-reduced-motion: reduce) { .footerLink::after { transition: none; } }
+
+.footerBottom { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 3.5rem; padding-top: 1.4rem; border-top: 1px solid rgba(255,255,255,.14); color: rgba(255,255,255,.5); font-size: .78rem; }
+.footerLegal { display: inline-flex; align-items: center; gap: .6rem; }
+.footerLegal .footerLink { font-size: .78rem; font-weight: 600; color: rgba(255,255,255,.6); }
+.footerDot { color: rgba(255,255,255,.35); }
 
 @media (max-width: 800px) {
   .section { padding: 4.5rem 0; }
@@ -144,6 +163,11 @@ button, input, textarea, select { font: inherit; }
   .resourceGrid { grid-template-columns: 1fr; }
   .sectionHead { display: block; }
   .sectionHead .lede { margin-top: 1rem; }
+  .footerGrid { grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
+  .footerBrand { grid-column: 1 / -1; }
+  .footerBottom { justify-content: flex-start; }
+}
+@media (max-width: 520px) {
   .footerGrid { grid-template-columns: 1fr; }
 }
 
@@ -224,3 +248,15 @@ button, input, textarea, select { font: inherit; }
 .bookTag--prod { background: var(--mint); color: var(--teal-deep); }
 .bookTag--soon { background: #f3ece0; color: #8a6d3b; }
 @media (max-width: 680px) { .bookGrid { grid-template-columns: 1fr; } }
+
+/* Legal pages (Privacy / Terms) */
+.legal { max-width: 52rem; }
+.legalMeta { margin: .6rem 0 0; color: var(--muted); font-size: .9rem; }
+.legalLead { margin: 0 0 1.5rem; font-size: 1.08rem; color: var(--ink); line-height: 1.7; }
+.legal h2 { margin: 2.6rem 0 .5rem; font-family: "Playfair Display", Georgia, serif; font-size: clamp(1.4rem, 2.4vw, 1.8rem); letter-spacing: -.02em; }
+.legal h3 { margin: 1.5rem 0 .35rem; font-size: 1.05rem; color: var(--teal-deep); }
+.legal p { margin: 0 0 .9rem; color: var(--muted); line-height: 1.75; }
+.legal .legalList { margin: 0 0 1rem; padding-left: 1.25rem; display: grid; gap: .6rem; }
+.legal .legalList li { color: var(--muted); line-height: 1.7; }
+.legal .legalList li strong { color: var(--ink); }
+.legal h2:first-of-type { margin-top: 1rem; }
