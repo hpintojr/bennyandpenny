@@ -1,5 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Benny & Penny's — A Tech Company",
+  description:
+    "Benny & Penny's is the development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, brand and web development, and publishing solutions.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    url: "/",
+    title: "Benny & Penny's — A Tech Company",
+    description:
+      "Custom API integrations, business consulting, design, web, and publishing solutions by Hamilton Pinto Jr.",
+  },
+};
 
 const capabilities = [
   {
