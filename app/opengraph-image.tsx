@@ -5,36 +5,153 @@ export const alt = "Benny & Penny's — A Tech Company | Hamilton Pinto Jr.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+const siteUrl = "https://bennyandpenny.com";
+
 export default function OpenGraphImage() {
   return new ImageResponse(
     (
       <div
         style={{
-          height: "100%",
           width: "100%",
+          height: "100%",
           display: "flex",
-          position: "relative",
+          flexDirection: "column",
           overflow: "hidden",
-          background: "linear-gradient(125deg, #fffaf2 0%, #e8f7ef 55%, #f8dfe2 100%)",
-          color: "#183437",
-          padding: "74px",
-          fontFamily: "sans-serif",
+          background: "linear-gradient(120deg, #fffdf7 0%, #edf8f2 55%, #f9eeee 100%)",
+          color: "#103f3f",
+          fontFamily: "Arial, sans-serif",
         }}
       >
-        <div style={{ display: "flex", flexDirection: "column", width: "760px", zIndex: 1 }}>
-          <div style={{ display: "flex", color: "#175b59", fontSize: 24, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase" }}>
-            Software Architect · Creative Technologist · Publisher
+        <div
+          style={{
+            flex: 1,
+            display: "flex",
+            position: "relative",
+            padding: "52px 70px 20px",
+          }}
+        >
+          <div
+            style={{
+              width: "57%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                color: "#1b6662",
+                fontSize: 18,
+                fontWeight: 700,
+                letterSpacing: "0.16em",
+                marginBottom: 24,
+              }}
+            >
+              SOFTWARE ARCHITECT&nbsp;&nbsp;•&nbsp;&nbsp;CREATIVE TECHNOLOGIST&nbsp;&nbsp;•&nbsp;&nbsp;PUBLISHER
+            </div>
+
+            <img
+              src={`${siteUrl}/images/logo-horizontal-transparent.png`}
+              width="480"
+              height="142"
+              style={{
+                objectFit: "contain",
+                objectPosition: "left center",
+                marginLeft: -10,
+                marginBottom: 10,
+              }}
+            />
+
+            <div
+              style={{
+                display: "flex",
+                fontSize: 44,
+                fontWeight: 750,
+                letterSpacing: "-0.035em",
+                lineHeight: 1.05,
+                marginTop: 5,
+              }}
+            >
+              Hamilton Pinto Jr.
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                color: "#506d6b",
+                fontSize: 23,
+                lineHeight: 1.35,
+                marginTop: 16,
+              }}
+            >
+              <span>Vision, translated into real-world solutions.</span>
+              <span>Built with heart. Built to work.</span>
+            </div>
           </div>
-          <div style={{ display: "flex", marginTop: 26, fontSize: 72, lineHeight: 1.02, fontWeight: 700, letterSpacing: -3 }}>
-            Hamilton Pinto Jr.
-          </div>
-          <div style={{ display: "flex", marginTop: 22, fontSize: 31, lineHeight: 1.25, color: "#496363" }}>
-            Benny &amp; Penny&apos;s — a technology &amp; creative studio. Vision, translated into real-world solutions.
+
+          <div
+            style={{
+              position: "absolute",
+              right: 32,
+              top: 35,
+              width: 460,
+              height: 430,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={`${siteUrl}/images/home-hero-brandmark.webp`}
+              width="460"
+              height="430"
+              style={{ objectFit: "contain" }}
+            />
           </div>
         </div>
-        <div style={{ position: "absolute", right: 108, bottom: 105, display: "flex", alignItems: "flex-end", gap: 25 }}>
-          <div style={{ display: "flex", height: 245, width: 180, alignItems: "center", justifyContent: "center", border: "8px solid rgba(255,255,255,.88)", borderRadius: "94px 94px 38px 38px", background: "#df8ca0", color: "white", fontSize: 75, fontWeight: 700, transform: "rotate(-6deg)" }}>P</div>
-          <div style={{ display: "flex", height: 190, width: 190, alignItems: "center", justifyContent: "center", border: "8px solid rgba(255,255,255,.88)", borderRadius: 95, background: "#9b6244", color: "white", fontSize: 75, fontWeight: 700, transform: "rotate(6deg)" }}>B</div>
+
+        <div
+          style={{
+            height: 144,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "0 70px",
+            background: "#103f3f",
+            color: "#fffdf9",
+            borderTop: "3px solid #78bdb3",
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div
+              style={{
+                display: "flex",
+                fontSize: 29,
+                fontWeight: 800,
+                letterSpacing: "0.025em",
+              }}
+            >
+              A TECH COMPANY
+            </div>
+            <div style={{ display: "flex", marginTop: 10, color: "#bce9e1", fontSize: 25 }}>
+              bennyandpenny.com
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              color: "#c2e8e1",
+              fontSize: 15,
+              fontWeight: 700,
+              letterSpacing: "0.13em",
+            }}
+          >
+            CUSTOM APIS&nbsp;&nbsp;•&nbsp;&nbsp;CONSULTING&nbsp;&nbsp;•&nbsp;&nbsp;BRAND + PUBLISHING
+          </div>
         </div>
       </div>
     ),
