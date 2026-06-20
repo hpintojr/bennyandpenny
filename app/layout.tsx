@@ -7,6 +7,7 @@ import "./logo-monogram.css";
 import "./aff-logo.css";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SkipLink } from "@/components/SkipLink";
 
 const siteUrl = "https://bennyandpenny.com";
 const socialTitle = "Benny & Penny's | A Tech Company";
@@ -127,7 +128,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <meta name="twitter:image:alt" content={socialTitle} />
       </head>
       <body>
-        <a className="skipLink" href="#main-content">Skip to main content</a>
+        <SkipLink />
         <SiteHeader />
         <main id="main-content" tabIndex={-1}>{children}</main>
         <SiteFooter />
