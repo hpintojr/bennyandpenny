@@ -27,13 +27,13 @@ html {
 .desktopNav > a:not(.button) {
   display: inline-flex;
   align-items: center;
-  min-height: 2.5rem;
+  min-height: 2.75rem;
 }
 
 .footerLink {
   display: inline-flex;
   align-items: center;
-  min-height: 2rem;
+  min-height: 2.75rem;
 }
 
 .cardLink {
