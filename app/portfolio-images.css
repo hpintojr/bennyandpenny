@@ -101,6 +101,7 @@
 /* Benny & Penny's Adventures lockup — matched to the storefront brand. */
 .adventuresBrand {
   margin: 0;
+  text-align: center;
 }
 
 .adventuresBrand__name {
@@ -116,6 +117,7 @@
 .adventuresBrand__adventures {
   display: flex;
   align-items: baseline;
+  justify-content: center;
   gap: .18em;
   margin-top: .02em;
   color: #e7646c;
