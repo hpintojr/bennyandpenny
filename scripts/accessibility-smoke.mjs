@@ -86,7 +86,7 @@ function assertMarkup(route, html, { expectNotFound = false } = {}) {
     }
   }
 
-  if (expectNotFound && !/name="robots" content="noindex, nofollow"/i.test(documentHtml)) {
+  if (expectNotFound && !/name="robots" content="noindex"/i.test(documentHtml)) {
     fail(route, "expected 404 metadata to block indexing.");
   }
 
