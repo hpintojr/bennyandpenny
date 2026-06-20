@@ -89,7 +89,7 @@ export function SiteFooter() {
               <img
                 className="footerMark"
                 src="/images/logo-mark-transparent.png"
-                alt="Benny & Penny's monogram"
+                alt=""
                 width={66}
                 height={66}
               />
@@ -106,16 +106,16 @@ export function SiteFooter() {
 
           <nav className="footerCol" aria-label="Explore">
             <p className="footerColLabel">Explore</p>
-            {explore.map((e) => (
-              <Link key={e.href} className="footerLink" href={e.href}>{e.label}</Link>
+            {explore.map((item) => (
+              <Link key={item.href} className="footerLink" href={item.href}>{item.label}</Link>
             ))}
           </nav>
 
           <nav className="footerCol" aria-label="Ventures">
             <p className="footerColLabel">Ventures</p>
-            {ventures.map((v) => (
-              <a key={v.label} className="footerLink" href={v.url} target="_blank" rel="noopener">
-                {v.label}
+            {ventures.map((venture) => (
+              <a key={venture.label} className="footerLink" href={venture.url} target="_blank" rel="noopener noreferrer">
+                {venture.label}<span className="visuallyHidden"> (opens in a new tab)</span>
               </a>
             ))}
           </nav>
@@ -133,6 +133,8 @@ export function SiteFooter() {
             <Link className="footerLink" href="/privacy">Privacy Policy</Link>
             <span aria-hidden="true" className="footerDot">·</span>
             <Link className="footerLink" href="/terms">Terms of Service</Link>
+            <span aria-hidden="true" className="footerDot">·</span>
+            <Link className="footerLink" href="/accessibility">Accessibility</Link>
           </span>
         </div>
       </footer>
