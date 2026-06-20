@@ -21,11 +21,13 @@ export function SiteFooter() {
   return (
     <>
       <style>{`
+        @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Montserrat:wght@500;600;700&display=swap");
+
         .footerBrandLockup {
           display: flex;
           align-items: center;
-          gap: .8rem;
-          margin-bottom: 1rem;
+          gap: .82rem;
+          margin-bottom: 1.05rem;
         }
 
         .footerMark {
@@ -41,27 +43,30 @@ export function SiteFooter() {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          padding-top: .12rem;
+          min-width: 0;
+          padding-top: .1rem;
         }
 
         .footerBrandName {
           margin: 0;
-          color: #fff;
-          font-family: "Playfair Display", Georgia, serif;
-          font-size: clamp(1.32rem, 1.8vw, 1.55rem);
-          font-weight: 600;
-          line-height: 1;
-          letter-spacing: -.045em;
+          color: #fffdf9;
+          font-family: "Bodoni Moda", Didot, "Bodoni MT", "Times New Roman", serif;
+          font-size: clamp(1.42rem, 1.9vw, 1.65rem);
+          font-weight: 500;
+          font-optical-sizing: auto;
+          font-style: normal;
+          line-height: .92;
+          letter-spacing: -.06em;
           white-space: nowrap;
         }
 
         .footerBrandTag {
-          margin: .38rem 0 0;
+          margin: .48rem 0 0;
           color: #a6e1d5;
-          font-family: "DM Sans", Arial, sans-serif;
-          font-size: .61rem;
-          font-weight: 700;
-          letter-spacing: .23em;
+          font-family: Montserrat, "Avenir Next", Arial, sans-serif;
+          font-size: .56rem;
+          font-weight: 600;
+          letter-spacing: .29em;
           line-height: 1;
           text-transform: uppercase;
           white-space: nowrap;
@@ -74,16 +79,16 @@ export function SiteFooter() {
           }
 
           .footerBrandLockup {
-            gap: .68rem;
+            gap: .7rem;
           }
 
           .footerBrandName {
-            font-size: 1.24rem;
+            font-size: 1.32rem;
           }
 
           .footerBrandTag {
-            font-size: .55rem;
-            letter-spacing: .19em;
+            font-size: .51rem;
+            letter-spacing: .23em;
           }
         }
       `}</style>
