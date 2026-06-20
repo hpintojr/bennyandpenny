@@ -181,8 +181,10 @@ export default function WorkPage() {
         <div className="shell pageIntro">
           <div>
             <p className="eyebrow">The newest chapter</p>
-            <div className="adventuresBrand adventuresBrand--compact" aria-label="Benny and Penny's Adventures — Medical Books for Brave Little Hearts">
-              <h2 className="adventuresBrand__name">Benny &amp; Penny&apos;s</h2>
+            <div className="adventuresBrand adventuresBrand--compact">
+              <h2 className="adventuresBrand__name">
+                Benny &amp; Penny&apos;s<span className="visuallyHidden"> Adventures</span>
+              </h2>
               <div className="adventuresBrand__adventures" aria-hidden="true">
                 <span>♥</span>
                 <span>Adventures</span>
