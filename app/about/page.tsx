@@ -64,6 +64,7 @@ export default function AboutPage() {
                 style={{ objectFit: "cover", objectPosition: "center 56%" }}
               />
             </div>
+            <p className="visuallyHidden">Hamilton Pinto Jr.</p>
             <h2 className="h2">A disciplined problem solver with a designer&apos;s eye.</h2>
             <p className="lede">
               My traditional training began at Westwood College of Technology, where I studied Graphic
@@ -91,10 +92,10 @@ export default function AboutPage() {
           <p className="eyebrow">By the numbers</p>
           <h2 className="h2">Execution, at scale.</h2>
           <div className="statRow">
-            {stats.map((s) => (
-              <div className="statCard" key={s.label}>
-                <div className="statNum">{s.num}</div>
-                <div className="statLabel">{s.label}</div>
+            {stats.map((stat) => (
+              <div className="statCard" key={stat.label}>
+                <div className="statNum">{stat.num}</div>
+                <div className="statLabel">{stat.label}</div>
               </div>
             ))}
           </div>
