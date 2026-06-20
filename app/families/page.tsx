@@ -81,8 +81,15 @@ export default function AdventuresPage() {
         <div className="shell pageHeroSplit">
           <div>
             <p className="eyebrow">Featured imprint · Ten-part series</p>
-            <h1 className="display">Benny &amp; Penny&apos;s Adventures.</h1>
-            <p className="seriesTagline">Medical Books for Brave Little Hearts</p>
+            <div className="adventuresBrand" aria-label="Benny and Penny's Adventures — Medical Books for Brave Little Hearts">
+              <h1 className="adventuresBrand__name">Benny &amp; Penny&apos;s</h1>
+              <div className="adventuresBrand__adventures" aria-hidden="true">
+                <span>♥</span>
+                <span>Adventures</span>
+                <span>♥</span>
+              </div>
+              <p className="adventuresBrand__tagline">Medical Books for Brave Little Hearts</p>
+            </div>
             <p className="lede">
               A ten-part children&apos;s book series that turns real medical experiences into gentle,
               age-appropriate stories—giving families the words, comfort, and confidence to face them
