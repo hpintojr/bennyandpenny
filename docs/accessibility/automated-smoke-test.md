@@ -17,7 +17,7 @@ It is not a substitute for an axe scan, manual keyboard testing, contrast testin
 - `target="_blank"` links include `rel="noopener"`.
 - The Contact page includes its core labelled controls.
 - The Accessibility page exposes the support contact.
-- A missing route returns a 404 with `noindex, nofollow` metadata.
+- A missing route returns a 404 with framework-provided `noindex` metadata.
 
 ## Run locally
 
