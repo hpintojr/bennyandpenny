@@ -151,6 +151,20 @@
   text-transform: uppercase;
 }
 
+/* A slightly more compact version for the two-column Work-page feature. */
+.adventuresBrand--compact .adventuresBrand__name {
+  font-size: clamp(2.25rem, 3.3vw, 3.25rem);
+}
+
+.adventuresBrand--compact .adventuresBrand__adventures {
+  font-size: clamp(2.05rem, 3vw, 2.9rem);
+}
+
+.adventuresBrand--compact .adventuresBrand__tagline {
+  margin-top: .65rem;
+  font-size: clamp(.56rem, .78vw, .64rem);
+}
+
 @media (max-width: 800px) {
   .heroGrid,
   .pageHeroSplit {
@@ -191,5 +205,13 @@
   .adventuresBrand__tagline {
     font-size: .62rem;
     letter-spacing: .125em;
+  }
+
+  .adventuresBrand--compact .adventuresBrand__name {
+    font-size: clamp(2.25rem, 10.5vw, 2.9rem);
+  }
+
+  .adventuresBrand--compact .adventuresBrand__adventures {
+    font-size: clamp(2rem, 9.8vw, 2.65rem);
   }
 }
