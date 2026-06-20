@@ -1,0 +1,40 @@
+# Benny & Penny's — A Tech Company
+
+> Benny & Penny's is the development and design studio of Hamilton Pinto Jr. The studio delivers custom software architecture, API and CRM integrations, business consulting, brand and web development, and publishing solutions. It is proudly motivated by Hamilton's children, Benny and Penny.
+
+The public website is at https://bennyandpenny.com. Primary contact: hello@bennyandpenny.com.
+
+## Core pages
+
+- [Home](https://bennyandpenny.com/): Studio overview, capabilities, and selected ventures. Markdown mirror: https://bennyandpenny.com/index.md
+- [Work](https://bennyandpenny.com/our-work): Portfolio of XBeton, Advantage First Financial, American Colonial Capital, Benny & Penny's Adventures, Mercury Call Desk, and 60+ establishments. Markdown mirror: https://bennyandpenny.com/our-work.md
+- [Benny & Penny's Adventures](https://bennyandpenny.com/families): The studio's self-owned children’s medical-book imprint. Markdown mirror: https://bennyandpenny.com/families.md
+- [About Hamilton Pinto Jr.](https://bennyandpenny.com/about): Background, experience, and credentials. Markdown mirror: https://bennyandpenny.com/about.md
+- [Contact / Work With Us](https://bennyandpenny.com/work-with-us): Engagement types and contact form. Markdown mirror: https://bennyandpenny.com/work-with-us.md
+
+## Services
+
+- Software architecture and custom platform builds
+- API, CRM, telephony, and business-intelligence integrations
+- Business consulting and development
+- Marketing, brand design, visual identity, and web development
+- Go-to-market and launch systems
+- Publishing, imprint, e-book, audio, and production workflows
+
+## Ventures
+
+- [XBeton](https://www.xbeton.com/): Construction technology and AAC building systems
+- [Advantage First Financial](https://www.advantagefirst.com/): Financial-services infrastructure
+- [American Colonial Capital](https://acc.capital/): Capital and finance venture
+- [Benny & Penny's Adventures](https://www.bennyandpennyadventures.com/): Children's medical-book imprint
+- [Mercury Call Desk](https://mercurycalldesk.com/): AI-powered communications platform
+
+## Legal and policy pages
+
+- [Privacy Policy](https://bennyandpenny.com/privacy): https://bennyandpenny.com/privacy.md
+- [Terms of Service](https://bennyandpenny.com/terms): https://bennyandpenny.com/terms.md
+
+## Full site context
+
+- [Complete LLM context](https://bennyandpenny.com/llms-full.txt)
+- [XML sitemap](https://bennyandpenny.com/sitemap.xml)
