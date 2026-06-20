@@ -30,12 +30,15 @@ test("contact form shows accessible validation", async ({ page }) => {
   await expect(page.locator("#cf-message")).toHaveAttribute("aria-invalid", "true");
 });
 
-test("floating accessibility launcher opens preferences and saves display choices", async ({ page }) => {
+test("floating accessibility launcher uses the approved universal icon and saves display choices", async ({ page }) => {
   await page.goto("/", { waitUntil: "networkidle" });
   const launcher = page.getByRole("button", { name: "Open accessibility preferences" });
+  const icon = launcher.locator(".a11yDock__icon");
   await expect(launcher).toBeVisible();
-  await launcher.click();
+  await expect(icon).toBeVisible();
+  await expect(icon).toHaveCSS("mask-image", /accessibility-universal-icon\.svg/);
 
+  await launcher.click();
   const dialog = page.getByRole("dialog", { name: "Accessibility preferences" });
   await expect(dialog).toBeVisible();
   await dialog.getByRole("button", { name: "Increase text size" }).click();
@@ -62,6 +65,7 @@ test("floating accessibility launcher can minimize and be restored", async ({ pa
   const restore = page.getByRole("button", { name: "Show accessibility launcher" });
   await expect(restore).toBeVisible();
   await expect(restore).toBeFocused();
+  await expect(restore.locator(".a11yDock__icon")).toBeVisible();
 
   await restore.click();
   await expect(page.getByRole("button", { name: "Open accessibility preferences" })).toBeVisible();
