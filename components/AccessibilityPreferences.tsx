@@ -44,6 +44,7 @@ function PreferenceToggle({
 
 export function AccessibilityPreferencesProvider({ children }: { children: ReactNode }) {
   const [preferences, setPreferences] = useState<Preferences>(defaults);
+  const [isLoaded, setIsLoaded] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLElement | null>(null);
 
@@ -51,13 +52,18 @@ export function AccessibilityPreferencesProvider({ children }: { children: React
     try {
       const parsed = JSON.parse(window.localStorage.getItem(storageKey) || "null") as Preferences | null;
       if (parsed && (parsed.textScale === 0 || parsed.textScale === 1 || parsed.textScale === 2)) setPreferences({ ...defaults, ...parsed });
-    } catch {}
+    } catch {
+      // Storage may be unavailable in a privacy-restricted browser context.
+    } finally {
+      setIsLoaded(true);
+    }
   }, []);
 
   useEffect(() => {
     applyPreferences(preferences);
+    if (!isLoaded) return;
     try { window.localStorage.setItem(storageKey, JSON.stringify(preferences)); } catch {}
-  }, [preferences]);
+  }, [isLoaded, preferences]);
 
   const closePreferences = useCallback(() => {
     if (dialogRef.current?.open) dialogRef.current.close();
