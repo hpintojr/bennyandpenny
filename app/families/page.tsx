@@ -10,18 +10,56 @@ export const metadata: Metadata = {
 
 const highlights = [
   {
+    icon: "book",
     title: "A children's medical book series",
     text: "Care-centered stories that help young readers feel prepared and brave for medical experiences—written by the author, produced end to end in-house.",
   },
   {
+    icon: "imprint",
     title: "A self-owned imprint",
     text: "Brand, web storefront, digital delivery, and a full print, e-book, and audio production pipeline, built and operated as our own publishing venture.",
   },
   {
+    icon: "studio",
     title: "Part of the studio",
     text: "The imprint is the namesake and creative heart of Benny & Penny's—proof of the same build-it-right discipline applied to my own work.",
   },
 ];
+
+function HighlightIcon({ name }: { name: string }) {
+  const common = {
+    width: 22,
+    height: 22,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.7,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+  };
+  if (name === "book") {
+    return (
+      <svg {...common} aria-hidden="true">
+        <path d="M12 6.5C10.5 5 8 4.5 4 4.7v13c4-.2 6.5.3 8 1.8" />
+        <path d="M12 6.5C13.5 5 16 4.5 20 4.7v13c-4-.2-6.5.3-8 1.8" />
+      </svg>
+    );
+  }
+  if (name === "imprint") {
+    return (
+      <svg {...common} aria-hidden="true">
+        <path d="M9 11V8a3 3 0 0 1 6 0v3l1.5 3.5h-9L9 11Z" />
+        <rect x="4.5" y="16.5" width="15" height="3" rx="1" />
+      </svg>
+    );
+  }
+  return (
+    <svg {...common} aria-hidden="true">
+      <path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z" />
+      <path d="M18.5 15.5l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z" />
+    </svg>
+  );
+}
 
 const books = [
   { n: 1, title: "Home Infusion Day", topic: "Home infusions" },
@@ -119,10 +157,22 @@ export default function AdventuresPage() {
 
       <section className="section">
         <div className="shell">
-          <div className="resourceGrid">
+          <div className="sectionHead">
+            <div>
+              <p className="eyebrow">The imprint</p>
+              <h2 className="h2">Built with the same care as the stories.</h2>
+            </div>
+            <p className="lede">
+              Three things make Benny &amp; Penny&apos;s Adventures more than a book—it&apos;s a brand,
+              a pipeline, and a promise.
+            </p>
+          </div>
+          <div className="pillarGrid">
             {highlights.map((h) => (
-              <article className="card resourceCard" key={h.title}>
-                <div className="iconBadge" aria-hidden="true">♥</div>
+              <article className="card pillarCard" key={h.title}>
+                <div className="iconBadge">
+                  <HighlightIcon name={h.icon} />
+                </div>
                 <h3>{h.title}</h3>
                 <p>{h.text}</p>
               </article>
