@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Accessibility",
   description:
-    "Accessibility statement for Benny & Penny's — A Tech Company, including our WCAG 2.2 AA target and how to report an access barrier.",
+    "Accessibility statement for Benny & Penny's — A Tech Company, including our WCAG 2.2 AA target, accessibility preferences, and how to report an access barrier.",
   alternates: { canonical: "/accessibility" },
   openGraph: {
     url: "/accessibility",
@@ -34,19 +34,28 @@ export default function AccessibilityPage() {
             Accessibility is an ongoing process of testing, improving, and remediating barriers as we identify them.
           </p>
 
+          <h2>Accessibility preferences</h2>
+          <p>
+            Use the <strong>Accessibility preferences</strong> button in the site footer to adjust text size,
+            high contrast, motion, and font readability for this device. These optional controls work alongside
+            browser and operating-system accessibility settings.
+          </p>
+
           <h2>What we are working on</h2>
           <ul className="legalList">
             <li>Keyboard-accessible navigation, forms, links, and interactive controls.</li>
             <li>Visible focus indicators, readable contrast, responsive reflow, and reduced-motion support.</li>
             <li>Meaningful headings, landmarks, labels, alternative text, and status messages.</li>
+            <li>Automated accessibility checks plus manual keyboard, screen-reader, contrast, and zoom testing.</li>
             <li>Accessible contact and portfolio experiences, with continued review of new site content and features.</li>
           </ul>
 
           <h2>Known limitations</h2>
           <p>
-            Some third-party websites linked from this portfolio, embedded services, and externally hosted content
-            may not be fully controlled by Benny &amp; Penny&apos;s. We will review and address barriers within our control
-            when they are reported or discovered.
+            This portfolio is actively being reviewed against WCAG 2.2 Level AA. Some third-party websites linked
+            from this portfolio, embedded services, and externally hosted content may not be fully controlled by
+            Benny &amp; Penny&apos;s. We will review and address barriers within our control when they are reported or
+            discovered.
           </p>
 
           <h2>Request help or report a barrier</h2>
@@ -59,7 +68,8 @@ export default function AccessibilityPage() {
           </p>
           <p>
             Please include the page or feature involved, the assistive technology or browser you are using when
-            relevant, and the support you need. We aim to acknowledge accessibility requests within five business days.
+            relevant, and the support you need. We aim to acknowledge accessibility requests within five business days
+            and will work with you to identify a reasonable alternative format or assistance where needed.
           </p>
 
           <h2>Last reviewed</h2>
