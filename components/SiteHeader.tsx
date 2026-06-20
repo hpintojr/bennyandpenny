@@ -55,12 +55,29 @@ export function SiteHeader() {
           background: var(--cream); border-bottom: 1px solid rgba(24,52,55,.1); }
         .mobilePanel.is-open { max-height: 420px; opacity: 1; visibility: visible; transition-delay: 0s; }
         @media (min-width: 801px) { .mobilePanel { display: none; } }
-        .mobilePanelNav { display: flex; flex-direction: column; padding: .3rem clamp(20px,5vw,56px) 1.1rem; }
+        .mobilePanelNav { display: flex; flex-direction: column; padding: .3rem clamp(20px,5vw,56px) 1.4rem; }
         .mobilePanelNav a { padding: .85rem 0; font-size: 1.08rem; font-weight: 600; color: var(--ink);
           border-bottom: 1px solid rgba(24,52,55,.08); transition: color .2s ease; }
         .mobilePanelNav a:last-child { border-bottom: 0; }
         .mobilePanelNav a:hover { color: var(--teal-deep); }
-        .mobilePanelNav .mobileContact { margin-top: .6rem; align-self: flex-start; }
+        .mobilePanelNav .mobileContact {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          align-self: flex-start;
+          min-width: 8.7rem;
+          min-height: 3.1rem;
+          margin-top: 1rem;
+          padding: .74rem 1.45rem;
+          border: 0;
+          border-radius: 999px;
+          background: var(--teal);
+          color: white;
+          font-size: 1rem;
+          font-weight: 700;
+          line-height: 1;
+        }
+        .mobilePanelNav .mobileContact:hover { background: var(--teal-deep); color: white; transform: translateY(-1px); }
         @media (prefers-reduced-motion: reduce) {
           .menuIcon span, .mobilePanel { transition: none; }
         }
