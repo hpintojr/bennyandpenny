@@ -21,8 +21,6 @@ export function SiteFooter() {
   return (
     <>
       <style>{`
-        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
-
         .footerBrandLockup {
           display: flex;
           align-items: center;
@@ -50,11 +48,11 @@ export function SiteFooter() {
         .footerBrandName {
           margin: 0;
           color: #fffdf9;
-          font-family: "Playfair Display", Didot, "Bodoni MT", Georgia, serif;
-          font-size: clamp(1.48rem, 2vw, 1.72rem);
-          font-weight: 600;
+          font-family: Didot, "Bodoni MT", Georgia, serif;
+          font-size: clamp(1.88rem, 2vw, 1.72rem);
+          font-weight: 300;
           font-style: normal;
-          line-height: .92;
+          line-height: 0.82;
           letter-spacing: -.07em;
           white-space: nowrap;
         }
@@ -62,10 +60,10 @@ export function SiteFooter() {
         .footerBrandTag {
           margin: .46rem 0 0;
           color: #a6e1d5;
-          font-family: Montserrat, "Avenir Next", Arial, sans-serif;
-          font-size: .55rem;
-          font-weight: 600;
-          letter-spacing: .285em;
+          font-family: Geometric, "Avenir Next", Arial, sans-serif;
+          font-size: 0.85rem;
+          font-weight: 300;
+          letter-spacing: .155em;
           line-height: 1;
           text-transform: uppercase;
           white-space: nowrap;
@@ -79,15 +77,6 @@ export function SiteFooter() {
           .footerBrandLockup .footerMark {
             width: 58px;
             height: 58px;
-          }
-
-          .footerBrandName {
-            font-size: 1.35rem;
-          }
-
-          .footerBrandTag {
-            font-size: .5rem;
-            letter-spacing: .23em;
           }
         }
       `}</style>
