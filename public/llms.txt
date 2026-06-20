@@ -11,6 +11,7 @@ The public website is at https://bennyandpenny.com. Primary contact: hello@benny
 - [Benny & Penny's Adventures](https://bennyandpenny.com/families): The studio's self-owned children’s medical-book imprint. Markdown mirror: https://bennyandpenny.com/families.md
 - [About Hamilton Pinto Jr.](https://bennyandpenny.com/about): Background, experience, and credentials. Markdown mirror: https://bennyandpenny.com/about.md
 - [Contact / Work With Us](https://bennyandpenny.com/work-with-us): Engagement types and contact form. Markdown mirror: https://bennyandpenny.com/work-with-us.md
+- [Accessibility](https://bennyandpenny.com/accessibility): Accessibility statement, WCAG 2.2 AA target, and support contact. Markdown mirror: https://bennyandpenny.com/accessibility.md
 
 ## Services
 
@@ -33,6 +34,7 @@ The public website is at https://bennyandpenny.com. Primary contact: hello@benny
 
 - [Privacy Policy](https://bennyandpenny.com/privacy): https://bennyandpenny.com/privacy.md
 - [Terms of Service](https://bennyandpenny.com/terms): https://bennyandpenny.com/terms.md
+- [Accessibility Statement](https://bennyandpenny.com/accessibility): https://bennyandpenny.com/accessibility.md
 
 ## Full site context
 
