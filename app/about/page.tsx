@@ -58,7 +58,7 @@ export default function AboutPage() {
             >
               <Image
                 src="/images/Sig.png"
-                alt="Hamilton Pinto Jr. signature"
+                alt=""
                 fill
                 sizes="(max-width: 800px) 18.5rem, 18.5rem"
                 style={{ objectFit: "cover", objectPosition: "center 56%" }}
