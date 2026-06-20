@@ -99,8 +99,8 @@ export function SiteFooter() {
               </div>
             </div>
             <p className="footerMission">
-              The technology and creative studio of Hamilton Pinto Jr. — software architecture,
-              creative technology, and publishing for brands, platforms, and ventures.
+              The development and design studio of Hamilton Pinto Jr., delivering custom API integrations,
+              business consulting, and publishing solutions. Proudly motivated by my children, Benny and Penny.
             </p>
           </div>
 
