@@ -21,12 +21,7 @@ function applyPreferences(preferences: Preferences) {
 }
 
 function AccessibilityIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <circle cx="12" cy="4.75" r="2.15" />
-      <path d="M4.25 8.35h15.5M12 7.25v12.1M7.25 20.25 12 13.55l4.75 6.7M8.1 8.45 5.95 14.3M15.9 8.45l2.15 5.85" />
-    </svg>
-  );
+  return <span className="a11yDock__icon" aria-hidden="true" />;
 }
 
 function PreferenceToggle({
