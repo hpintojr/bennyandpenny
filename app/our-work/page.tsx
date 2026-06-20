@@ -80,17 +80,6 @@ const ventures = [
 export default function WorkPage() {
   return (
     <>
-      <style>{`
-        .accPortfolioLogo {
-          transition: transform .35s ease;
-          transform-origin: top left;
-        }
-
-        .workCard:hover .accPortfolioLogo {
-          transform: scale(1.025);
-        }
-      `}</style>
-
       <section className="pageHero">
         <div className="shell">
           <p className="eyebrow">Work</p>
@@ -105,55 +94,58 @@ export default function WorkPage() {
       <section className="section">
         <div className="shell">
           <div className="workGrid workGrid--feature">
-            {ventures.map((v) => (
-              <article className="card workCard ventureCard" key={v.title}>
-                <div className="workCardMedia">
-                  <Image
-                    src={v.image}
-                    alt={v.imageAlt}
-                    fill
-                    sizes="(max-width: 800px) 100vw, 33vw"
-                    className="workCardImage"
-                  />
-                  {v.title === "American Colonial Capital" && (
-                    <div
-                      className="accPortfolioLogo"
-                      aria-hidden="true"
-                      style={{
-                        position: "absolute",
-                        top: "10%",
-                        left: "8%",
-                        width: "33%",
-                        aspectRatio: "175.38 / 104.41",
-                        zIndex: 2,
-                      }}
-                    >
+            {ventures.map((v) => {
+              const isAcc = v.title === "American Colonial Capital";
+
+              return (
+                <article className="card workCard ventureCard" key={v.title}>
+                  <div className="workCardMedia">
+                    {isAcc ? (
+                      <div className="accPortfolioVisual">
+                        <Image
+                          src={v.image}
+                          alt={v.imageAlt}
+                          fill
+                          sizes="(max-width: 800px) 100vw, 33vw"
+                          className="accPortfolioVisual__background"
+                        />
+                        <div className="accPortfolioLogo" aria-hidden="true">
+                          <Image
+                            src="/images/acc-logo.svg"
+                            alt=""
+                            fill
+                            sizes="(max-width: 800px) 35vw, 11vw"
+                            className="accPortfolioLogo__image"
+                          />
+                        </div>
+                      </div>
+                    ) : (
                       <Image
-                        src="/images/acc-logo.svg"
-                        alt=""
+                        src={v.image}
+                        alt={v.imageAlt}
                         fill
-                        sizes="(max-width: 800px) 35vw, 11vw"
-                        style={{ objectFit: "contain" }}
+                        sizes="(max-width: 800px) 100vw, 33vw"
+                        className="workCardImage"
                       />
-                    </div>
-                  )}
-                </div>
-                <div className="workCardBody">
-                  <span className="kicker">{v.label}</span>
-                  <h3>{v.title}</h3>
-                  <p>{v.description}</p>
-                  <p className="roleLine">{v.role}</p>
-                  <div className="tagList">
-                    {v.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
+                    )}
                   </div>
-                  {v.url && (
-                    <a className="cardLink" href={v.url} target="_blank" rel="noopener">
-                      Visit site →
-                    </a>
-                  )}
-                </div>
-              </article>
-            ))}
+                  <div className="workCardBody">
+                    <span className="kicker">{v.label}</span>
+                    <h3>{v.title}</h3>
+                    <p>{v.description}</p>
+                    <p className="roleLine">{v.role}</p>
+                    <div className="tagList">
+                      {v.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
+                    </div>
+                    {v.url && (
+                      <a className="cardLink" href={v.url} target="_blank" rel="noopener">
+                        Visit site →
+                      </a>
+                    )}
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
