@@ -35,10 +35,12 @@
 | BAP-A11Y-008 | 1.4.3 Contrast / 1.4.11 Non-text Contrast | High | No documented contrast audit for branded typography, subtle borders, gradients, or image overlays. | Partially addressed: shared brand pairs were checked and dark-surface focus contrast plus `prefers-contrast: more` support were added. Full audit remains open. |
 | BAP-A11Y-009 | 1.1.1 Non-text Content | Medium | Image alt text requires route-by-route review, including card art, logos, and visual overlays. | Partially addressed: decorative footer/overlay elements and About signature handling were clarified. Full audit remains open. |
 | BAP-A11Y-010 | 2.4.4 Link Purpose | Medium | Generic “Visit site” links on Home and Work did not identify the destination out of context. | Addressed: links now use destination-specific labels, such as `Visit XBeton`. |
-| BAP-A11Y-011 | 2.4.2 Page Titled / 2.4.6 Headings and Labels | Medium | Metadata is present, but page heading hierarchy and visual-heading semantics need manual verification across all routes. | Open: perform route-by-route keyboard and screen-reader audit. |
+| BAP-A11Y-011 | 2.4.2 Page Titled / 2.4.6 Headings and Labels | Medium | Metadata is present, but page heading hierarchy and visual-heading semantics need manual verification across all routes. | Partially addressed: the Benny & Penny's Adventures visual lockups now include `Adventures` in their screen-reader heading text. Full route audit remains open. |
 | BAP-A11Y-012 | 1.4.10 Reflow / 1.4.12 Text Spacing | High | No documented 200% zoom, 400% reflow, or text-spacing test evidence. | Open: test all public routes and remediate clipping/overlap. |
 | BAP-A11Y-013 | 2.5.8 Target Size (Minimum) | Medium | Some shared navigation and text-link targets did not have documented minimum interactive size. | Addressed in code: desktop navigation, footer links, and card links now receive shared minimum target-height styling. Manual visual verification still required. |
 | BAP-A11Y-014 | 1.3.1 Info and Relationships | Medium | Adventures book-card content used inline wrappers around block-level heading and paragraph content. | Addressed: book-card body uses valid block content. |
+| BAP-A11Y-015 | 2.4.2 Page Titled / SEO hygiene | Low | A 404 page should not appear as a normal search result. | Addressed: not-found metadata now uses `noindex, nofollow`. |
+| BAP-A11Y-016 | Regression prevention | Medium | No automated baseline checks existed for shared accessibility markup. | Addressed: dependency-free smoke test and manual GitHub Actions workflow added; axe/browser coverage remains open. |
 
 ## Phase 1 code delivered
 
@@ -48,15 +50,20 @@
 - `components/SiteHeader.tsx`: accessible mobile-menu focus behavior and current-page state.
 - `components/ContactForm.tsx`: accessible labels, required notice, custom validation, error summary, inline errors, focus movement, and status updates.
 - `components/SiteFooter.tsx`: external-link disclosure and accessibility-statement link.
-- `app/page.tsx`, `app/our-work/page.tsx`, `app/families/page.tsx`: descriptive portfolio/storefront links and improved content semantics.
+- `app/page.tsx`, `app/our-work/page.tsx`, `app/families/page.tsx`: descriptive portfolio/storefront links, improved content semantics, and complete Adventures heading text for assistive technology.
 - `app/about/page.tsx`: non-duplicative signature text equivalent.
+- `app/not-found.tsx`: noindex, nofollow metadata for unavailable routes.
 - `app/accessibility/page.tsx`: public accessibility statement.
 - `public/accessibility.md`: Markdown mirror.
 - `app/sitemap.ts`: accessibility page added to XML sitemap.
+- `scripts/accessibility-smoke.mjs`: dependency-free server-rendered accessibility regression checks.
+- `.github/workflows/accessibility-smoke.yml`: manually triggered smoke-test workflow for production or preview URLs.
 - `docs/accessibility/manual-qa-checklist.md`: reusable manual testing and evidence checklist.
+- `docs/accessibility/automated-smoke-test.md`: smoke-test runbook.
 
 ## Required verification before Phase 1 signoff
 
+- [ ] Run `SITE_URL=https://www.bennyandpenny.com npm run a11y:smoke` after the current production deployment is ready.
 - [ ] Keyboard-only pass on Home, Work, Adventures, About, Contact, Privacy, Terms, Accessibility, and 404.
 - [ ] Confirm skip link moves to main content and focus remains visible below sticky header.
 - [ ] Confirm mobile menu opens, focuses first item, closes on Escape, and returns focus to trigger.
@@ -71,5 +78,5 @@
 1. Complete manual route-by-route keyboard, visual, and assistive-technology audit evidence using `docs/accessibility/manual-qa-checklist.md`.
 2. Conduct a full contrast and focus-not-obscured audit for all shared components.
 3. Complete image-alt inventory and decorative-image review.
-4. Add automated accessibility testing in local development and CI.
+4. Add automated browser-level axe testing in local development and CI.
 5. Create a release evidence folder and use it for regression tracking.
