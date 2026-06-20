@@ -49,10 +49,9 @@ const ventures = [
       "Web, API, systems, brand, and launch infrastructure for an American Colonial Capital venture.",
     role: "Web · APIs · Systems · Brand · Launch",
     tags: ["Web", "APIs", "Systems", "Brand", "Launch"],
-    image: null,
-    imageAlt: "American Colonial Capital portfolio visual",
-    url: null,
-    visual: "acc",
+    image: "/images/work-acc-capital.svg",
+    imageAlt: "American Colonial Capital navy, red, and white private-equity brand visual",
+    url: "https://acc.capital/",
   },
   {
     title: "Mercury Call Desk",
@@ -97,22 +96,14 @@ export default function WorkPage() {
           <div className="workGrid workGrid--feature">
             {ventures.map((v) => (
               <article className="card workCard ventureCard" key={v.title}>
-                <div className={`workCardMedia${v.visual ? ` workCardMedia--${v.visual}` : ""}`}>
-                  {v.image ? (
-                    <Image
-                      src={v.image}
-                      alt={v.imageAlt}
-                      fill
-                      sizes="(max-width: 800px) 100vw, 33vw"
-                      className="workCardImage"
-                    />
-                  ) : (
-                    <div className="accVisual" aria-hidden="true">
-                      <span className="accVisual__monogram">ACC</span>
-                      <span className="accVisual__name">American Colonial Capital</span>
-                      <span className="accVisual__line" />
-                    </div>
-                  )}
+                <div className="workCardMedia">
+                  <Image
+                    src={v.image}
+                    alt={v.imageAlt}
+                    fill
+                    sizes="(max-width: 800px) 100vw, 33vw"
+                    className="workCardImage"
+                  />
                 </div>
                 <div className="workCardBody">
                   <span className="kicker">{v.label}</span>
