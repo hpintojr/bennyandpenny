@@ -17,6 +17,13 @@ html {
   outline-offset: var(--a11y-focus-offset);
 }
 
+.siteFooter :focus-visible,
+.callout :focus-visible,
+.contactPanel--dark :focus-visible,
+.notFoundPage :focus-visible {
+  outline-color: #ffffff;
+}
+
 .cform input:focus-visible,
 .cform select:focus-visible,
 .cform textarea:focus-visible {
