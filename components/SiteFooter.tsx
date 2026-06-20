@@ -62,7 +62,7 @@ export function SiteFooter() {
           color: #a6e1d5;
           font-family: Geometric, "Avenir Next", Arial, sans-serif;
           font-size: 0.85rem;
-          font-weight: 300;
+          font-weight: 500;
           letter-spacing: .155em;
           line-height: 1;
           text-transform: uppercase;
