@@ -77,6 +77,15 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: socialTitle,
+  url: siteUrl,
+  email: "hello@bennyandpenny.com",
+  description,
+};
+
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -110,28 +119,15 @@ const personSchema = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
-      <head>
-        <meta property="og:site_name" content={socialTitle} />
-        <meta property="og:title" content={socialTitle} />
-        <meta property="og:description" content={socialDescription} />
-        <meta property="og:image" content={socialImageUrl} />
-        <meta property="og:image:url" content={socialImageUrl} />
-        <meta property="og:image:secure_url" content={socialImageUrl} />
-        <meta property="og:image:type" content="image/webp" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content={socialTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={socialTitle} />
-        <meta name="twitter:description" content={socialDescription} />
-        <meta name="twitter:image" content={socialImageUrl} />
-        <meta name="twitter:image:alt" content={socialTitle} />
-      </head>
       <body>
         <SkipLink />
         <SiteHeader />
         <main id="main-content" tabIndex={-1}>{children}</main>
         <SiteFooter />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
