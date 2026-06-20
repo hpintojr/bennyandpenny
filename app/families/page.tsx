@@ -44,6 +44,7 @@ function HighlightIcon({ name }: { name: string }) {
     strokeLinecap: "round" as const,
     strokeLinejoin: "round" as const,
   };
+
   if (name === "book") {
     return (
       <svg {...common} aria-hidden="true">
@@ -52,6 +53,7 @@ function HighlightIcon({ name }: { name: string }) {
       </svg>
     );
   }
+
   if (name === "imprint") {
     return (
       <svg {...common} aria-hidden="true">
@@ -60,6 +62,7 @@ function HighlightIcon({ name }: { name: string }) {
       </svg>
     );
   }
+
   return (
     <svg {...common} aria-hidden="true">
       <path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z" />
@@ -104,8 +107,13 @@ export default function AdventuresPage() {
               storefront, and production pipeline.
             </p>
             <div className="buttonRow">
-              <a className="button" href="https://www.bennyandpennyadventures.com/" target="_blank" rel="noopener">
-                Visit the storefront →
+              <a
+                className="button"
+                href="https://www.bennyandpennyadventures.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Benny &amp; Penny&apos;s Adventures storefront<span aria-hidden="true"> →</span><span className="visuallyHidden"> (opens in a new tab)</span>
               </a>
               <Link className="button button--light" href="/our-work">Back to all work</Link>
             </div>
@@ -156,13 +164,13 @@ export default function AdventuresPage() {
             </p>
           </div>
           <ol className="bookGrid">
-            {books.map((b) => (
-              <li className="bookCard" key={b.n}>
-                <span className="bookNum" aria-hidden="true">{b.n}</span>
-                <span className="bookCard__body">
-                  <h3>{b.title}</h3>
-                  <p>{b.topic}</p>
-                </span>
+            {books.map((book) => (
+              <li className="bookCard" key={book.n}>
+                <span className="bookNum" aria-hidden="true">{book.n}</span>
+                <div className="bookCard__body">
+                  <h3>{book.title}</h3>
+                  <p>{book.topic}</p>
+                </div>
               </li>
             ))}
           </ol>
@@ -182,13 +190,13 @@ export default function AdventuresPage() {
             </p>
           </div>
           <div className="pillarGrid">
-            {highlights.map((h) => (
-              <article className="card pillarCard" key={h.title}>
-                <div className="iconBadge">
-                  <HighlightIcon name={h.icon} />
+            {highlights.map((highlight) => (
+              <article className="card pillarCard" key={highlight.title}>
+                <div className="iconBadge" aria-hidden="true">
+                  <HighlightIcon name={highlight.icon} />
                 </div>
-                <h3>{h.title}</h3>
-                <p>{h.text}</p>
+                <h3>{highlight.title}</h3>
+                <p>{highlight.text}</p>
               </article>
             ))}
           </div>
@@ -205,8 +213,13 @@ export default function AdventuresPage() {
               storefront. This page is the imprint&apos;s home within the studio portfolio.
             </p>
             <div className="buttonRow">
-              <a className="button" href="https://www.bennyandpennyadventures.com/" target="_blank" rel="noopener">
-                Go to the storefront →
+              <a
+                className="button"
+                href="https://www.bennyandpennyadventures.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Go to Benny &amp; Penny&apos;s Adventures storefront<span aria-hidden="true"> →</span><span className="visuallyHidden"> (opens in a new tab)</span>
               </a>
             </div>
           </div>
