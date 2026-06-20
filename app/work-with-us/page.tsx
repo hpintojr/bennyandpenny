@@ -4,7 +4,14 @@ import { ContactForm } from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Work with Hamilton Pinto Jr. — software architecture, API integration, creative technology, brand and web, and publishing engagements.",
+    "Work with Hamilton Pinto Jr. on custom software architecture, API and CRM integrations, business consulting, brand and web development, and publishing projects.",
+  alternates: { canonical: "/work-with-us" },
+  openGraph: {
+    url: "/work-with-us",
+    title: "Work with Benny & Penny's — A Tech Company",
+    description:
+      "Start a conversation about custom platform builds, integrations, business consulting, brand and web, or publishing production.",
+  },
 };
 
 const engagements = [
