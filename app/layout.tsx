@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
+import "./accessibility.css";
 import "./portfolio-images.css";
 import "./logo-monogram.css";
 import "./aff-logo.css";
@@ -126,8 +127,9 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <meta name="twitter:image:alt" content={socialTitle} />
       </head>
       <body>
+        <a className="skipLink" href="#main-content">Skip to main content</a>
         <SiteHeader />
-        <main>{children}</main>
+        <main id="main-content" tabIndex={-1}>{children}</main>
         <SiteFooter />
         <script
           type="application/ld+json"
