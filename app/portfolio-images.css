@@ -100,8 +100,10 @@
 
 /* Benny & Penny's Adventures lockup — matched to the storefront brand. */
 .adventuresBrand {
+  width: fit-content;
+  max-width: 100%;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .adventuresBrand__name {
@@ -112,6 +114,7 @@
   font-weight: 700;
   line-height: .98;
   letter-spacing: -.045em;
+  text-align: left;
 }
 
 .adventuresBrand__adventures {
@@ -144,6 +147,7 @@
   font-weight: 800;
   letter-spacing: .18em;
   line-height: 1.35;
+  text-align: center;
   text-transform: uppercase;
 }
 
