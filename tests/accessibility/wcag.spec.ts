@@ -30,10 +30,11 @@ test("contact form shows accessible validation", async ({ page }) => {
   await expect(page.locator("#cf-message")).toHaveAttribute("aria-invalid", "true");
 });
 
-test("accessibility preferences persist display choices", async ({ page }) => {
+test("floating accessibility launcher opens preferences and saves display choices", async ({ page }) => {
   await page.goto("/", { waitUntil: "networkidle" });
-  const trigger = page.getByRole("button", { name: "Accessibility preferences" });
-  await trigger.click();
+  const launcher = page.getByRole("button", { name: "Open accessibility preferences" });
+  await expect(launcher).toBeVisible();
+  await launcher.click();
 
   const dialog = page.getByRole("dialog", { name: "Accessibility preferences" });
   await expect(dialog).toBeVisible();
@@ -48,9 +49,23 @@ test("accessibility preferences persist display choices", async ({ page }) => {
   await expect(page.locator("html")).toHaveAttribute("data-a11y-readable-font", "true");
 
   await dialog.getByRole("button", { name: "Done" }).click();
-  await expect(trigger).toBeFocused();
+  await expect(launcher).toBeFocused();
   await page.reload({ waitUntil: "networkidle" });
   await expect(page.locator("html")).toHaveAttribute("data-a11y-text-scale", "1");
+});
+
+test("floating accessibility launcher can minimize and be restored", async ({ page }) => {
+  await page.goto("/", { waitUntil: "networkidle" });
+  const minimize = page.getByRole("button", { name: "Minimize accessibility launcher" });
+  await minimize.click();
+
+  const restore = page.getByRole("button", { name: "Show accessibility launcher" });
+  await expect(restore).toBeVisible();
+  await expect(restore).toBeFocused();
+
+  await restore.click();
+  await expect(page.getByRole("button", { name: "Open accessibility preferences" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Open accessibility preferences" })).toBeFocused();
 });
 
 test("desktop route changes move focus to the destination heading", async ({ page }, testInfo) => {
