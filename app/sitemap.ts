@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const siteUrl = "https://bennyandpenny.com";
-const lastModified = new Date("2026-06-19T00:00:00.000Z");
+const lastModified = new Date("2026-06-20T00:00:00.000Z");
 
 const pages: Array<{
   path: string;
@@ -13,6 +13,7 @@ const pages: Array<{
   { path: "/families", changeFrequency: "monthly", priority: 0.9 },
   { path: "/about", changeFrequency: "monthly", priority: 0.8 },
   { path: "/work-with-us", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/accessibility", changeFrequency: "yearly", priority: 0.5 },
   { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
   { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
 ];
