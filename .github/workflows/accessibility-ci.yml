@@ -1,0 +1,91 @@
+name: Accessibility CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - app/**
+      - components/**
+      - public/**
+      - tests/accessibility/**
+      - scripts/accessibility-smoke.mjs
+      - playwright.accessibility.config.ts
+      - package.json
+      - package-lock.json
+      - .github/workflows/accessibility-ci.yml
+  pull_request:
+    paths:
+      - app/**
+      - components/**
+      - public/**
+      - tests/accessibility/**
+      - scripts/accessibility-smoke.mjs
+      - playwright.accessibility.config.ts
+      - package.json
+      - package-lock.json
+      - .github/workflows/accessibility-ci.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  accessibility:
+    name: Local WCAG checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Build site
+        run: npm run build
+
+      - name: Start site
+        run: |
+          npm run start -- --hostname 127.0.0.1 --port 3000 > /tmp/bennyandpenny-next.log 2>&1 &
+          echo $! > /tmp/bennyandpenny-next.pid
+          for attempt in $(seq 1 30); do
+            if curl --silent --fail http://127.0.0.1:3000/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/bennyandpenny-next.log
+          exit 1
+
+      - name: Run server-rendered smoke test
+        run: SITE_URL=http://127.0.0.1:3000 npm run a11y:smoke
+
+      - name: Run browser axe audit
+        run: BASE_URL=http://127.0.0.1:3000 npm run a11y:axe
+
+      - name: Upload audit artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: accessibility-ci-artifacts
+          path: |
+            playwright-report/accessibility
+            test-results
+            /tmp/bennyandpenny-next.log
+          if-no-files-found: ignore
+
+      - name: Stop site
+        if: always()
+        run: |
+          if [ -f /tmp/bennyandpenny-next.pid ]; then
+            kill $(cat /tmp/bennyandpenny-next.pid) || true
+          fi
