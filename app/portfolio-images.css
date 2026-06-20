@@ -98,6 +98,53 @@
   object-position: center;
 }
 
+/* Benny & Penny's Adventures lockup — matched to the storefront brand. */
+.adventuresBrand {
+  margin: 0;
+}
+
+.adventuresBrand__name {
+  margin: 0;
+  color: #064852;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.75rem, 4.65vw, 4.25rem);
+  font-weight: 700;
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+
+.adventuresBrand__adventures {
+  display: flex;
+  align-items: baseline;
+  gap: .18em;
+  margin-top: .02em;
+  color: #e7646c;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.5rem, 4.25vw, 3.95rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: .98;
+  letter-spacing: -.04em;
+}
+
+.adventuresBrand__adventures span:first-child,
+.adventuresBrand__adventures span:last-child {
+  display: inline-block;
+  font-size: .72em;
+  font-style: normal;
+  transform: translateY(-.03em);
+}
+
+.adventuresBrand__tagline {
+  margin: .85rem 0 0;
+  color: #6b5d4f;
+  font-size: clamp(.63rem, 1vw, .72rem);
+  font-weight: 800;
+  letter-spacing: .18em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
 @media (max-width: 800px) {
   .heroGrid,
   .pageHeroSplit {
@@ -125,5 +172,18 @@
 @media (max-width: 520px) {
   .heroVisual {
     min-height: 17rem;
+  }
+
+  .adventuresBrand__name {
+    font-size: clamp(2.55rem, 12vw, 3.25rem);
+  }
+
+  .adventuresBrand__adventures {
+    font-size: clamp(2.3rem, 10.8vw, 3rem);
+  }
+
+  .adventuresBrand__tagline {
+    font-size: .62rem;
+    letter-spacing: .125em;
   }
 }
