@@ -149,11 +149,11 @@ export default function HomePage() {
             </p>
           </div>
           <div className="pillarGrid">
-            {capabilities.map((c) => (
-              <article className="card pillarCard" key={c.title}>
-                <div className="iconBadge" aria-hidden="true">{c.icon}</div>
-                <h3>{c.title}</h3>
-                <p>{c.text}</p>
+            {capabilities.map((capability) => (
+              <article className="card pillarCard" key={capability.title}>
+                <div className="iconBadge" aria-hidden="true">{capability.icon}</div>
+                <h3>{capability.title}</h3>
+                <p>{capability.text}</p>
               </article>
             ))}
           </div>
@@ -170,18 +170,18 @@ export default function HomePage() {
             <Link className="textLink" href="/our-work">See all work</Link>
           </div>
           <div className="workGrid">
-            {ventures.map((v) => {
-              const isAcc = v.title === "American Colonial Capital";
-              const isAff = v.title === "Advantage First Financial";
+            {ventures.map((venture) => {
+              const isAcc = venture.title === "American Colonial Capital";
+              const isAff = venture.title === "Advantage First Financial";
 
               return (
-                <article className="card workCard ventureCard" key={v.title}>
+                <article className="card workCard ventureCard" key={venture.title}>
                   <div className="workCardMedia">
                     {isAcc ? (
                       <div className="accPortfolioVisual">
                         <Image
-                          src={v.image}
-                          alt={v.imageAlt}
+                          src={venture.image}
+                          alt={venture.imageAlt}
                           fill
                           sizes="(max-width: 800px) 100vw, 33vw"
                           className="accPortfolioVisual__background"
@@ -199,8 +199,8 @@ export default function HomePage() {
                     ) : isAff ? (
                       <div className="affPortfolioVisual">
                         <Image
-                          src={v.image}
-                          alt={v.imageAlt}
+                          src={venture.image}
+                          alt={venture.imageAlt}
                           fill
                           sizes="(max-width: 800px) 100vw, 33vw"
                           className="affPortfolioVisual__background"
@@ -217,8 +217,8 @@ export default function HomePage() {
                       </div>
                     ) : (
                       <Image
-                        src={v.image}
-                        alt={v.imageAlt}
+                        src={venture.image}
+                        alt={venture.imageAlt}
                         fill
                         sizes="(max-width: 800px) 100vw, 33vw"
                         className="workCardImage"
@@ -226,12 +226,12 @@ export default function HomePage() {
                     )}
                   </div>
                   <div className="workCardBody">
-                    <span className="kicker">{v.eyebrow}</span>
-                    <h3>{v.title}</h3>
-                    <p>{v.text}</p>
-                    {v.url && (
-                      <a className="cardLink" href={v.url} target="_blank" rel="noopener">
-                        Visit site →
+                    <span className="kicker">{venture.eyebrow}</span>
+                    <h3>{venture.title}</h3>
+                    <p>{venture.text}</p>
+                    {venture.url && (
+                      <a className="cardLink" href={venture.url} target="_blank" rel="noopener noreferrer">
+                        Visit {venture.title}<span aria-hidden="true"> →</span><span className="visuallyHidden"> (opens in a new tab)</span>
                       </a>
                     )}
                   </div>
