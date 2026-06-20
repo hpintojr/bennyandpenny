@@ -41,6 +41,35 @@
   transform: scale(1.025);
 }
 
+/* ACC moves as one composed visual, so the real logo and backdrop never drift apart. */
+.accPortfolioVisual {
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+  transition: transform .35s ease;
+}
+
+.workCard:hover .accPortfolioVisual {
+  transform: scale(1.025);
+}
+
+.accPortfolioVisual__background {
+  object-fit: cover;
+}
+
+.accPortfolioLogo {
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  width: 33%;
+  aspect-ratio: 175.38 / 104.41;
+  z-index: 2;
+}
+
+.accPortfolioLogo__image {
+  object-fit: contain;
+}
+
 .workCardBody {
   display: flex;
   min-height: 0;
@@ -163,71 +192,6 @@
 .adventuresBrand--compact .adventuresBrand__tagline {
   margin-top: .65rem;
   font-size: clamp(.56rem, .78vw, .64rem);
-}
-
-/* American Colonial Capital portfolio card visual. */
-.workCardMedia--acc {
-  background:
-    linear-gradient(145deg, rgba(20, 52, 62, .98), rgba(12, 36, 44, .98)),
-    var(--teal-deep);
-}
-
-.workCardMedia--acc::before,
-.workCardMedia--acc::after {
-  position: absolute;
-  content: "";
-  pointer-events: none;
-}
-
-.workCardMedia--acc::before {
-  inset: 12% 8%;
-  border: 1px solid rgba(230, 205, 158, .38);
-  border-radius: .55rem;
-}
-
-.workCardMedia--acc::after {
-  width: 14rem;
-  height: 14rem;
-  right: -5.5rem;
-  bottom: -7rem;
-  border: 1px solid rgba(230, 205, 158, .24);
-  border-radius: 50%;
-}
-
-.accVisual {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  place-content: center;
-  gap: .45rem;
-  width: 100%;
-  height: 100%;
-  padding: 1.2rem;
-  color: #f6ebd1;
-  text-align: center;
-}
-
-.accVisual__monogram {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(2.15rem, 4vw, 3.15rem);
-  font-weight: 700;
-  letter-spacing: .08em;
-  line-height: 1;
-}
-
-.accVisual__name {
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: .18em;
-  line-height: 1.35;
-  text-transform: uppercase;
-}
-
-.accVisual__line {
-  width: 4.2rem;
-  height: 1px;
-  margin: .18rem auto 0;
-  background: rgba(230, 205, 158, .7);
 }
 
 @media (max-width: 800px) {
