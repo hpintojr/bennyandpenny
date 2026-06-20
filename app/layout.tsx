@@ -10,7 +10,7 @@ const siteUrl = "https://bennyandpenny.com";
 const description =
   "Benny & Penny's is the development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, brand and web development, and publishing solutions.";
 const socialImage = {
-  url: "/images/og-benny-penny-social.png",
+  url: "/opengraph-image?rev=20260620",
   width: 1200,
   height: 630,
   alt: "Benny & Penny's — A Tech Company | Hamilton Pinto Jr.",
