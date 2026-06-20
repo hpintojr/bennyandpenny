@@ -53,6 +53,7 @@
 - `app/accessibility/page.tsx`: public accessibility statement.
 - `public/accessibility.md`: Markdown mirror.
 - `app/sitemap.ts`: accessibility page added to XML sitemap.
+- `docs/accessibility/manual-qa-checklist.md`: reusable manual testing and evidence checklist.
 
 ## Required verification before Phase 1 signoff
 
@@ -67,8 +68,8 @@
 
 ## Phase 2 priorities
 
-1. Complete manual route-by-route keyboard, visual, and assistive-technology audit evidence.
+1. Complete manual route-by-route keyboard, visual, and assistive-technology audit evidence using `docs/accessibility/manual-qa-checklist.md`.
 2. Conduct a full contrast and focus-not-obscured audit for all shared components.
 3. Complete image-alt inventory and decorative-image review.
 4. Add automated accessibility testing in local development and CI.
-5. Create a manual accessibility QA checklist and release evidence folder.
+5. Create a release evidence folder and use it for regression tracking.
