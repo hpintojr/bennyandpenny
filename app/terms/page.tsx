@@ -33,6 +33,18 @@ export default function TermsPage() {
             services. By using our site or services, you agree to these Terms.
           </p>
 
+          <h2>Acceptance and Eligibility</h2>
+          <p>
+            By accessing this site or engaging our services, you confirm that you are at least 18 years old
+            and have the authority to enter into these Terms on behalf of yourself or the entity you represent.
+            If you do not agree, please do not use the site or our services.
+          </p>
+          <p>
+            Where a signed Statement of Work (SOW), publishing agreement, or platform checkout terms exist,
+            those documents control for that engagement and take precedence over these general Terms to the
+            extent of any conflict.
+          </p>
+
           <h2>Contract Execution and Scope of Services</h2>
 
           <h3>1. Formation of Contract</h3>
@@ -122,6 +134,85 @@ export default function TermsPage() {
             </li>
           </ul>
 
+          <h2>Intellectual Property</h2>
+
+          <h3>1. Deliverables</h3>
+          <p>
+            Unless a signed SOW or publishing agreement states otherwise, ownership of final, paid-for
+            deliverables transfers to you upon our receipt of full payment. Until full payment is received, all
+            work product remains our property.
+          </p>
+
+          <h3>2. Pre-Existing and Background IP</h3>
+          <p>
+            We retain all rights to our pre-existing tools, frameworks, libraries, templates, know-how, and any
+            general-purpose components used to create deliverables. We grant you a non-exclusive license to use
+            those components solely as incorporated into your deliverables.
+          </p>
+
+          <h3>3. Your Content</h3>
+          <p>
+            You retain ownership of the content, data, manuscripts, and materials you provide. You grant us a
+            limited license to use them as needed to perform the services, and you represent that you have the
+            rights to all materials you provide.
+          </p>
+
+          <h3>4. Portfolio Use</h3>
+          <p>
+            Unless you request otherwise in writing, we may identify you as a client and display non-confidential
+            aspects of completed work in our portfolio and marketing.
+          </p>
+
+          <h3>5. Site Content</h3>
+          <p>
+            All content on bennyandpenny.com — including text, design, logos, and the Benny &amp; Penny&apos;s
+            marks — is owned by us or our licensors and may not be copied or reused without permission.
+          </p>
+
+          <h2>Acceptable Use</h2>
+          <p>When using our site, platforms, or services, you agree not to:</p>
+          <ul className="legalList">
+            <li>Use them for any unlawful, infringing, harmful, or fraudulent purpose.</li>
+            <li>Attempt to gain unauthorized access to, disrupt, or reverse engineer our systems, code, or APIs.</li>
+            <li>Introduce malware, scrape at scale, or abuse rate limits or automated/AI features.</li>
+            <li>Upload content you do not have the right to use, or that is unlawful or violates third-party rights.</li>
+          </ul>
+          <p>We may suspend or terminate access for conduct that violates this section.</p>
+
+          <h2>Confidentiality</h2>
+          <p>
+            Each party may receive non-public information from the other. Both parties agree to use such
+            confidential information only to perform under these Terms or an applicable agreement, and to protect
+            it with reasonable care. This does not apply to information that is or becomes public, is
+            independently developed, or is required to be disclosed by law.
+          </p>
+
+          <h2>Warranties and Disclaimer</h2>
+          <p>
+            We perform services in a professional and workmanlike manner. Except as expressly stated in a signed
+            agreement, the site, platforms, and services are provided &quot;as is&quot; and &quot;as available,&quot;
+            without warranties of any kind, whether express or implied, including merchantability, fitness for a
+            particular purpose, and non-infringement. We do not warrant that the services will be uninterrupted,
+            error-free, or free of harmful components, and we are not responsible for third-party platforms,
+            APIs, or infrastructure outside our control.
+          </p>
+
+          <h2>Limitation of Liability</h2>
+          <p>
+            To the maximum extent permitted by law, we will not be liable for any indirect, incidental, special,
+            consequential, or punitive damages, or for lost profits, revenue, data, or goodwill, arising out of
+            or relating to the site or services. Our total aggregate liability for any claim will not exceed the
+            amount you paid us for the specific service giving rise to the claim during the three (3) months
+            preceding the event, or one hundred U.S. dollars ($100) if no fees were paid.
+          </p>
+
+          <h2>Indemnification</h2>
+          <p>
+            You agree to indemnify and hold harmless Benny &amp; Penny&apos;s — A Tech Company, and Hamilton
+            Pinto Jr., from any claims, damages, liabilities, and reasonable legal fees arising from your
+            content, your use of the services, or your violation of these Terms or applicable law.
+          </p>
+
           <h2>Dispute Resolution and Binding Arbitration</h2>
 
           <h3>1. Agreement to Arbitrate</h3>
@@ -166,6 +257,31 @@ export default function TermsPage() {
             service. If you opt out, all disputes will be resolved in the state or federal courts located in
             your designated jurisdiction.
           </p>
+
+          <h2>Governing Law and Venue</h2>
+          <p>
+            These Terms are governed by the laws of the State of California, without regard to its
+            conflict-of-laws rules. Subject to the arbitration provisions above, any matter not subject to
+            arbitration will be brought exclusively in the state or federal courts located in California, and you
+            consent to their jurisdiction.
+          </p>
+
+          <h2>Changes to These Terms</h2>
+          <p>
+            We may update these Terms from time to time. Material changes take effect when posted, as indicated
+            by the updated effective date above. Your continued use of the site or services after changes are
+            posted constitutes acceptance of the revised Terms.
+          </p>
+
+          <h2>Miscellaneous</h2>
+          <ul className="legalList">
+            <li><strong>Entire agreement:</strong> these Terms, together with any signed SOW, publishing agreement, or checkout terms, are the entire agreement between us regarding their subject matter.</li>
+            <li><strong>Order of precedence:</strong> if there is a conflict, a signed SOW or publishing agreement controls first, then checkout terms, then these Terms.</li>
+            <li><strong>Severability:</strong> if any provision is found unenforceable, the remaining provisions stay in effect.</li>
+            <li><strong>Waiver:</strong> failure to enforce a provision is not a waiver of it.</li>
+            <li><strong>Assignment:</strong> you may not assign these Terms without our written consent; we may assign them in connection with a merger, acquisition, or sale of assets.</li>
+            <li><strong>Force majeure:</strong> neither party is liable for delays or failures caused by events beyond its reasonable control.</li>
+          </ul>
 
           <h2>Questions</h2>
           <p>

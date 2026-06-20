@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -24,6 +24,8 @@ const budgets = [
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string>("");
+  // When the form first mounted — used for a bot "filled too fast" check.
+  const mountedAt = useRef<number>(Date.now());
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -31,7 +33,9 @@ export function ContactForm() {
     setError("");
 
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
+    const data = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
+    // Time-on-page: bots submit near-instantly; humans take seconds.
+    data.elapsed_ms = String(Date.now() - mountedAt.current);
 
     try {
       const res = await fetch("/api/contact", {
@@ -66,15 +70,13 @@ export function ContactForm() {
 
   return (
     <form className="cform" onSubmit={handleSubmit} noValidate>
-      {/* honeypot: hidden from humans, bots fill it */}
-      <input
-        type="text"
-        name="company_url"
-        tabIndex={-1}
-        autoComplete="off"
-        aria-hidden="true"
-        className="cform__hp"
-      />
+      {/* honeypots: hidden from humans; bots tend to fill every field */}
+      <div className="cform__hp" aria-hidden="true">
+        <label htmlFor="company_url">Company website (leave blank)</label>
+        <input id="company_url" type="text" name="company_url" tabIndex={-1} autoComplete="off" />
+        <label htmlFor="nickname">Nickname (leave blank)</label>
+        <input id="nickname" type="text" name="nickname" tabIndex={-1} autoComplete="off" />
+      </div>
 
       <div className="cform__row">
         <div className="cform__field">

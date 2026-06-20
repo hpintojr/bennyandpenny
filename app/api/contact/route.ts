@@ -11,7 +11,12 @@ type Payload = {
   budget?: string;
   message?: string;
   company_url?: string; // honeypot
+  nickname?: string; // honeypot
+  elapsed_ms?: string; // time the form was on screen before submit
 };
+
+// Minimum time (ms) a human plausibly needs to fill the form. Faster = bot.
+const MIN_FILL_MS = 2000;
 
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "hello@bennyandpenny.com";
 const FROM_EMAIL = process.env.SEQUENZY_FROM_EMAIL || "hello@bennyandpenny.com";
@@ -122,8 +127,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Invalid request." }, { status: 400 });
   }
 
-  // Honeypot: pretend success, drop silently.
-  if (clean(body.company_url)) {
+  // Spam traps: pretend success, drop silently so bots get no signal.
+  const honeypotTripped = Boolean(clean(body.company_url) || clean(body.nickname));
+  const elapsed = Number(body.elapsed_ms);
+  const tooFast = Number.isFinite(elapsed) && elapsed >= 0 && elapsed < MIN_FILL_MS;
+  if (honeypotTripped || tooFast) {
     return NextResponse.json({ ok: true });
   }
 
