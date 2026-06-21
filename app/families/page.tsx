@@ -5,11 +5,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Adventures",
   description:
-    "Benny & Penny's Adventures — Medical Books for Brave Little Hearts. A ten-part children's medical book series and the self-owned publishing imprint behind Benny & Penny's, A Tech Company.",
+    "Benny & Penny Adventures — Medical Books for Brave Little Hearts. A ten-part children's medical book series and the self-owned publishing imprint behind Benny & Penny, A Tech Company.",
   alternates: { canonical: "/families" },
   openGraph: {
     url: "/families",
-    title: "Benny & Penny's Adventures — Medical Books for Brave Little Hearts",
+    title: "Benny & Penny Adventures — Medical Books for Brave Little Hearts",
     description:
       "A ten-part children’s medical book series that helps families approach real medical experiences with comfort and confidence.",
   },
@@ -29,7 +29,7 @@ const highlights = [
   {
     icon: "studio",
     title: "Part of the studio",
-    text: "The imprint is the namesake and creative heart of Benny & Penny's—proof of the same build-it-right discipline applied to my own work.",
+    text: "The imprint is the namesake and creative heart of Benny & Penny—proof of the same build-it-right discipline applied to my own work.",
   },
 ];
 
@@ -93,7 +93,7 @@ export default function AdventuresPage() {
             <p className="eyebrow">Featured imprint · Ten-part series</p>
             <div className="adventuresBrand">
               <h1 className="adventuresBrand__name">
-                Benny &amp; Penny&apos;s<span className="visuallyHidden"> Adventures</span>
+                Benny &amp; Penny<span className="visuallyHidden"> Adventures</span>
               </h1>
               <div className="adventuresBrand__adventures" aria-hidden="true">
                 <span>♥</span>
@@ -115,7 +115,7 @@ export default function AdventuresPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Visit Benny &amp; Penny&apos;s Adventures storefront<span aria-hidden="true"> →</span><span className="visuallyHidden"> (opens in a new tab)</span>
+                Visit Benny &amp; Penny Adventures storefront<span aria-hidden="true"> →</span><span className="visuallyHidden"> (opens in a new tab)</span>
               </a>
               <Link className="button button--light" href="/our-work">Back to all work</Link>
             </div>
@@ -123,7 +123,7 @@ export default function AdventuresPage() {
           <div className="imprintHeroVisual">
             <Image
               src="/images/work-adventures-mockup.webp"
-              alt="Benny and Penny's Adventures children's book collection"
+              alt="Benny and Penny Adventures children's book collection"
               fill
               sizes="(max-width: 800px) 100vw, 42vw"
               className="imprintHeroImage"
@@ -187,7 +187,7 @@ export default function AdventuresPage() {
               <h2 className="h2">Built with the same care as the stories.</h2>
             </div>
             <p className="lede">
-              Three things make Benny &amp; Penny&apos;s Adventures more than a book—it&apos;s a brand,
+              Three things make Benny &amp; Penny Adventures more than a book—it&apos;s a brand,
               a pipeline, and a promise.
             </p>
           </div>
@@ -221,7 +221,7 @@ export default function AdventuresPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Go to Benny &amp; Penny&apos;s Adventures storefront<span aria-hidden="true"> →</span><span className="visuallyHidden"> (opens in a new tab)</span>
+                Go to Benny &amp; Penny Adventures storefront<span aria-hidden="true"> →</span><span className="visuallyHidden"> (opens in a new tab)</span>
               </a>
             </div>
           </div>
