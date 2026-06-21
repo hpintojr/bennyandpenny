@@ -13,7 +13,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SkipLink } from "@/components/SkipLink";
 
 const siteUrl = "https://www.bennyandpenny.com";
-const socialTitle = "Benny & Penny's | A Tech Company";
+const socialTitle = "Benny & Penny | A Tech Company";
 const description =
   "The development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, and publishing solutions. Proudly motivated by my children, Benny and Penny.";
 const socialDescription =
@@ -25,14 +25,14 @@ const socialImage = {
   type: "image/png",
   width: 1200,
   height: 630,
-  alt: "Benny & Penny's — A Tech Company",
+  alt: "Benny & Penny — A Tech Company",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: socialTitle,
-    template: "%s | Benny & Penny's",
+    template: "%s | Benny & Penny",
   },
   description,
   applicationName: socialTitle,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     "XBeton",
     "Advantage First Financial",
     "American Colonial Capital",
-    "Benny & Penny's Adventures",
+    "Benny & Penny Adventures",
     "Mercury Call Desk",
     "Southern California",
   ],
