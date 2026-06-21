@@ -138,9 +138,9 @@ export function SiteHeader() {
       `}</style>
 
       <div className="shell headerInner">
-        <Link className="brandMark" href="/" aria-label="Benny and Penny's — A Tech Company, home" onClick={close}>
+        <Link className="brandMark" href="/" aria-label="Benny and Penny — A Tech Company, home" onClick={close}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="brandLogo" src="/images/logo-horizontal-transparent.png" alt="Benny & Penny's — A Tech Company" width={269} height={54} />
+          <img className="brandLogo" src="/images/logo-horizontal-transparent.png" alt="Benny & Penny — A Tech Company" width={269} height={54} />
         </Link>
 
         <nav className="desktopNav" aria-label="Primary navigation">
