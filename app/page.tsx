@@ -13,25 +13,25 @@ const socialImage = {
   type: "image/png",
   width: 1200,
   height: 630,
-  alt: "Benny & Penny's — A Tech Company",
+  alt: "Benny & Penny — A Tech Company",
 };
 
 export const metadata: Metadata = {
-  title: { absolute: "Benny & Penny's | A Tech Company" },
+  title: { absolute: "Benny & Penny | A Tech Company" },
   description: siteDescription,
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "Benny & Penny's | A Tech Company",
-    title: "Benny & Penny's | A Tech Company",
+    siteName: "Benny & Penny | A Tech Company",
+    title: "Benny & Penny | A Tech Company",
     description: ogDescription,
     images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Benny & Penny's | A Tech Company",
+    title: "Benny & Penny | A Tech Company",
     description: siteDescription,
     images: [socialImageUrl],
   },
@@ -73,11 +73,11 @@ const ventures = [
     url: "https://www.advantagefirst.com/",
   },
   {
-    title: "Benny & Penny's Adventures",
+    title: "Benny & Penny Adventures",
     eyebrow: "Publishing Imprint",
     text: "An original children's medical book series and a self-owned publishing imprint. Brand, web, and production pipeline.",
     image: "/images/work-adventures-mockup.webp",
-    imageAlt: "Benny and Penny's Adventures children's book collection",
+    imageAlt: "Benny and Penny Adventures children's book collection",
     url: "https://www.bennyandpennyadventures.com/",
   },
   {
@@ -115,7 +115,7 @@ export default function Home() {
             <h1 className="display">Vision, translated into real-world solutions.</h1>
             <p className="lede">
               For two decades I&apos;ve built the systems behind brands, platforms, and ventures—pairing the eye of a
-              designer with the discipline of a software architect. Benny &amp; Penny&apos;s is the studio where that work,
+              designer with the discipline of a software architect. Benny &amp; Penny is the studio where that work,
               and my own, comes together. Now I&apos;m building my own.
             </p>
             <div className="buttonRow">
@@ -127,7 +127,7 @@ export default function Home() {
             <div className="heroImageFrame">
               <Image
                 src="/images/home-hero-brandmark.webp"
-                alt="Benny and Penny's sculptural B and P brand mark"
+                alt="Benny and Penny sculptural B and P brand mark"
                 fill
                 priority
                 sizes="(max-width: 800px) 100vw, 46vw"
