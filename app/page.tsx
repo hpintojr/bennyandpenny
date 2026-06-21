@@ -7,10 +7,12 @@ const siteDescription =
 const ogDescription =
   "Building the next generation of digital tools, web applications, and technology platforms.";
 const socialImage = {
-  url: "/images/og-social-background.webp?rev=20260620",
+  url: "/og-image",
+  secureUrl: "/og-image",
+  type: "image/png",
   width: 1200,
   height: 630,
-  alt: "Benny & Penny's | A Tech Company",
+  alt: "Benny & Penny's — A Tech Company",
 };
 
 export const metadata: Metadata = {
@@ -99,11 +101,10 @@ const ventures = [
     text: "Restaurants, law firms, medical practices, and professional-service organizations opened and supported across Southern California.",
     image: "/images/work-establishments-collage.webp",
     imageAlt: "Restaurant, law office, and medical-practice environments",
-    url: null,
   },
 ];
 
-export default function HomePage() {
+export default function Home() {
   return (
     <>
       <section className="hero">
@@ -112,9 +113,9 @@ export default function HomePage() {
             <p className="eyebrow">Software Architect · Creative Technologist · Publisher</p>
             <h1 className="display">Vision, translated into real-world solutions.</h1>
             <p className="lede">
-              For two decades I&apos;ve built the systems behind brands, platforms, and ventures—pairing
-              the eye of a designer with the discipline of a software architect. Benny &amp; Penny&apos;s is
-              the studio where that work, and my own, comes together. Now I&apos;m building my own.
+              For two decades I&apos;ve built the systems behind brands, platforms, and ventures—pairing the eye of a
+              designer with the discipline of a software architect. Benny &amp; Penny&apos;s is the studio where that work,
+              and my own, comes together. Now I&apos;m building my own.
             </p>
             <div className="buttonRow">
               <Link className="button" href="/our-work">View my work</Link>
@@ -144,9 +145,7 @@ export default function HomePage() {
               <p className="eyebrow">What I do</p>
               <h2 className="h2">One discipline, many registers.</h2>
             </div>
-            <p className="lede">
-              From construction-tech platforms to a children&apos;s book imprint, the common thread is execution.
-            </p>
+            <p className="lede">From construction-tech platforms to a children&apos;s book imprint, the common thread is execution.</p>
           </div>
           <div className="pillarGrid">
             {capabilities.map((capability) => (
@@ -170,74 +169,45 @@ export default function HomePage() {
             <Link className="textLink" href="/our-work">See all work</Link>
           </div>
           <div className="workGrid">
-            {ventures.map((venture) => {
-              const isAcc = venture.title === "American Colonial Capital";
-              const isAff = venture.title === "Advantage First Financial";
-
-              return (
-                <article className="card workCard ventureCard" key={venture.title}>
-                  <div className="workCardMedia">
-                    {isAcc ? (
-                      <div className="accPortfolioVisual">
-                        <Image
-                          src={venture.image}
-                          alt={venture.imageAlt}
-                          fill
-                          sizes="(max-width: 800px) 100vw, 33vw"
-                          className="accPortfolioVisual__background"
-                        />
-                        <div className="accPortfolioLogo" aria-hidden="true">
-                          <Image
-                            src="/images/acc-logo.svg"
-                            alt=""
-                            fill
-                            sizes="(max-width: 800px) 35vw, 11vw"
-                            className="accPortfolioLogo__image"
-                          />
-                        </div>
-                      </div>
-                    ) : isAff ? (
-                      <div className="affPortfolioVisual">
-                        <Image
-                          src={venture.image}
-                          alt={venture.imageAlt}
-                          fill
-                          sizes="(max-width: 800px) 100vw, 33vw"
-                          className="affPortfolioVisual__background"
-                        />
-                        <div className="affPortfolioLogo" aria-hidden="true">
-                          <Image
-                            src="/images/AFF_Logo.png"
-                            alt=""
-                            fill
-                            sizes="(max-width: 800px) 52vw, 17vw"
-                            className="affPortfolioLogo__image"
-                          />
-                        </div>
-                      </div>
-                    ) : (
+            {ventures.map((venture) => (
+              <article className="card workCard ventureCard" key={venture.title}>
+                <div className="workCardMedia">
+                  {venture.title === "Advantage First Financial" ? (
+                    <div className="affPortfolioVisual">
                       <Image
                         src={venture.image}
                         alt={venture.imageAlt}
                         fill
                         sizes="(max-width: 800px) 100vw, 33vw"
-                        className="workCardImage"
+                        className="affPortfolioVisual__background"
                       />
-                    )}
-                  </div>
-                  <div className="workCardBody">
-                    <span className="kicker">{venture.eyebrow}</span>
-                    <h3>{venture.title}</h3>
-                    <p>{venture.text}</p>
-                    {venture.url && (
-                      <a className="cardLink" href={venture.url} target="_blank" rel="noopener noreferrer">
-                        Visit {venture.title}<span aria-hidden="true"> →</span><span className="visuallyHidden"> (opens in a new tab)</span>
-                      </a>
-                    )}
-                  </div>
-                </article>
-              );
-            })}
+                      <div className="affPortfolioLogo" aria-hidden="true">
+                        <Image src="/images/AFF_Logo.png" alt="" fill sizes="(max-width: 800px) 52vw, 17vw" className="affPortfolioLogo__image" />
+                      </div>
+                    </div>
+                  ) : venture.title === "American Colonial Capital" ? (
+                    <div className="accPortfolioVisual">
+                      <Image src={venture.image} alt={venture.imageAlt} fill className="accPortfolioVisual__background" />
+                      <div className="accPortfolioLogo" aria-hidden="true">
+                        <Image src="/images/acc-logo.svg" alt="" fill sizes="(max-width: 800px) 35vw, 11vw" className="accPortfolioLogo__image" />
+                      </div>
+                    </div>
+                  ) : (
+                    <Image src={venture.image} alt={venture.imageAlt} fill sizes="(max-width: 800px) 100vw, 33vw" className="workCardImage" />
+                  )}
+                </div>
+                <div className="workCardBody">
+                  <span className="kicker">{venture.eyebrow}</span>
+                  <h3>{venture.title}</h3>
+                  <p>{venture.text}</p>
+                  {venture.url && (
+                    <a className="cardLink" href={venture.url} target="_blank" rel="noopener noreferrer">
+                      Visit {venture.title}<span aria-hidden="true"> →</span><span className="visuallyHidden"> (opens in a new tab)</span>
+                    </a>
+                  )}
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -247,12 +217,8 @@ export default function HomePage() {
           <div className="calloutInner">
             <p className="eyebrow">Let&apos;s build the next one</p>
             <h2 className="h2">Have a platform, brand, or product that needs to get built right?</h2>
-            <p className="lede">
-              I take on a small number of aligned software, brand, and publishing engagements.
-            </p>
-            <div className="buttonRow">
-              <Link className="button" href="/work-with-us">Start a conversation</Link>
-            </div>
+            <p className="lede">I take on a small number of aligned software, brand, and publishing engagements.</p>
+            <div className="buttonRow"><Link className="button" href="/work-with-us">Start a conversation</Link></div>
           </div>
         </div>
       </section>
