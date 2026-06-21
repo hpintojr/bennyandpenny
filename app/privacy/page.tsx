@@ -4,12 +4,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy Policy for Benny & Penny's — A Tech Company: what we collect, how we use it, the providers we rely on, and your rights.",
+    "Privacy Policy for Benny & Penny — A Tech Company: what we collect, how we use it, the providers we rely on, and your rights.",
   alternates: { canonical: "/privacy" },
   openGraph: {
     url: "/privacy",
-    title: "Privacy Policy | Benny & Penny's",
-    description: "How Benny & Penny's collects, uses, and protects contact-form information.",
+    title: "Privacy Policy | Benny & Penny",
+    description: "How Benny & Penny collects, uses, and protects contact-form information.",
   },
 };
 
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
       <section className="section">
         <div className="shell legal">
           <p className="legalLead">
-            This Privacy Policy explains how Benny &amp; Penny&apos;s — A Tech Company (&quot;we,&quot; &quot;us,&quot;
+            This Privacy Policy explains how Benny &amp; Penny — A Tech Company (&quot;we,&quot; &quot;us,&quot;
             or &quot;our&quot;) collects, uses, and protects information when you visit bennyandpenny.com or contact
             us through the site. We collect only what we need to respond to you and operate our services.
           </p>
