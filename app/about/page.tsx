@@ -29,7 +29,7 @@ export default function AboutPage() {
           <p className="eyebrow">About</p>
           <h1 className="display">The big picture, executed at the technical level.</h1>
           <p className="lede">
-            Benny &amp; Penny&apos;s is named for my children and serves as the banner for my work as a
+            Benny &amp; Penny is named for my children and serves as the banner for my work as a
             software architect, creative technologist, and publisher.
           </p>
         </div>

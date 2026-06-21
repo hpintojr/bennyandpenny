@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/work-with-us" },
   openGraph: {
     url: "/work-with-us",
-    title: "Work with Benny & Penny's — A Tech Company",
+    title: "Work with Benny & Penny — A Tech Company",
     description:
       "Start a conversation about custom platform builds, integrations, business consulting, brand and web, or publishing production.",
   },

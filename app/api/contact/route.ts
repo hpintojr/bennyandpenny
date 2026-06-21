@@ -20,7 +20,7 @@ const MIN_FILL_MS = 2000;
 
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "hello@bennyandpenny.com";
 const FROM_EMAIL = process.env.SEQUENZY_FROM_EMAIL || "hello@bennyandpenny.com";
-const FROM_NAME = process.env.SEQUENZY_FROM_NAME || "Benny & Penny's";
+const FROM_NAME = process.env.SEQUENZY_FROM_NAME || "Benny & Penny";
 const SEQUENZY_API_URL = (
   process.env.SEQUENZY_API_URL || "https://api.sequenzy.com/api/v1"
 ).replace(/\/$/, "");

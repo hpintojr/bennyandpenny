@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Accessibility",
   description:
-    "Accessibility statement for Benny & Penny's — A Tech Company, including our WCAG 2.2 AA target, floating accessibility preferences, and how to report an access barrier.",
+    "Accessibility statement for Benny & Penny — A Tech Company, including our WCAG 2.2 AA target, floating accessibility preferences, and how to report an access barrier.",
   alternates: { canonical: "/accessibility" },
   openGraph: {
     url: "/accessibility",
-    title: "Accessibility | Benny & Penny's",
+    title: "Accessibility | Benny & Penny",
     description:
-      "How Benny & Penny's is improving access for visitors who use assistive technologies.",
+      "How Benny & Penny is improving access for visitors who use assistive technologies.",
   },
 };
 
@@ -21,7 +21,7 @@ export default function AccessibilityPage() {
           <p className="eyebrow">Accessibility</p>
           <h1 className="display">Access is part of building it right.</h1>
           <p className="lede">
-            Benny &amp; Penny&apos;s is working to make this website usable by the widest possible audience,
+            Benny &amp; Penny is working to make this website usable by the widest possible audience,
             including people who use assistive technologies.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function AccessibilityPage() {
           <p>
             This portfolio is actively being reviewed against WCAG 2.2 Level AA. Some third-party websites linked
             from this portfolio, embedded services, and externally hosted content may not be fully controlled by
-            Benny &amp; Penny&apos;s. We will review and address barriers within our control when they are reported or
+            Benny &amp; Penny. We will review and address barriers within our control when they are reported or
             discovered.
           </p>
 

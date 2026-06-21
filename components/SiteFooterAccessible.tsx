@@ -6,7 +6,7 @@ import { AccessibilityPreferencesTrigger } from "@/components/AccessibilityPrefe
 const ventures = [
   { label: "Advantage First Financial", url: "https://www.advantagefirst.com/" },
   { label: "American Colonial Capital", url: "https://acc.capital/" },
-  { label: "Benny & Penny's Adventures", url: "https://www.bennyandpennyadventures.com/" },
+  { label: "Benny & Penny Adventures", url: "https://www.bennyandpennyadventures.com/" },
   { label: "Mercury Call Desk", url: "https://mercurycalldesk.com/" },
   { label: "XBeton", url: "https://www.xbeton.com/" },
 ];
@@ -40,7 +40,7 @@ export function SiteFooterAccessible() {
             <div className="footerBrandLockup">
               <img className="footerMark" src="/images/logo-mark-transparent.png" alt="" width={66} height={66} />
               <div className="footerBrandWordmark">
-                <p className="footerBrandName">Benny &amp; Penny&apos;s</p>
+                <p className="footerBrandName">Benny &amp; Penny</p>
                 <p className="footerBrandTag">A Tech Company</p>
               </div>
             </div>
@@ -70,7 +70,7 @@ export function SiteFooterAccessible() {
         </div>
 
         <div className="shell footerBottom">
-          <span>© {year} Benny &amp; Penny&apos;s — A Tech Company. All rights reserved.</span>
+          <span>© {year} Benny &amp; Penny — A Tech Company. All rights reserved.</span>
           <span className="footerLegal">
             <Link className="footerLink" href="/privacy">Privacy Policy</Link>
             <span aria-hidden="true" className="footerDot">·</span>

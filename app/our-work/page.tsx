@@ -5,11 +5,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected ventures and platforms by Hamilton Pinto Jr. — XBeton, Advantage First Financial, American Colonial Capital, Benny & Penny's Adventures, Mercury Call Desk, and 60+ launched establishments.",
+    "Selected ventures and platforms by Hamilton Pinto Jr. — XBeton, Advantage First Financial, American Colonial Capital, Benny & Penny Adventures, Mercury Call Desk, and 60+ launched establishments.",
   alternates: { canonical: "/our-work" },
   openGraph: {
     url: "/our-work",
-    title: "Work by Benny & Penny's — A Tech Company",
+    title: "Work by Benny & Penny — A Tech Company",
     description:
       "Selected platforms, ventures, brand systems, and publishing work by Hamilton Pinto Jr.",
   },
@@ -39,14 +39,14 @@ const ventures = [
     url: "https://www.advantagefirst.com/",
   },
   {
-    title: "Benny & Penny's Adventures",
+    title: "Benny & Penny Adventures",
     label: "Publishing Imprint",
     description:
       "An original children's medical book series and the launch of a self-owned publishing imprint. Brand, web, and production pipeline.",
     role: "Founder · Publisher · Design",
     tags: ["Brand", "Web", "Publishing"],
     image: "/images/work-adventures-mockup.webp",
-    imageAlt: "Benny and Penny's Adventures children's book collection",
+    imageAlt: "Benny and Penny Adventures children's book collection",
     url: "https://www.bennyandpennyadventures.com/",
   },
   {
@@ -183,7 +183,7 @@ export default function WorkPage() {
             <p className="eyebrow">The newest chapter</p>
             <div className="adventuresBrand adventuresBrand--compact">
               <h2 className="adventuresBrand__name">
-                Benny &amp; Penny&apos;s<span className="visuallyHidden"> Adventures</span>
+                Benny &amp; Penny<span className="visuallyHidden"> Adventures</span>
               </h2>
               <div className="adventuresBrand__adventures" aria-hidden="true">
                 <span>♥</span>
