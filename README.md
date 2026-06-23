@@ -1,30 +1,49 @@
-# Benny & Penny's — A Tech Company
+# Benny & Penny — A Tech Company
 
-The technology and creative studio of **Hamilton Pinto Jr.** — software architect, creative technologist, and publisher. This is the personal/tech portfolio site under the Benny & Penny's banner.
+The technology and creative studio of **Hamilton Pinto Jr.** — software architect, creative technologist, and publisher. This is the portfolio and studio site for the Benny & Penny brand.
 
 ## Purpose
 
-This repository is for **BennyAndPenny.com**, Hamilton's portfolio and tech-company brand site.
+This repository powers **https://www.bennyandpenny.com**, Hamilton's portfolio and technology-company brand site.
 
 It is intentionally separate from the Benny & Penny Adventures commerce application:
 
-- **This site:** Hamilton's portfolio, the ventures/work, the studio brand, and aligned business inquiries, with backlinks to ACC, Advantage First Financial, Benny & Penny's Adventures, XBeton, and Mercury Call Desk.
-- **Adventures/store app (`hpintojr/bennyandpennyadventures`):** product catalog, checkout, customer portal, digital delivery, gifting, and cart recovery.
+- **This site:** Hamilton's portfolio, studio capabilities, venture work, and aligned business inquiries, with links to American Colonial Capital, Advantage First Financial, Benny & Penny Adventures, XBeton, and Mercury Call Desk.
+- **Adventures storefront (`hpintojr/bennyandpennyadventures`):** product catalog, checkout, customer portal, digital delivery, gifting, and cart recovery.
 
 ## Pages
 
 - Home — portfolio hero, capabilities, and selected ventures
-- Work (`/our-work`) — ventures detail with outbound links (XBeton, AFF, Benny & Penny's Adventures, Mercury, 60+ establishments)
-- Adventures (`/families`) — the Benny & Penny's Adventures publishing imprint spotlight
-- About (`/about`) — Hamilton's background and stats
-- Contact (`/work-with-us`) — engagement types and direct email
+- Work (`/our-work`) — venture detail and outbound links
+- Adventures (`/families`) — Benny & Penny Adventures publishing-imprint spotlight
+- About (`/about`) — Hamilton's background and experience
+- Contact (`/work-with-us`) — engagement types and inquiry form
+- Accessibility, Privacy, and Terms — public policy and support pages
 
-## Launch v1 included
+## Production status
 
-- Responsive multi-page portfolio with a clear personal/tech-company position.
-- Backlinks to the five ventures (footer + work tiles), plus Person JSON-LD `sameAs`.
-- Search foundations: page metadata, canonical URL, Person schema, sitemap, robots, and a social-sharing image.
-- CSS-first visual direction (teal/mint) that works before final photography and book art are ready.
+- Vercel production deployment is connected to `main`.
+- Canonical domain: `https://www.bennyandpenny.com`.
+- `https://bennyandpenny.com` permanently redirects to the canonical `www` domain.
+- Search foundations include page metadata, canonical URLs, Organization and Person JSON-LD, sitemap, robots, and a social-sharing image.
+- Accessibility foundations include skip navigation, accessible form validation, display preferences, and a public accessibility statement.
+- The inquiry flow is configured for its confirmed production delivery path.
+
+## Discovery and indexing files
+
+Public Markdown mirrors and LLM discovery files live in `public/`:
+
+- `index.md`, `our-work.md`, `families.md`, `about.md`, and `work-with-us.md`
+- `privacy.md`, `terms.md`, and `accessibility.md`
+- `llm.txt`, `llms.txt`, and `llms-full.txt`
+
+These documents must use the exact brand names and canonical domain below:
+
+- **Benny & Penny — A Tech Company**
+- **Benny & Penny Adventures**
+- **https://www.bennyandpenny.com**
+
+The Markdown and LLM files are intentionally served with `X-Robots-Tag: noindex, follow` so they can support machine-readable discovery without competing with the primary HTML pages in search results.
 
 ## Run locally
 
@@ -35,16 +54,15 @@ npm run dev
 
 Open `http://localhost:3000`.
 
-## Production deployment
+## Validation
 
-1. This repo is connected to Vercel; pushing `main` triggers a production deploy.
-2. Attach `bennyandpenny.com` and `www.bennyandpenny.com` to the Vercel project and point DNS.
-3. Verify `https://bennyandpenny.com/sitemap.xml` and `/robots.txt` after deployment.
-4. Submit the live domain to Google Search Console and Bing Webmaster Tools.
+```bash
+npm run build
+npm run a11y:smoke
+npm run a11y:axe
+```
 
-## Before public launch
+## Later roadmap
 
-- [ ] Confirm `hello@bennyandpenny.com` is an active mailbox and configure SPF, DKIM, and DMARC.
-- [ ] Replace the CSS-only placeholders with approved photography, a Hamilton portrait, and book-preview art.
-- [ ] Add a privacy policy and terms page before collecting any form data.
-- [ ] Choos
+- Add deeper portfolio case studies with role, problem, implementation, proof points, and measurable outcomes where appropriate.
+- Refresh visual assets only with approved photography, venture screenshots, and book-preview art.
