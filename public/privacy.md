@@ -2,15 +2,15 @@
 
 Effective date: June 19, 2026
 
-Canonical page: https://bennyandpenny.com/privacy
+Canonical page: https://www.bennyandpenny.com/privacy
 
-Benny & Penny's — A Tech Company collects only the information needed to respond to inquiries and operate services.
+Benny & Penny — A Tech Company collects only the information needed to respond to inquiries and operate services.
 
 ## Information collected
 
 - Contact-form information: name, email address, and any company, project type, budget, or message details voluntarily submitted.
 - Limited technical information: IP address and browser user-agent at the time of a form submission to help prevent abuse and deliver the site.
-- Benny & Penny's does not knowingly collect sensitive personal information and does not sell personal information.
+- Benny & Penny does not knowingly collect sensitive personal information and does not sell personal information.
 
 ## How information is used
 
@@ -30,4 +30,4 @@ Contact submissions are retained as needed to respond, maintain records, and mee
 
 For privacy questions or requests: hello@bennyandpenny.com
 
-Related page: https://bennyandpenny.com/terms
+Related page: https://www.bennyandpenny.com/terms

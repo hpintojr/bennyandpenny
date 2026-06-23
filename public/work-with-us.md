@@ -1,10 +1,10 @@
-# Work With Benny & Penny's
+# Work With Benny & Penny
 
 > Start a conversation about the next platform, integration, brand, or publishing project.
 
-Canonical page: https://bennyandpenny.com/work-with-us
+Canonical page: https://www.bennyandpenny.com/work-with-us
 
-Benny & Penny's takes on a small number of aligned engagements across software, business, brand, web, and publishing.
+Benny & Penny takes on a small number of aligned engagements across software, business, brand, web, and publishing.
 
 ## Engagement types
 
@@ -21,5 +21,5 @@ Hamilton listens for the heart of the project first, then provides a clear, hone
 
 ## Contact
 
-Contact form: https://bennyandpenny.com/work-with-us
+Contact form: https://www.bennyandpenny.com/work-with-us
 Email: hello@bennyandpenny.com

@@ -1,10 +1,10 @@
-# Benny & Penny's — A Tech Company: Full Context
+# Benny & Penny — A Tech Company: Full Context
 
 ## Organization
 
-Benny & Penny's is the development and design studio of Hamilton Pinto Jr. The studio delivers custom software architecture, API and CRM integrations, business consulting, brand and web development, go-to-market systems, and publishing solutions. The studio is named for and proudly motivated by Hamilton's children, Benny and Penny.
+Benny & Penny is the development and design studio of Hamilton Pinto Jr. The studio delivers custom software architecture, API and CRM integrations, business consulting, brand and web development, go-to-market systems, and publishing solutions. The studio is named for and proudly motivated by Hamilton's children, Benny and Penny.
 
-Website: https://bennyandpenny.com
+Website: https://www.bennyandpenny.com
 Contact: hello@bennyandpenny.com
 Location: Southern California
 
@@ -26,31 +26,31 @@ Hamilton Pinto Jr. is a software architect, creative technologist, business cons
 - XBeton: https://www.xbeton.com/
 - Advantage First Financial: https://www.advantagefirst.com/
 - American Colonial Capital: https://acc.capital/
-- Benny & Penny's Adventures: https://www.bennyandpennyadventures.com/
+- Benny & Penny Adventures: https://www.bennyandpennyadventures.com/
 - Mercury Call Desk: https://mercurycalldesk.com/
 
 ## Accessibility
 
-Benny & Penny's is working toward WCAG 2.2 Level AA as a design and engineering target. Accessibility improvements are ongoing; the site does not claim zero defects or guaranteed legal compliance.
+Benny & Penny is working toward WCAG 2.2 Level AA as a design and engineering target. Accessibility improvements are ongoing; the site does not claim zero defects or guaranteed legal compliance.
 
-Accessibility statement: https://bennyandpenny.com/accessibility
-Accessibility Markdown mirror: https://bennyandpenny.com/accessibility.md
+Accessibility statement: https://www.bennyandpenny.com/accessibility
+Accessibility Markdown mirror: https://www.bennyandpenny.com/accessibility.md
 Accessibility support: hello@bennyandpenny.com
 
 ## Site pages and Markdown mirrors
 
-- Home: https://bennyandpenny.com/ | https://bennyandpenny.com/index.md
-- Work: https://bennyandpenny.com/our-work | https://bennyandpenny.com/our-work.md
-- Adventures: https://bennyandpenny.com/families | https://bennyandpenny.com/families.md
-- About: https://bennyandpenny.com/about | https://bennyandpenny.com/about.md
-- Contact: https://bennyandpenny.com/work-with-us | https://bennyandpenny.com/work-with-us.md
-- Accessibility: https://bennyandpenny.com/accessibility | https://bennyandpenny.com/accessibility.md
-- Privacy: https://bennyandpenny.com/privacy | https://bennyandpenny.com/privacy.md
-- Terms: https://bennyandpenny.com/terms | https://bennyandpenny.com/terms.md
+- Home: https://www.bennyandpenny.com/ | https://www.bennyandpenny.com/index.md
+- Work: https://www.bennyandpenny.com/our-work | https://www.bennyandpenny.com/our-work.md
+- Adventures: https://www.bennyandpenny.com/families | https://www.bennyandpenny.com/families.md
+- About: https://www.bennyandpenny.com/about | https://www.bennyandpenny.com/about.md
+- Contact: https://www.bennyandpenny.com/work-with-us | https://www.bennyandpenny.com/work-with-us.md
+- Accessibility: https://www.bennyandpenny.com/accessibility | https://www.bennyandpenny.com/accessibility.md
+- Privacy: https://www.bennyandpenny.com/privacy | https://www.bennyandpenny.com/privacy.md
+- Terms: https://www.bennyandpenny.com/terms | https://www.bennyandpenny.com/terms.md
 
 ## Discovery
 
-LLM guide: https://bennyandpenny.com/llms.txt
-LLM guide alias: https://bennyandpenny.com/llm.txt
-XML sitemap: https://bennyandpenny.com/sitemap.xml
-Robots file: https://bennyandpenny.com/robots.txt
+LLM guide: https://www.bennyandpenny.com/llms.txt
+LLM guide alias: https://www.bennyandpenny.com/llm.txt
+XML sitemap: https://www.bennyandpenny.com/sitemap.xml
+Robots file: https://www.bennyandpenny.com/robots.txt

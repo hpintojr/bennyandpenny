@@ -2,9 +2,9 @@
 
 > The big picture, executed at the technical level.
 
-Canonical page: https://bennyandpenny.com/about
+Canonical page: https://www.bennyandpenny.com/about
 
-Benny & Penny's is named for Hamilton Pinto Jr.'s children and serves as the banner for his work as a software architect, creative technologist, business consultant, and publisher.
+Benny & Penny is named for Hamilton Pinto Jr.'s children and serves as the banner for his work as a software architect, creative technologist, business consultant, and publisher.
 
 ## A disciplined problem solver with a designer's eye
 
@@ -22,6 +22,6 @@ As owner of Pinto Design Group and Pinto Consulting, he has opened and supported
 
 ## Work with Hamilton
 
-https://bennyandpenny.com/our-work
-https://bennyandpenny.com/work-with-us
+https://www.bennyandpenny.com/our-work
+https://www.bennyandpenny.com/work-with-us
 hello@bennyandpenny.com

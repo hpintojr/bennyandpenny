@@ -2,7 +2,7 @@
 
 Canonical page: https://www.bennyandpenny.com/accessibility
 
-Benny & Penny's is working toward WCAG 2.2 Level AA.
+Benny & Penny is working toward WCAG 2.2 Level AA.
 
 ## Preferences
 
