@@ -1,8 +1,8 @@
-# Work — Benny & Penny's
+# Work — Benny & Penny
 
 > Selected platforms, ventures, and brands architected, built, and supported by Hamilton Pinto Jr.
 
-Canonical page: https://bennyandpenny.com/our-work
+Canonical page: https://www.bennyandpenny.com/our-work
 
 ## Two decades of building the systems behind brands
 
@@ -18,13 +18,13 @@ Services: platform architecture, APIs, commerce, go-to-market.
 https://www.xbeton.com/
 
 ### Advantage First Financial — Financial Services
-Lead-capture, compliance, and sales-performance infrastructure for a debt-resolution firm.
+Lead-capture, compliance, and sales-performance infrastructure for a financial-services firm.
 
 Services: systems, compliance, business intelligence.
 
 https://www.advantagefirst.com/
 
-### Benny & Penny's Adventures — Publishing Imprint
+### Benny & Penny Adventures — Publishing Imprint
 An original children’s medical book series and self-owned publishing imprint.
 
 Services: brand, web, publishing. Role: founder, publisher, design.
@@ -50,9 +50,9 @@ Restaurants, law firms, medical practices, and professional-service organization
 
 Services: branding, web, launch.
 
-## The newest chapter: Benny & Penny's Adventures
+## The newest chapter: Benny & Penny Adventures
 
-Benny & Penny's Adventures is an original children’s medical-book series created with Hamilton's wife, the author. It is the namesake of the studio and a self-owned publishing venture.
+Benny & Penny Adventures is an original children’s medical-book series created with Hamilton's wife, the author. It is the namesake of the studio and a self-owned publishing venture.
 
-Learn more: https://bennyandpenny.com/families
-Contact: https://bennyandpenny.com/work-with-us
+Learn more: https://www.bennyandpenny.com/families
+Contact: https://www.bennyandpenny.com/work-with-us
