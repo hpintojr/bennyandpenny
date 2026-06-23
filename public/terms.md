@@ -2,9 +2,9 @@
 
 Effective date: June 19, 2026
 
-Canonical page: https://bennyandpenny.com/terms
+Canonical page: https://www.bennyandpenny.com/terms
 
-These terms govern use of bennyandpenny.com and services offered by Benny & Penny's — A Tech Company, including custom technical development, CRM and AI platforms, business consultation, and publishing services.
+These terms govern use of www.bennyandpenny.com and services offered by Benny & Penny — A Tech Company, including custom technical development, CRM and AI platforms, business consultation, and publishing services.
 
 ## Contract and scope
 
@@ -14,7 +14,7 @@ The applicable agreement defines deliverables, timelines, fees, intellectual-pro
 
 ## Third-party platforms
 
-CRM, AI, and integration work may rely on third-party infrastructure. Clients are responsible for following applicable provider terms. Benny & Penny's is not responsible for third-party outages, data loss, or provider API-term changes.
+CRM, AI, and integration work may rely on third-party infrastructure. Clients are responsible for following applicable provider terms. Benny & Penny is not responsible for third-party outages, data loss, or provider API-term changes.
 
 ## Payments and refunds
 
@@ -27,5 +27,5 @@ CRM, AI, and integration work may rely on third-party infrastructure. Clients ar
 
 The site terms provide for individual binding arbitration, subject to stated exceptions such as qualifying small-claims matters and certain intellectual-property claims. Visitors may have an opt-out period as described in the full Terms of Service.
 
-Read the complete terms: https://bennyandpenny.com/terms
+Read the complete terms: https://www.bennyandpenny.com/terms
 Questions: hello@bennyandpenny.com
