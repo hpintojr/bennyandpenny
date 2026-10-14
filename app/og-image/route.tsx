@@ -9,6 +9,7 @@ export const runtime = "edge";
  */
 export async function GET(request: Request) {
   const sourceUrl = new URL("/images/og-social-background.webp", request.url);
+  sourceUrl.searchParams.set("rev", "20261013-brand");
   const source = await fetch(sourceUrl, { cache: "force-cache" });
 
   if (!source.ok || !source.body) {
