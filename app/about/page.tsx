@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Hamilton Pinto Jr. — software architect, creative technologist, and publisher. BA in Visual Communications, owner of Pinto Design Group and Pinto Consulting, with 60+ establishments launched across Southern California.",
+    "Hamilton Pinto Jr. â software architect, creative technologist, and publisher. BA in Visual Communications, owner of Pinto Design Group and Pinto Consulting, with 60+ establishments launched across Southern California.",
   alternates: { canonical: "/about" },
   openGraph: {
     url: "/about",
@@ -40,10 +40,11 @@ export default function AboutPage() {
           <div className="featureArtwork featureArtwork--portrait">
             <Image
               src="/images/about-portrait-context.webp"
-              alt="Hamilton Pinto Jr. in a modern office"
+              alt="Portrait of Hamilton Pinto Jr."
               fill
               sizes="(max-width: 800px) 100vw, 45vw"
               className="featureArtworkImage"
+              style={{ objectPosition: "center 20%" }}
             />
           </div>
           <div>
@@ -51,17 +52,18 @@ export default function AboutPage() {
               style={{
                 position: "relative",
                 width: "min(100%, 18.5rem)",
-                height: "5.2rem",
+                height: "6.5rem",
                 margin: "0 0 .85rem",
                 overflow: "hidden",
               }}
             >
               <Image
-                src="/images/Sig.png"
+                src="/images/Hamilton_Pinto_Jr_Consultant_Black.svg"
                 alt=""
                 fill
+                unoptimized
                 sizes="(max-width: 800px) 18.5rem, 18.5rem"
-                style={{ objectFit: "cover", objectPosition: "center 56%" }}
+                style={{ objectFit: "contain", objectPosition: "left center" }}
               />
             </div>
             <p className="visuallyHidden">Hamilton Pinto Jr.</p>
@@ -73,7 +75,7 @@ export default function AboutPage() {
             </p>
             <p className="note">
               I architect and build custom solutions, integrate third-party and proprietary APIs, and
-              implement systems that improve operational efficiency, data flow, and business intelligence—
+              implement systems that improve operational efficiency, data flow, and business intelligenceâ
               aligning creative execution with business objectives.
             </p>
             <p className="note">
