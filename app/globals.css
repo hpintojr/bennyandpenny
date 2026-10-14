@@ -260,3 +260,7 @@ button, input, textarea, select { font: inherit; }
 .legal .legalList li { color: var(--muted); line-height: 1.7; }
 .legal .legalList li strong { color: var(--ink); }
 .legal h2:first-of-type { margin-top: 1rem; }
+
+/* About page: signature sits directly under the portrait */
+.aboutPortraitColumn { display: flex; flex-direction: column; gap: 1.25rem; }
+.aboutSignature { display: block; width: min(100%, 20rem); height: auto; }

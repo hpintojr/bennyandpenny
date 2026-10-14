@@ -37,34 +37,26 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="shell featureSplit">
-          <div className="featureArtwork featureArtwork--portrait">
+          <div className="aboutPortraitColumn">
+            <div className="featureArtwork featureArtwork--portrait">
+              <Image
+                src="/images/about-portrait-context.webp"
+                alt="Hamilton Pinto Jr. in a modern office"
+                fill
+                sizes="(max-width: 800px) 100vw, 45vw"
+                className="featureArtworkImage"
+              />
+            </div>
             <Image
-              src="/images/about-portrait-context.webp"
-              alt="Hamilton Pinto Jr. in a modern office"
-              fill
-              sizes="(max-width: 800px) 100vw, 45vw"
-              className="featureArtworkImage"
+              src="/images/Sig.png"
+              alt="Hamilton Pinto Jr., Consultant"
+              width={900}
+              height={314}
+              sizes="(max-width: 800px) 70vw, 20rem"
+              className="aboutSignature"
             />
           </div>
           <div>
-            <div
-              style={{
-                position: "relative",
-                width: "min(100%, 18.5rem)",
-                height: "5.2rem",
-                margin: "0 0 .85rem",
-                overflow: "hidden",
-              }}
-            >
-              <Image
-                src="/images/Sig.png"
-                alt=""
-                fill
-                sizes="(max-width: 800px) 18.5rem, 18.5rem"
-                style={{ objectFit: "cover", objectPosition: "center 56%" }}
-              />
-            </div>
-            <p className="visuallyHidden">Hamilton Pinto Jr.</p>
             <h2 className="h2">A disciplined problem solver with a designer&apos;s eye.</h2>
             <p className="lede">
               My traditional training began at Westwood College of Technology, where I studied Graphic
