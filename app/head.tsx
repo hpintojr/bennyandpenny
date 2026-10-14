@@ -1,5 +1,5 @@
 export default function Head() {
-  const socialImage = "https://www.bennyandpenny.com/images/og-social-background.webp?rev=20260621-static";
+  const socialImage = "https://www.bennyandpenny.com/images/og-social-background.webp?rev=20261013-brand";
 
   return (
     <>
@@ -9,7 +9,7 @@ export default function Head() {
       <meta property="og:image:type" content="image/webp" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="Benny & Penny's — A Tech Company" />
+      <meta property="og:image:alt" content="Benny & Penny — A Tech Company" />
       <meta name="twitter:image" content={socialImage} />
     </>
   );
