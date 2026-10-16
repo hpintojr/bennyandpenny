@@ -13,7 +13,7 @@ const socialImage = {
   type: "image/png",
   width: 1200,
   height: 630,
-  alt: "Benny & Penny — A Tech Company",
+  alt: "Benny & Penny, A Tech Company",
 };
 
 export const metadata: Metadata = {
@@ -46,7 +46,7 @@ const capabilities = [
   {
     icon: "◆",
     title: "Creative technology",
-    text: "The eye of a designer with the discipline of an architect—brand systems, web, and digital experiences built to perform.",
+    text: "The eye of a designer with the discipline of an architect: brand systems, web, and digital experiences built to perform.",
   },
   {
     icon: "♥",
@@ -114,7 +114,7 @@ export default function Home() {
             <p className="eyebrow">Software Architect · Creative Technologist · Publisher</p>
             <h1 className="display">Vision, translated into real-world solutions.</h1>
             <p className="lede">
-              For two decades I&apos;ve built the systems behind brands, platforms, and ventures—pairing the eye of a
+              For two decades I&apos;ve built the systems behind brands, platforms, and ventures, pairing the eye of a
               designer with the discipline of a software architect. Benny &amp; Penny is the studio where that work,
               and my own, comes together. Now I&apos;m building my own.
             </p>

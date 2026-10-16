@@ -70,7 +70,7 @@ export function SiteFooterAccessible() {
         </div>
 
         <div className="shell footerBottom">
-          <span>© {year} Benny &amp; Penny — A Tech Company. All rights reserved.</span>
+          <span>© {year} Benny &amp; Penny, A Tech Company. All rights reserved.</span>
           <span className="footerLegal">
             <Link className="footerLink" href="/privacy">Privacy Policy</Link>
             <span aria-hidden="true" className="footerDot">·</span>

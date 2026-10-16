@@ -121,7 +121,7 @@ export function SiteFooter() {
           </div>
 
           <div className="shell footerBottom">
-            <span>© {year} Benny &amp; Penny&apos;s — A Tech Company. All rights reserved.</span>
+            <span>© {year} Benny &amp; Penny&apos;s, A Tech Company. All rights reserved.</span>
             <span className="footerLegal">
               <Link className="footerLink" href="/privacy">Privacy Policy</Link>
               <span aria-hidden="true" className="footerDot">·</span>

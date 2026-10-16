@@ -5,11 +5,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Adventures",
   description:
-    "Benny & Penny Adventures — Medical Books for Brave Little Hearts. A ten-part children's medical book series and the self-owned publishing imprint behind Benny & Penny, A Tech Company.",
+    "Benny & Penny Adventures: Medical Books for Brave Little Hearts. A ten-part children's medical book series and the self-owned publishing imprint behind Benny & Penny, A Tech Company.",
   alternates: { canonical: "/families" },
   openGraph: {
     url: "/families",
-    title: "Benny & Penny Adventures — Medical Books for Brave Little Hearts",
+    title: "Benny & Penny Adventures: Medical Books for Brave Little Hearts",
     description:
       "A ten-part children’s medical book series that helps families approach real medical experiences with comfort and confidence.",
   },
@@ -19,7 +19,7 @@ const highlights = [
   {
     icon: "book",
     title: "A children's medical book series",
-    text: "Care-centered stories that help young readers feel prepared and brave for medical experiences—written by the author, produced end to end in-house.",
+    text: "Care-centered stories that help young readers feel prepared and brave for medical experiences, written by the author, produced end to end in-house.",
   },
   {
     icon: "imprint",
@@ -29,7 +29,7 @@ const highlights = [
   {
     icon: "studio",
     title: "Part of the studio",
-    text: "The imprint is the namesake and creative heart of Benny & Penny—proof of the same build-it-right discipline applied to my own work.",
+    text: "The imprint is the namesake and creative heart of Benny & Penny, proof of the same build-it-right discipline applied to my own work.",
   },
 ];
 
@@ -104,7 +104,7 @@ export default function AdventuresPage() {
             </div>
             <p className="lede">
               A ten-part children&apos;s book series that turns real medical experiences into gentle,
-              age-appropriate stories—giving families the words, comfort, and confidence to face them
+              age-appropriate stories, giving families the words, comfort, and confidence to face them
               together. It&apos;s the publishing imprint at the heart of the studio, with its own brand,
               storefront, and production pipeline.
             </p>
@@ -187,7 +187,7 @@ export default function AdventuresPage() {
               <h2 className="h2">Built with the same care as the stories.</h2>
             </div>
             <p className="lede">
-              Three things make Benny &amp; Penny Adventures more than a book—it&apos;s a brand,
+              Three things make Benny &amp; Penny Adventures more than a book. It&apos;s a brand,
               a pipeline, and a promise.
             </p>
           </div>

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy Policy for Benny & Penny — A Tech Company: what we collect, how we use it, the providers we rely on, and your rights.",
+    "Privacy Policy for Benny & Penny, A Tech Company: what we collect, how we use it, the providers we rely on, and your rights.",
   alternates: { canonical: "/privacy" },
   openGraph: {
     url: "/privacy",
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
       <section className="section">
         <div className="shell legal">
           <p className="legalLead">
-            This Privacy Policy explains how Benny &amp; Penny — A Tech Company (&quot;we,&quot; &quot;us,&quot;
+            This Privacy Policy explains how Benny &amp; Penny, A Tech Company (&quot;we,&quot; &quot;us,&quot;
             or &quot;our&quot;) collects, uses, and protects information when you visit bennyandpenny.com or contact
             us through the site. We collect only what we need to respond to you and operate our services.
           </p>
@@ -70,9 +70,9 @@ export default function PrivacyPage() {
             process data on our behalf and only as needed to deliver their service:
           </p>
           <ul className="legalList">
-            <li><strong>Vercel</strong> — website hosting and delivery.</li>
-            <li><strong>Sequenzy</strong> — transactional email used to deliver your inquiry to us.</li>
-            <li><strong>Neon</strong> — database storage for contact submissions.</li>
+            <li><strong>Vercel</strong>: website hosting and delivery.</li>
+            <li><strong>Sequenzy</strong>: transactional email used to deliver your inquiry to us.</li>
+            <li><strong>Neon</strong>: database storage for contact submissions.</li>
           </ul>
           <p>
             Each provider maintains its own privacy and security practices. We are not responsible for the

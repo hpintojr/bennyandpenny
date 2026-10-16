@@ -4,7 +4,7 @@ Effective date: June 19, 2026
 
 Canonical page: https://www.bennyandpenny.com/terms
 
-These terms govern use of www.bennyandpenny.com and services offered by Benny & Penny — A Tech Company, including custom technical development, CRM and AI platforms, business consultation, and publishing services.
+These terms govern use of www.bennyandpenny.com and services offered by Benny & Penny, A Tech Company, including custom technical development, CRM and AI platforms, business consultation, and publishing services.
 
 ## Contract and scope
 

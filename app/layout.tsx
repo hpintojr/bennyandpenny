@@ -18,7 +18,7 @@ const socialTitle = "Benny & Penny | A Tech Company";
 const description = "The development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, and publishing solutions. Proudly motivated by my children, Benny and Penny.";
 const socialDescription = "Building the next generation of digital tools, web applications, and technology platforms.";
 const socialImageUrl = `${siteUrl}/og-image`;
-const socialImage = { url: socialImageUrl, secureUrl: socialImageUrl, type: "image/png", width: 1200, height: 630, alt: "Benny & Penny — A Tech Company" };
+const socialImage = { url: socialImageUrl, secureUrl: socialImageUrl, type: "image/png", width: 1200, height: 630, alt: "Benny & Penny, A Tech Company" };
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

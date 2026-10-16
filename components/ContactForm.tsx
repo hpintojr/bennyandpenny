@@ -113,7 +113,7 @@ export function ContactForm() {
     return (
       <div className="cform cform--success" role="status" aria-live="polite">
         <div className="cform__check" aria-hidden="true">✓</div>
-        <h3>Thank you — message sent.</h3>
+        <h3>Thank you. Message sent.</h3>
         <p>I&apos;ll review your note and get back to you personally at the email you provided.</p>
         <button type="button" className="button button--light" onClick={() => setStatus("idle")}>
           Send another message

@@ -6,7 +6,7 @@ Canonical page: https://www.bennyandpenny.com/families
 
 ## Featured imprint: a ten-part series
 
-Benny & Penny Adventures is a ten-part illustrated story series created to help families approach healthcare experiences with age-appropriate language, comfort, and confidence. It is the publishing imprint at the heart of Benny & Penny — A Tech Company, with its own brand, storefront, and production pipeline.
+Benny & Penny Adventures is a ten-part illustrated story series created to help families approach healthcare experiences with age-appropriate language, comfort, and confidence. It is the publishing imprint at the heart of Benny & Penny, A Tech Company, with its own brand, storefront, and production pipeline.
 
 Storefront: https://www.bennyandpennyadventures.com/
 
@@ -31,7 +31,7 @@ Care-centered stories help young readers feel prepared and brave.
 The imprint includes brand, web storefront, digital delivery, and a full print, e-book, and audio production pipeline.
 
 ### Part of the studio
-The imprint is the namesake and creative heart of Benny & Penny — A Tech Company.
+The imprint is the namesake and creative heart of Benny & Penny, A Tech Company.
 
 ## More information
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms of Service for Benny & Penny's — A Tech Company: contract execution and scope, payment terms and refunds, and binding arbitration.",
+    "Terms of Service for Benny & Penny's, A Tech Company: contract execution and scope, payment terms and refunds, and binding arbitration.",
   alternates: { canonical: "/terms" },
   openGraph: {
     url: "/terms",
@@ -28,7 +28,7 @@ export default function TermsPage() {
         <div className="shell legal">
           <p className="legalLead">
             These Terms of Service (&quot;Terms&quot;) govern your access to and use of bennyandpenny.com and the
-            services offered by Benny &amp; Penny&apos;s — A Tech Company (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;),
+            services offered by Benny &amp; Penny&apos;s, A Tech Company (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;),
             including custom technical development, CRM and AI platforms, business consultation, and publishing
             services. By using our site or services, you agree to these Terms.
           </p>
@@ -165,8 +165,8 @@ export default function TermsPage() {
 
           <h3>5. Site Content</h3>
           <p>
-            All content on bennyandpenny.com — including text, design, logos, and the Benny &amp; Penny&apos;s
-            marks — is owned by us or our licensors and may not be copied or reused without permission.
+            All content on bennyandpenny.com, including text, design, logos, and the Benny &amp; Penny&apos;s
+            marks, is owned by us or our licensors and may not be copied or reused without permission.
           </p>
 
           <h2>Acceptable Use</h2>
@@ -208,7 +208,7 @@ export default function TermsPage() {
 
           <h2>Indemnification</h2>
           <p>
-            You agree to indemnify and hold harmless Benny &amp; Penny&apos;s — A Tech Company, and Hamilton
+            You agree to indemnify and hold harmless Benny &amp; Penny&apos;s, A Tech Company, and Hamilton
             Pinto Jr., from any claims, damages, liabilities, and reasonable legal fees arising from your
             content, your use of the services, or your violation of these Terms or applicable law.
           </p>

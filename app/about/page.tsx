@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Hamilton Pinto Jr. — software architect, creative technologist, and publisher. BA in Visual Communications, owner of Pinto Design Group and HDG Technical Services, founder of Mercury Call Desk, with 60+ establishments launched across Southern California.",
+    "Hamilton Pinto Jr. is a software architect, creative technologist, and publisher. BA in Visual Communications, owner of Pinto Design Group and HDG Technical Services, founder of Mercury Call Desk, with 60+ establishments launched across Southern California.",
   alternates: { canonical: "/about" },
   openGraph: {
     url: "/about",
@@ -65,7 +65,7 @@ export default function AboutPage() {
             </p>
             <p className="note">
               I architect and build custom solutions, integrate third-party and proprietary APIs, and
-              implement systems that improve operational efficiency, data flow, and business intelligence—
+              implement systems that improve operational efficiency, data flow, and business intelligence,
               aligning creative execution with business objectives.
             </p>
             <p className="note">

@@ -1,4 +1,4 @@
-# Benny & Penny — A Tech Company
+# Benny & Penny, A Tech Company
 
 > The development and design studio of Hamilton Pinto Jr., delivering custom API integrations, business consulting, brand and web development, and publishing solutions. Proudly motivated by Benny and Penny.
 
@@ -6,7 +6,7 @@ Canonical page: https://www.bennyandpenny.com/
 
 ## Vision, translated into real-world solutions
 
-For two decades, Hamilton Pinto Jr. has built systems behind brands, platforms, and ventures—pairing the eye of a designer with the discipline of a software architect. Benny & Penny is the studio where that work and Hamilton's own ventures come together.
+For two decades, Hamilton Pinto Jr. has built systems behind brands, platforms, and ventures, pairing the eye of a designer with the discipline of a software architect. Benny & Penny is the studio where that work and Hamilton's own ventures come together.
 
 ## Capabilities
 

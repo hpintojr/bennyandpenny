@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Accessibility",
   description:
-    "Accessibility statement for Benny & Penny — A Tech Company, including our WCAG 2.2 AA target, floating accessibility preferences, and how to report an access barrier.",
+    "Accessibility statement for Benny & Penny, A Tech Company, including our WCAG 2.2 AA target, floating accessibility preferences, and how to report an access barrier.",
   alternates: { canonical: "/accessibility" },
   openGraph: {
     url: "/accessibility",

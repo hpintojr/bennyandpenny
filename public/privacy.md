@@ -4,7 +4,7 @@ Effective date: June 19, 2026
 
 Canonical page: https://www.bennyandpenny.com/privacy
 
-Benny & Penny — A Tech Company collects only the information needed to respond to inquiries and operate services.
+Benny & Penny, A Tech Company collects only the information needed to respond to inquiries and operate services.
 
 ## Information collected
 

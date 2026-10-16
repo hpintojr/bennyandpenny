@@ -5,11 +5,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected ventures and platforms by Hamilton Pinto Jr. — XBeton, Advantage First Financial, American Colonial Capital, Benny & Penny Adventures, Mercury Call Desk, and 60+ launched establishments.",
+    "Selected ventures and platforms by Hamilton Pinto Jr.: XBeton, Advantage First Financial, American Colonial Capital, Benny & Penny Adventures, Mercury Call Desk, and 60+ launched establishments.",
   alternates: { canonical: "/our-work" },
   openGraph: {
     url: "/our-work",
-    title: "Work by Benny & Penny — A Tech Company",
+    title: "Work by Benny & Penny, A Tech Company",
     description:
       "Selected platforms, ventures, brand systems, and publishing work by Hamilton Pinto Jr.",
   },
@@ -92,7 +92,7 @@ export default function WorkPage() {
           <p className="eyebrow">Work</p>
           <h1 className="display">Two decades of building the systems behind brands.</h1>
           <p className="lede">
-            A selection of platforms, ventures, and brands I&apos;ve architected, built, and supported—
+            A selection of platforms, ventures, and brands I&apos;ve architected, built, and supported,
             spanning construction technology, financial services, communications, and publishing.
           </p>
         </div>

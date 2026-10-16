@@ -67,9 +67,9 @@ async function sendViaSequenzy(row: Record<string, string>) {
   const text = [
     `Name: ${row.name}`,
     `Email: ${row.email}`,
-    `Company: ${row.company || "—"}`,
-    `Project type: ${row.project_type || "—"}`,
-    `Budget: ${row.budget || "—"}`,
+    `Company: ${row.company || "Not provided"}`,
+    `Project type: ${row.project_type || "Not provided"}`,
+    `Budget: ${row.budget || "Not provided"}`,
     "",
     "Message:",
     row.message,
@@ -79,9 +79,9 @@ async function sendViaSequenzy(row: Record<string, string>) {
       <h2 style="margin:0 0 12px;color:#175b59">New website inquiry</h2>
       <p style="margin:0 0 4px"><strong>Name:</strong> ${escapeHtml(row.name)}</p>
       <p style="margin:0 0 4px"><strong>Email:</strong> ${escapeHtml(row.email)}</p>
-      <p style="margin:0 0 4px"><strong>Company:</strong> ${escapeHtml(row.company || "—")}</p>
-      <p style="margin:0 0 4px"><strong>Project type:</strong> ${escapeHtml(row.project_type || "—")}</p>
-      <p style="margin:0 0 12px"><strong>Budget:</strong> ${escapeHtml(row.budget || "—")}</p>
+      <p style="margin:0 0 4px"><strong>Company:</strong> ${escapeHtml(row.company || "Not provided")}</p>
+      <p style="margin:0 0 4px"><strong>Project type:</strong> ${escapeHtml(row.project_type || "Not provided")}</p>
+      <p style="margin:0 0 12px"><strong>Budget:</strong> ${escapeHtml(row.budget || "Not provided")}</p>
       <p style="margin:0 0 4px"><strong>Message:</strong></p>
       <p style="white-space:pre-wrap;margin:0;padding:12px 14px;background:#effaf5;border-radius:10px">${escapeHtml(row.message)}</p>
     </div>`;
