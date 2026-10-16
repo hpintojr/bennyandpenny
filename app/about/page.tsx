@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Hamilton Pinto Jr. — software architect, creative technologist, and publisher. BA in Visual Communications, owner of Pinto Design Group and Pinto Consulting, with 60+ establishments launched across Southern California.",
+    "Hamilton Pinto Jr. — software architect, creative technologist, and publisher. BA in Visual Communications, owner of Pinto Design Group and HDG Technical Services, founder of Mercury Call Desk, with 60+ establishments launched across Southern California.",
   alternates: { canonical: "/about" },
   openGraph: {
     url: "/about",
@@ -69,11 +69,19 @@ export default function AboutPage() {
               aligning creative execution with business objectives.
             </p>
             <p className="note">
-              As owner of Pinto Design Group and Pinto Consulting, I&apos;ve opened and supported 60+
-              establishments across financial services, restaurants, law, medicine, and professional
-              services throughout Southern California. My studies also include certifications from Point
-              Loma Nazarene University and advanced work in blockchain and cryptocurrency applications
-              through UC Berkeley&apos;s Haas School of Business.
+              As owner of Pinto Design Group and HDG Technical Services, I&apos;ve opened and supported
+              60+ establishments across financial services, restaurants, law, medicine, and professional
+              services throughout Southern California. My studies include an Undergraduate Certificate in
+              Cryptography and Blockchain Technologies from UC Berkeley&apos;s Haas School of Business and
+              executive leadership programs via Chicago Booth.
+            </p>
+            <p className="note">
+              Today I run Mercury Call Desk, an AI phone-agent platform for service businesses, alongside
+              Benny &amp; Penny, my technology and creative studio. Full background at{" "}
+              <a href="https://hamiltonpinto.com" className="textLink">
+                hamiltonpinto.com
+              </a>
+              .
             </p>
           </div>
         </div>
